@@ -20,6 +20,7 @@
 
  // Generated from Java.g4 by ANTLR 4.4
 package javasharp;
+import javax.annotation.Generated;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -27,6 +28,7 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  * This interface defines a complete listener for a parse tree produced by
  * {@link JavaParser}.
  */
+@Generated("ANTLR4")
 public interface JavaListener extends ParseTreeListener {
 	/**
 	 * Enter a parse tree produced by {@link JavaParser#memberDeclaration}.

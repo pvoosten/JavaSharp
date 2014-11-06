@@ -20,6 +20,7 @@
 
  // Generated from Java.g4 by ANTLR 4.4
 package javasharp;
+import javax.annotation.Generated;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -30,6 +31,7 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
+@Generated("ANTLR4")
 public interface JavaVisitor<T> extends ParseTreeVisitor<T> {
 	/**
 	 * Visit a parse tree produced by {@link JavaParser#memberDeclaration}.
