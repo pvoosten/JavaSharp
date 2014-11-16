@@ -30,9 +30,9 @@ Instead, the Java List interface will probably be translated in the .NET IList i
  
 ## Contributing
  
-Since this is a hobby project, contributions will be informal. There is no issue tracker, 
+Since this is a hobby project, contributions will be informal. There is no issue tracker, roadmap, wiki and things like that.
 If you like the idea behind this project or if you have an idea you wish to share, just get in touch.
 We might be able to do something interesting together.
 
-If you own a huge load of cash that you absolutely want to get rid of and you want me to work more seriously on this,
+If you own a huge load of cash or some kind of funding that you absolutely want to get rid of and you want me to work more seriously on this,
 then we can talk.
