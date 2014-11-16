@@ -1,26 +1,5 @@
-/*
- * JavaSharp, a free Java to C# translator based on ANTLRv4
- * Copyright (C) 2014  Philip van Oosten
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- * 
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * https://github.com/pvoosten
- */
-
- // Generated from Java.g4 by ANTLR 4.4
+// Generated from Java.g4 by ANTLR 4.3
 package javasharp;
-import javax.annotation.Generated;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -30,10 +9,9 @@ import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
-@Generated("ANTLR4")
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class JavaLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -127,9 +105,39 @@ public class JavaLexer extends Lexer {
 	public ATN getATN() { return _ATN; }
 
 	@Override
+	public void action(RuleContext _localctx, int ruleIndex, int actionIndex) {
+		switch (ruleIndex) {
+		case 144: WS_action((RuleContext)_localctx, actionIndex); break;
+
+		case 145: COMMENT_action((RuleContext)_localctx, actionIndex); break;
+
+		case 146: LINE_COMMENT_action((RuleContext)_localctx, actionIndex); break;
+		}
+	}
+        
+        private static final int COMMENTS=1;
+        private static final int WHITESPACE=2;
+
+        private void LINE_COMMENT_action(RuleContext _localctx, int actionIndex) {
+		switch (actionIndex) {
+		case 2: _channel = COMMENTS; break;
+		}
+	}
+	private void WS_action(RuleContext _localctx, int actionIndex) {
+		switch (actionIndex) {
+		case 0: _channel = WHITESPACE; break;
+		}
+	}
+	private void COMMENT_action(RuleContext _localctx, int actionIndex) {
+		switch (actionIndex) {
+		case 1: _channel = COMMENTS; break;
+		}
+	}
+	@Override
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
 		case 140: return JavaLetter_sempred((RuleContext)_localctx, predIndex);
+
 		case 141: return JavaLetterOrDigit_sempred((RuleContext)_localctx, predIndex);
 		}
 		return true;
@@ -137,6 +145,7 @@ public class JavaLexer extends Lexer {
 	private boolean JavaLetterOrDigit_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 2: return Character.isJavaIdentifierPart(_input.LA(-1));
+
 		case 3: return Character.isJavaIdentifierPart(Character.toCodePoint((char)_input.LA(-2), (char)_input.LA(-1)));
 		}
 		return true;
@@ -144,6 +153,7 @@ public class JavaLexer extends Lexer {
 	private boolean JavaLetter_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0: return Character.isJavaIdentifierStart(_input.LA(-1));
+
 		case 1: return Character.isJavaIdentifierStart(Character.toCodePoint((char)_input.LA(-2), (char)_input.LA(-1)));
 		}
 		return true;
@@ -518,15 +528,15 @@ public class JavaLexer extends Lexer {
 		"\u041b\3\2\2\2\u0418\u041a\13\2\2\2\u0419\u0418\3\2\2\2\u041a\u041d\3"+
 		"\2\2\2\u041b\u041c\3\2\2\2\u041b\u0419\3\2\2\2\u041c\u041e\3\2\2\2\u041d"+
 		"\u041b\3\2\2\2\u041e\u041f\7,\2\2\u041f\u0420\7\61\2\2\u0420\u0421\3\2"+
-		"\2\2\u0421\u0422\b\u0093\2\2\u0422\u0126\3\2\2\2\u0423\u0424\7\61\2\2"+
+		"\2\2\u0421\u0422\b\u0093\3\2\u0422\u0126\3\2\2\2\u0423\u0424\7\61\2\2"+
 		"\u0424\u0425\7\61\2\2\u0425\u0429\3\2\2\2\u0426\u0428\n\27\2\2\u0427\u0426"+
 		"\3\2\2\2\u0428\u042b\3\2\2\2\u0429\u0427\3\2\2\2\u0429\u042a\3\2\2\2\u042a"+
-		"\u042c\3\2\2\2\u042b\u0429\3\2\2\2\u042c\u042d\b\u0094\2\2\u042d\u0128"+
+		"\u042c\3\2\2\2\u042b\u0429\3\2\2\2\u042c\u042d\b\u0094\4\2\u042d\u0128"+
 		"\3\2\2\2\64\2\u0280\u0284\u0288\u028c\u0290\u0297\u029c\u029e\u02a4\u02a8"+
 		"\u02ac\u02b2\u02b7\u02c1\u02c5\u02cb\u02cf\u02d7\u02db\u02e1\u02eb\u02ef"+
 		"\u02f5\u02f9\u02fe\u0301\u0304\u0309\u030c\u0311\u0316\u031e\u0329\u032d"+
 		"\u0332\u0336\u0346\u0350\u0356\u035d\u0361\u0367\u0374\u03f5\u03fe\u0406"+
-		"\u0411\u041b\u0429\3\b\2\2";
+		"\u0411\u041b\u0429\5\3\u0092\2\3\u0093\3\3\u0094\4";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

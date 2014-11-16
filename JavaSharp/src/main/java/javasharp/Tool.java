@@ -17,22 +17,43 @@
  * 
  * https://github.com/pvoosten
  */
-
 package javasharp;
 
-import org.antlr.v4.runtime.misc.TestRig;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.sax.SAXSource;
+import javax.xml.transform.stream.StreamResult;
+import org.xml.sax.InputSource;
 
 /**
  *
  * @author PvO
  */
-
-
 public class Tool {
 
-    public static void main(String[] args) throws Exception{
-        TestRig rig = new TestRig(new String[]{"Java", "compilationUnit", "D:\\workspace\\JavaSharp\\JavaSharp\\main\\java\\javasharp\\JavaVisitor.java"});
-        System.out.println("The visitor is not attached. So find another way to run the parser. Have a peek in the TestRig source code perhaps.");
+    private void convertJavaToXmlSyntaxTree(String javaSourceFile, String xmlOutputFile) {
+        try {
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        SyntaxTreeXmlFilter xmlEmitter = new SyntaxTreeXmlFilter();
+        Source source = new SAXSource(xmlEmitter, new InputSource(javaSourceFile));
+        Result result = new StreamResult(new File(xmlOutputFile));
+        transformer.transform(source, result);
+        } catch (TransformerException ex) {
+            Logger.getLogger(Tool.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
+    public static void main(String[] args) throws Exception {
+        Tool tool = new Tool();
+        String javaInputFile = "D:\\workspace\\JavaSharp\\JavaSharp\\src\\main\\java\\javasharp\\Tool.java";
+        String xmlOutputFile = "D:\\workspace\\JavaSharp\\JavaSharp\\src\\main\\java\\javasharp\\Tool.xml";
+        tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
+    }
 }
+

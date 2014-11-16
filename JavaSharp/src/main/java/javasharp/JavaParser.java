@@ -1,39 +1,14 @@
-/*
- * JavaSharp, a free Java to C# translator based on ANTLRv4
- * Copyright (C) 2014  Philip van Oosten
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- * 
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * https://github.com/pvoosten
- */
-
- // Generated from Java.g4 by ANTLR 4.4
+// Generated from Java.g4 by ANTLR 4.3
 package javasharp;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
-import javax.annotation.Generated;
 
-@Generated("ANTLR4")
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class JavaParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -440,6 +415,7 @@ public class JavaParser extends Parser {
 				setState(246); classDeclaration();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -459,6 +435,7 @@ public class JavaParser extends Parser {
 				setState(253); enumDeclaration();
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
@@ -478,6 +455,7 @@ public class JavaParser extends Parser {
 				setState(260); interfaceDeclaration();
 				}
 				break;
+
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
@@ -499,6 +477,7 @@ public class JavaParser extends Parser {
 				setState(267); annotationTypeDeclaration();
 				}
 				break;
+
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
@@ -1567,6 +1546,7 @@ public class JavaParser extends Parser {
 				setState(405); match(SEMI);
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -1581,6 +1561,7 @@ public class JavaParser extends Parser {
 				setState(409); block();
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
@@ -1674,48 +1655,56 @@ public class JavaParser extends Parser {
 				setState(419); methodDeclaration();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(420); genericMethodDeclaration();
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(421); fieldDeclaration();
 				}
 				break;
+
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(422); constructorDeclaration();
 				}
 				break;
+
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(423); genericConstructorDeclaration();
 				}
 				break;
+
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(424); interfaceDeclaration();
 				}
 				break;
+
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
 				setState(425); annotationTypeDeclaration();
 				}
 				break;
+
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
 				setState(426); classDeclaration();
 				}
 				break;
+
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
@@ -2211,36 +2200,42 @@ public class JavaParser extends Parser {
 				setState(479); constDeclaration();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(480); interfaceMethodDeclaration();
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(481); genericInterfaceMethodDeclaration();
 				}
 				break;
+
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(482); interfaceDeclaration();
 				}
 				break;
+
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(483); annotationTypeDeclaration();
 				}
 				break;
+
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(484); classDeclaration();
 				}
 				break;
+
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
@@ -3465,6 +3460,7 @@ public class JavaParser extends Parser {
 
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -3867,6 +3863,7 @@ public class JavaParser extends Parser {
 					setState(693); elementValuePairs();
 					}
 					break;
+
 				case 2:
 					{
 					setState(694); elementValue();
@@ -4593,6 +4590,7 @@ public class JavaParser extends Parser {
 				setState(781); annotationMethodRest();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -4856,12 +4854,14 @@ public class JavaParser extends Parser {
 				setState(805); localVariableDeclarationStatement();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(806); statement();
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
@@ -5076,6 +5076,7 @@ public class JavaParser extends Parser {
 				setState(822); block();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -5093,6 +5094,7 @@ public class JavaParser extends Parser {
 				setState(829); match(SEMI);
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
@@ -5110,6 +5112,7 @@ public class JavaParser extends Parser {
 				}
 				}
 				break;
+
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
@@ -5120,6 +5123,7 @@ public class JavaParser extends Parser {
 				setState(842); statement();
 				}
 				break;
+
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
@@ -5128,6 +5132,7 @@ public class JavaParser extends Parser {
 				setState(846); statement();
 				}
 				break;
+
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
@@ -5138,6 +5143,7 @@ public class JavaParser extends Parser {
 				setState(852); match(SEMI);
 				}
 				break;
+
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
@@ -5180,6 +5186,7 @@ public class JavaParser extends Parser {
 				}
 				}
 				break;
+
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
@@ -5209,6 +5216,7 @@ public class JavaParser extends Parser {
 
 				}
 				break;
+
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
@@ -5246,6 +5254,7 @@ public class JavaParser extends Parser {
 				setState(894); match(RBRACE);
 				}
 				break;
+
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
@@ -5254,6 +5263,7 @@ public class JavaParser extends Parser {
 				setState(898); block();
 				}
 				break;
+
 			case 11:
 				enterOuterAlt(_localctx, 11);
 				{
@@ -5269,6 +5279,7 @@ public class JavaParser extends Parser {
 				setState(904); match(SEMI);
 				}
 				break;
+
 			case 12:
 				enterOuterAlt(_localctx, 12);
 				{
@@ -5277,6 +5288,7 @@ public class JavaParser extends Parser {
 				setState(907); match(SEMI);
 				}
 				break;
+
 			case 13:
 				enterOuterAlt(_localctx, 13);
 				{
@@ -5292,6 +5304,7 @@ public class JavaParser extends Parser {
 				setState(913); match(SEMI);
 				}
 				break;
+
 			case 14:
 				enterOuterAlt(_localctx, 14);
 				{
@@ -5307,12 +5320,14 @@ public class JavaParser extends Parser {
 				setState(918); match(SEMI);
 				}
 				break;
+
 			case 15:
 				enterOuterAlt(_localctx, 15);
 				{
 				setState(919); match(SEMI);
 				}
 				break;
+
 			case 16:
 				enterOuterAlt(_localctx, 16);
 				{
@@ -5320,6 +5335,7 @@ public class JavaParser extends Parser {
 				setState(921); match(SEMI);
 				}
 				break;
+
 			case 17:
 				enterOuterAlt(_localctx, 17);
 				{
@@ -5825,6 +5841,7 @@ public class JavaParser extends Parser {
 				setState(990); match(COLON);
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -5833,6 +5850,7 @@ public class JavaParser extends Parser {
 				setState(994); match(COLON);
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
@@ -5898,6 +5916,7 @@ public class JavaParser extends Parser {
 				setState(1000); enhancedForControl();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -5980,6 +5999,7 @@ public class JavaParser extends Parser {
 				setState(1014); localVariableDeclaration();
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -6383,6 +6403,7 @@ public class JavaParser extends Parser {
 				setState(1051); expression(17);
 				}
 				break;
+
 			case 2:
 				{
 				setState(1053);
@@ -6394,6 +6415,7 @@ public class JavaParser extends Parser {
 				setState(1054); expression(15);
 				}
 				break;
+
 			case 3:
 				{
 				setState(1055);
@@ -6405,11 +6427,13 @@ public class JavaParser extends Parser {
 				setState(1056); expression(14);
 				}
 				break;
+
 			case 4:
 				{
 				setState(1057); primary();
 				}
 				break;
+
 			case 5:
 				{
 				setState(1058); match(NEW);
@@ -6443,6 +6467,7 @@ public class JavaParser extends Parser {
 						setState(1064); expression(14);
 						}
 						break;
+
 					case 2:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6458,6 +6483,7 @@ public class JavaParser extends Parser {
 						setState(1067); expression(13);
 						}
 						break;
+
 					case 3:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6472,6 +6498,7 @@ public class JavaParser extends Parser {
 							setState(1070); match(LT);
 							}
 							break;
+
 						case 2:
 							{
 							setState(1071); match(GT);
@@ -6479,6 +6506,7 @@ public class JavaParser extends Parser {
 							setState(1073); match(GT);
 							}
 							break;
+
 						case 3:
 							{
 							setState(1074); match(GT);
@@ -6489,6 +6517,7 @@ public class JavaParser extends Parser {
 						setState(1078); expression(12);
 						}
 						break;
+
 					case 4:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6504,6 +6533,7 @@ public class JavaParser extends Parser {
 						setState(1081); expression(11);
 						}
 						break;
+
 					case 5:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6519,6 +6549,7 @@ public class JavaParser extends Parser {
 						setState(1084); expression(9);
 						}
 						break;
+
 					case 6:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6529,6 +6560,7 @@ public class JavaParser extends Parser {
 						setState(1087); expression(8);
 						}
 						break;
+
 					case 7:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6539,6 +6571,7 @@ public class JavaParser extends Parser {
 						setState(1090); expression(7);
 						}
 						break;
+
 					case 8:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6549,6 +6582,7 @@ public class JavaParser extends Parser {
 						setState(1093); expression(6);
 						}
 						break;
+
 					case 9:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6559,6 +6593,7 @@ public class JavaParser extends Parser {
 						setState(1096); expression(5);
 						}
 						break;
+
 					case 10:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6569,6 +6604,7 @@ public class JavaParser extends Parser {
 						setState(1099); expression(4);
 						}
 						break;
+
 					case 11:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6581,6 +6617,7 @@ public class JavaParser extends Parser {
 						setState(1104); expression(3);
 						}
 						break;
+
 					case 12:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6596,6 +6633,7 @@ public class JavaParser extends Parser {
 						setState(1108); expression(1);
 						}
 						break;
+
 					case 13:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6606,6 +6644,7 @@ public class JavaParser extends Parser {
 						setState(1111); match(Identifier);
 						}
 						break;
+
 					case 14:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6616,6 +6655,7 @@ public class JavaParser extends Parser {
 						setState(1114); match(THIS);
 						}
 						break;
+
 					case 15:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6635,6 +6675,7 @@ public class JavaParser extends Parser {
 						setState(1121); innerCreator();
 						}
 						break;
+
 					case 16:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6646,6 +6687,7 @@ public class JavaParser extends Parser {
 						setState(1125); superSuffix();
 						}
 						break;
+
 					case 17:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6656,6 +6698,7 @@ public class JavaParser extends Parser {
 						setState(1128); explicitGenericInvocation();
 						}
 						break;
+
 					case 18:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6667,6 +6710,7 @@ public class JavaParser extends Parser {
 						setState(1132); match(RBRACK);
 						}
 						break;
+
 					case 19:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6685,6 +6729,7 @@ public class JavaParser extends Parser {
 						setState(1139); match(RPAREN);
 						}
 						break;
+
 					case 20:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6699,6 +6744,7 @@ public class JavaParser extends Parser {
 						consume();
 						}
 						break;
+
 					case 21:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
@@ -6782,30 +6828,35 @@ public class JavaParser extends Parser {
 				setState(1152); match(RPAREN);
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(1154); match(THIS);
 				}
 				break;
+
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(1155); match(SUPER);
 				}
 				break;
+
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(1156); literal();
 				}
 				break;
+
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(1157); match(Identifier);
 				}
 				break;
+
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
@@ -6814,6 +6865,7 @@ public class JavaParser extends Parser {
 				setState(1160); match(CLASS);
 				}
 				break;
+
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
@@ -6822,6 +6874,7 @@ public class JavaParser extends Parser {
 				setState(1164); match(CLASS);
 				}
 				break;
+
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
@@ -7432,6 +7485,7 @@ public class JavaParser extends Parser {
 				setState(1249); match(GT);
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -7487,6 +7541,7 @@ public class JavaParser extends Parser {
 				setState(1254); match(GT);
 				}
 				break;
+
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
@@ -7696,25 +7751,45 @@ public class JavaParser extends Parser {
 	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0: return precpred(_ctx, 13);
+
 		case 1: return precpred(_ctx, 12);
+
 		case 2: return precpred(_ctx, 11);
+
 		case 3: return precpred(_ctx, 10);
+
 		case 4: return precpred(_ctx, 8);
+
 		case 5: return precpred(_ctx, 7);
+
 		case 6: return precpred(_ctx, 6);
+
 		case 7: return precpred(_ctx, 5);
+
 		case 8: return precpred(_ctx, 4);
+
 		case 9: return precpred(_ctx, 3);
+
 		case 10: return precpred(_ctx, 2);
+
 		case 11: return precpred(_ctx, 1);
+
 		case 12: return precpred(_ctx, 25);
+
 		case 13: return precpred(_ctx, 24);
+
 		case 14: return precpred(_ctx, 23);
+
 		case 15: return precpred(_ctx, 22);
+
 		case 16: return precpred(_ctx, 21);
+
 		case 17: return precpred(_ctx, 20);
+
 		case 18: return precpred(_ctx, 19);
+
 		case 19: return precpred(_ctx, 16);
+
 		case 20: return precpred(_ctx, 9);
 		}
 		return true;

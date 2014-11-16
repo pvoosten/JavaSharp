@@ -1,27 +1,6 @@
-/*
- * JavaSharp, a free Java to C# translator based on ANTLRv4
- * Copyright (C) 2014  Philip van Oosten
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- * 
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
- * https://github.com/pvoosten
- */
-
-// Generated from Java.g4 by ANTLR 4.4
+// Generated from Java.g4 by ANTLR 4.3
 package javasharp;
 
-import javax.annotation.Generated;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -32,7 +11,6 @@ import org.antlr.v4.runtime.tree.TerminalNode;
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-@Generated("ANTLR4")
 public class JavaBaseListener implements JavaListener {
 	/**
 	 * {@inheritDoc}
@@ -46,6 +24,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMemberDeclaration(@NotNull JavaParser.MemberDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -58,6 +37,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDefaultValue(@NotNull JavaParser.DefaultValueContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -70,6 +50,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationTypeElementDeclaration(@NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -82,6 +63,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitType(@NotNull JavaParser.TypeContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -94,6 +76,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationTypeBody(@NotNull JavaParser.AnnotationTypeBodyContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -106,6 +89,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitGenericInterfaceMethodDeclaration(@NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -118,6 +102,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassBodyDeclaration(@NotNull JavaParser.ClassBodyDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -130,6 +115,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBlock(@NotNull JavaParser.BlockContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -142,6 +128,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumBodyDeclarations(@NotNull JavaParser.EnumBodyDeclarationsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -154,6 +141,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitForUpdate(@NotNull JavaParser.ForUpdateContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -166,6 +154,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnhancedForControl(@NotNull JavaParser.EnhancedForControlContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -178,6 +167,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationConstantRest(@NotNull JavaParser.AnnotationConstantRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -190,6 +180,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExplicitGenericInvocation(@NotNull JavaParser.ExplicitGenericInvocationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -202,6 +193,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNonWildcardTypeArgumentsOrDiamond(@NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -214,6 +206,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpressionList(@NotNull JavaParser.ExpressionListContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -226,6 +219,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationTypeElementRest(@NotNull JavaParser.AnnotationTypeElementRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -238,6 +232,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassOrInterfaceType(@NotNull JavaParser.ClassOrInterfaceTypeContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -250,6 +245,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeBound(@NotNull JavaParser.TypeBoundContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -262,6 +258,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariableDeclaratorId(@NotNull JavaParser.VariableDeclaratorIdContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -274,6 +271,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPrimary(@NotNull JavaParser.PrimaryContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -286,6 +284,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassCreatorRest(@NotNull JavaParser.ClassCreatorRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -298,6 +297,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInterfaceBodyDeclaration(@NotNull JavaParser.InterfaceBodyDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -310,6 +310,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeArguments(@NotNull JavaParser.TypeArgumentsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -322,6 +323,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationName(@NotNull JavaParser.AnnotationNameContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -334,6 +336,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFinallyBlock(@NotNull JavaParser.FinallyBlockContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -346,6 +349,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeParameters(@NotNull JavaParser.TypeParametersContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -358,6 +362,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLastFormalParameter(@NotNull JavaParser.LastFormalParameterContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -370,6 +375,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstructorBody(@NotNull JavaParser.ConstructorBodyContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -382,6 +388,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLiteral(@NotNull JavaParser.LiteralContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -394,6 +401,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationMethodOrConstantRest(@NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -406,6 +414,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCatchClause(@NotNull JavaParser.CatchClauseContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -418,6 +427,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariableDeclarator(@NotNull JavaParser.VariableDeclaratorContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -430,6 +440,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeList(@NotNull JavaParser.TypeListContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -442,6 +453,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumConstants(@NotNull JavaParser.EnumConstantsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -454,6 +466,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassBody(@NotNull JavaParser.ClassBodyContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -466,6 +479,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCreatedName(@NotNull JavaParser.CreatedNameContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -478,6 +492,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumDeclaration(@NotNull JavaParser.EnumDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -490,6 +505,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFormalParameter(@NotNull JavaParser.FormalParameterContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -502,6 +518,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitParExpression(@NotNull JavaParser.ParExpressionContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -514,6 +531,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotation(@NotNull JavaParser.AnnotationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -526,6 +544,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariableInitializer(@NotNull JavaParser.VariableInitializerContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -538,6 +557,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElementValueArrayInitializer(@NotNull JavaParser.ElementValueArrayInitializerContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -550,6 +570,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCreator(@NotNull JavaParser.CreatorContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -562,6 +583,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArrayCreatorRest(@NotNull JavaParser.ArrayCreatorRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -574,6 +596,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpression(@NotNull JavaParser.ExpressionContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -586,6 +609,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstantExpression(@NotNull JavaParser.ConstantExpressionContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -598,6 +622,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitQualifiedNameList(@NotNull JavaParser.QualifiedNameListContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -610,6 +635,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstructorDeclaration(@NotNull JavaParser.ConstructorDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -622,6 +648,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitForControl(@NotNull JavaParser.ForControlContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -634,6 +661,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSuperSuffix(@NotNull JavaParser.SuperSuffixContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -646,6 +674,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariableDeclarators(@NotNull JavaParser.VariableDeclaratorsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -658,6 +687,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCatchType(@NotNull JavaParser.CatchTypeContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -670,6 +700,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassOrInterfaceModifier(@NotNull JavaParser.ClassOrInterfaceModifierContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -682,6 +713,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumConstantName(@NotNull JavaParser.EnumConstantNameContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -694,6 +726,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitModifier(@NotNull JavaParser.ModifierContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -706,6 +739,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInnerCreator(@NotNull JavaParser.InnerCreatorContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -718,6 +752,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExplicitGenericInvocationSuffix(@NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -730,6 +765,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVariableModifier(@NotNull JavaParser.VariableModifierContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -742,6 +778,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElementValuePair(@NotNull JavaParser.ElementValuePairContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -754,6 +791,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArrayInitializer(@NotNull JavaParser.ArrayInitializerContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -766,6 +804,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElementValue(@NotNull JavaParser.ElementValueContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -778,6 +817,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstDeclaration(@NotNull JavaParser.ConstDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -790,6 +830,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitResource(@NotNull JavaParser.ResourceContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -802,6 +843,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitQualifiedName(@NotNull JavaParser.QualifiedNameContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -814,6 +856,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitResourceSpecification(@NotNull JavaParser.ResourceSpecificationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -826,6 +869,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFormalParameterList(@NotNull JavaParser.FormalParameterListContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -838,6 +882,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationTypeDeclaration(@NotNull JavaParser.AnnotationTypeDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -850,6 +895,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCompilationUnit(@NotNull JavaParser.CompilationUnitContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -862,6 +908,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAnnotationMethodRest(@NotNull JavaParser.AnnotationMethodRestContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -874,6 +921,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSwitchBlockStatementGroup(@NotNull JavaParser.SwitchBlockStatementGroupContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -886,6 +934,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeParameter(@NotNull JavaParser.TypeParameterContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -898,6 +947,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInterfaceBody(@NotNull JavaParser.InterfaceBodyContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -910,6 +960,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMethodDeclaration(@NotNull JavaParser.MethodDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -922,6 +973,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMethodBody(@NotNull JavaParser.MethodBodyContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -934,6 +986,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeArgument(@NotNull JavaParser.TypeArgumentContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -946,6 +999,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypeDeclaration(@NotNull JavaParser.TypeDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -958,6 +1012,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitGenericConstructorDeclaration(@NotNull JavaParser.GenericConstructorDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -970,6 +1025,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClassDeclaration(@NotNull JavaParser.ClassDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -982,6 +1038,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumConstant(@NotNull JavaParser.EnumConstantContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -994,6 +1051,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStatement(@NotNull JavaParser.StatementContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1006,6 +1064,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitImportDeclaration(@NotNull JavaParser.ImportDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1018,6 +1077,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPrimitiveType(@NotNull JavaParser.PrimitiveTypeContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1030,6 +1090,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInterfaceDeclaration(@NotNull JavaParser.InterfaceDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1042,6 +1103,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLocalVariableDeclarationStatement(@NotNull JavaParser.LocalVariableDeclarationStatementContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1054,6 +1116,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBlockStatement(@NotNull JavaParser.BlockStatementContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1066,6 +1129,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFieldDeclaration(@NotNull JavaParser.FieldDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1078,6 +1142,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitConstantDeclarator(@NotNull JavaParser.ConstantDeclaratorContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1090,6 +1155,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitResources(@NotNull JavaParser.ResourcesContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1102,6 +1168,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStatementExpression(@NotNull JavaParser.StatementExpressionContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1114,6 +1181,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInterfaceMethodDeclaration(@NotNull JavaParser.InterfaceMethodDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1126,6 +1194,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPackageDeclaration(@NotNull JavaParser.PackageDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1138,6 +1207,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElementValuePairs(@NotNull JavaParser.ElementValuePairsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1150,6 +1220,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLocalVariableDeclaration(@NotNull JavaParser.LocalVariableDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1162,6 +1233,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNonWildcardTypeArguments(@NotNull JavaParser.NonWildcardTypeArgumentsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1174,6 +1246,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInterfaceMemberDeclaration(@NotNull JavaParser.InterfaceMemberDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1186,6 +1259,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSwitchLabel(@NotNull JavaParser.SwitchLabelContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1198,6 +1272,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitForInit(@NotNull JavaParser.ForInitContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1210,6 +1285,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFormalParameters(@NotNull JavaParser.FormalParametersContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1222,6 +1298,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArguments(@NotNull JavaParser.ArgumentsContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1234,6 +1311,7 @@ public class JavaBaseListener implements JavaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitGenericMethodDeclaration(@NotNull JavaParser.GenericMethodDeclarationContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
