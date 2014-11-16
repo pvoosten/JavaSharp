@@ -43,14 +43,15 @@ class XmlEmittingVisitor extends AbstractParseTreeVisitor<Object> implements Jav
     XmlEmittingVisitor(ContentHandler contentHandler, BufferedTokenStream bufferedTokenStream) {
         this.contentHandler = contentHandler;
         this.bufferedTokenStream = bufferedTokenStream;
-        cursor = 0;
+        cursor = -1;
     }
 
     private Object emitXmlElement(String elementName, ParserRuleContext ctx) throws RuntimeException {
         try {
-            contentHandler.startElement("", elementName, elementName, noAtts);
             int tokenIndex = ctx.start.getTokenIndex();
-            emitHiddenTokens(tokenIndex);
+            emitWhiteSpace(tokenIndex);
+            contentHandler.startElement("", elementName, elementName, noAtts);
+            emitComments(tokenIndex);
             visitChildren(ctx);
             contentHandler.endElement("", elementName, elementName);
         } catch (SAXException ex) {
@@ -60,22 +61,28 @@ class XmlEmittingVisitor extends AbstractParseTreeVisitor<Object> implements Jav
         return null;
     }
 
-    private void emitHiddenTokens(int tokenIndex) {
+    private void emitWhiteSpace(int tokenIndex) {
         if (tokenIndex > cursor) {
             List<Token> hiddenTokens = bufferedTokenStream.getHiddenTokensToLeft(tokenIndex);
-            if (hiddenTokens != null && hiddenTokens.size() > 0) {
-                for (Token t : hiddenTokens) {
+            if (hiddenTokens != null) {
+                emitWhiteSpace(hiddenTokens.get(0));
+            }
+        }
+    }
+
+    private void emitComments(int tokenIndex) {
+        if (tokenIndex > cursor) {
+            List<Token> hiddenTokens = bufferedTokenStream.getHiddenTokensToLeft(tokenIndex);
+            if (hiddenTokens != null && (hiddenTokens.size() > 0)) {
+                int offset = cursor - hiddenTokens.get(0).getTokenIndex() + 1;
+                for (int i = offset; i < hiddenTokens.size(); i++) {
+                    Token t = hiddenTokens.get(i);
                     if (t.getType() == JavaLexer.COMMENT) {
                         emitToken("Comment", t);
                     } else if (t.getType() == JavaLexer.LINE_COMMENT) {
                         emitToken("LineComment", t);
-                    } else if (t.getType() == JavaLexer.WS) {
-                        String ws = t.getText().replaceAll("\r\n", "\n");
-                        try {
-                            contentHandler.characters(ws.toCharArray(), 0, ws.length());
-                        } catch (SAXException ex) {
-                            Logger.getLogger(XmlEmittingVisitor.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                    } else {
+                        emitWhiteSpace(t);
                     }
                 }
             }
@@ -83,25 +90,45 @@ class XmlEmittingVisitor extends AbstractParseTreeVisitor<Object> implements Jav
         }
     }
 
+    private void emitWhiteSpace(Token t) {
+        int tokenIndex = t.getTokenIndex();
+        if (tokenIndex > cursor && t.getType() == JavaLexer.WS) {
+            String ws = t.getText().replaceAll("\r\n", "\n");
+            try {
+                contentHandler.characters(ws.toCharArray(), 0, ws.length());
+            } catch (SAXException ex) {
+                Logger.getLogger(XmlEmittingVisitor.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
+            cursor = t.getTokenIndex();
+        }
+    }
+
     void emitToken(String elementName, Token token) {
+        int tokenIndex = token.getTokenIndex();
+        assert tokenIndex > cursor;
         String tokenText = token.getText().replaceAll("\r\n", "\n");
         try {
             AttributesImpl atts = new AttributesImpl();
-            atts.addAttribute("", "channel", "channel", "", Integer.toString(token.getChannel()));
-            contentHandler.startElement("", elementName, elementName, new AttributesImpl());
+            int tokenType = token.getType();
+            tokenType = tokenType <= 0 ? 0 : tokenType;
+            atts.addAttribute("", "type", "type", "", JavaLexer.tokenTypes[tokenType]);
+            contentHandler.startElement("", elementName, elementName, atts);
             contentHandler.characters(tokenText.toCharArray(), 0, tokenText.length());
             contentHandler.endElement("", elementName, elementName);
         } catch (SAXException ex) {
-            Logger.getLogger(XmlEmittingVisitor.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(XmlEmittingVisitor.class
+                    .getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex);
         }
+        cursor = tokenIndex;
     }
 
     @Override
     public Object visitTerminal(TerminalNode node) {
         Token symbol = node.getSymbol();
         int tokenIndex = symbol.getTokenIndex();
-        emitHiddenTokens(tokenIndex);
+        emitComments(tokenIndex);
         TokenSource tokenSource = symbol.getTokenSource();
         emitToken("Symbol", symbol);
         return null;
