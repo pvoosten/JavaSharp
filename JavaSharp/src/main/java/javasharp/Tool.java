@@ -19,10 +19,10 @@
  */
 package javasharp;
 
-import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.xml.transform.Result;
+import java.io./* a comment withing a qualified name*/File;
+import java.util.logging.Level/* after a qualified name */;
+import /* Before a qualified name */java.util.logging.Logger;
+import javax.xml.transform . Result; // added white space within qualified name on purpose
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -57,3 +57,5 @@ public class Tool {
     }
 }
 
+// Comment at the end of the file
+/* Just to verify that it is included in the xml version of the AST */
