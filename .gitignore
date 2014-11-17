@@ -12,3 +12,6 @@
 hs_err_pid*
 
 target
+
+# .NET solution and project hidden files
+*.suo
