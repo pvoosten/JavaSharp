@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><CompilationUnit><Comment type="COMMENT">/*
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <CompilationUnit><Comment type="COMMENT">/*
  * JavaSharp, a free Java to C# translator based on ANTLRv4
  * Copyright (C) 2014  Philip van Oosten
  * 

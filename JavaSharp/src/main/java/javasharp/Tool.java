@@ -1,4 +1,6 @@
-/*
+
+
+ /*
  * JavaSharp, a free Java to C# translator based on ANTLRv4
  * Copyright (C) 2014  Philip van Oosten
  * 
