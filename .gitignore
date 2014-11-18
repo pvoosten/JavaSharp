@@ -15,3 +15,5 @@ target
 
 # .NET solution and project hidden files
 *.suo
+obj
+packages
