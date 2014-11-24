@@ -1,11 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace JavaAstReader
@@ -28,43 +24,121 @@ namespace JavaAstReader
             var cu = SyntaxFactory.CompilationUnit();
             if (root.Name == "CompilationUnit")
             {
-                TranslateCompilationUnit(root, cu);
+                cu = TranslateCompilationUnit(root, cu);
             }
             return CSharpSyntaxTree.Create(cu);
         }
 
-        private void TranslateCompilationUnit(XElement javaElement, CompilationUnitSyntax cSharpContext)
+        private CompilationUnitSyntax TranslateCompilationUnit(XElement javaElement, CompilationUnitSyntax cSharpContext)
         {
-            foreach (XElement element in javaCompilationUnit.Descendants())
+            CSharpSyntaxNode csSyntaxNode = cSharpContext;
+            javaElement.Element("PackageDeclaration");
+
+            SyntaxList<UsingDirectiveSyntax> usings = new SyntaxList<UsingDirectiveSyntax>();
+            foreach (XNode node in javaElement.Nodes())
             {
-                // TODO: package declaration becomes name space, which is hierarchical in C#, but there can be only one per compilation unit,
-                // because that is a Java constraint.
-                switch(element.Name.LocalName){
-                    case "PackageDeclaration":
-                        cSharpContext.AddMembers(SyntaxFactory.NamespaceDeclaration(SyntaxFactory.QualifiedName());
+                // Java package declaration becomes C# name space, which is hierarchical
+                // C# allows multiple name spaces per compilation unit, but that will not occur in translations from Java
+
+                // Java import statements come after the package declaration, in C# the using statements are declared before the name space.
+                if (node.NodeType == System.Xml.XmlNodeType.Element)
+                {
+                    var element = node as XElement;
+                    switch (element.Name.LocalName)
+                    {
+                        case "PackageDeclaration":
+                            var namespaceDeclaration = TranslatePackageDeclaration(element);
+                            cSharpContext = cSharpContext.AddMembers(namespaceDeclaration);
+                            csSyntaxNode = namespaceDeclaration;
+                            break;
+                        case "ImportDeclaration":
+                            //usings.Add(TranslateImportDeclaration(element));
+                            break;
+                        case "TypeDeclaration":
+                            break;
+                        case "Comment":
+                            break;
+                        case "LineComment":
+                            break;
+                        case "Symbol":
+                            break;
+                        default:
+                            throw new InvalidJavaSyntaxException(element);
+                    }
+                }
+            }
+            return cSharpContext;
+        }
+
+        private UsingDirectiveSyntax TranslateImportDeclaration(XElement element)
+        {
+            return null;
+        }
+
+        private T TranslateDefaults<T>(XNode javaContext, T csharpContext) where T : CSharpSyntaxNode
+        {
+            int triviaCount = -1;
+            SyntaxTriviaList trivias = new SyntaxTriviaList();
+            XNode currentNode = javaContext;
+            while (triviaCount < trivias.Count)
+            {
+                triviaCount = trivias.Count;
+                if (javaContext.NodeType == System.Xml.XmlNodeType.Element)
+                {
+                    XElement javaElement = javaContext as XElement;
+                    if (javaElement.Name.LocalName == "Comment")
+                    {
+                        trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.MultiLineCommentTrivia, javaElement.Value));
+                    }
+                    else if (javaElement.Name.LocalName == "LineComment")
+                    {
+                        trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.SingleLineCommentTrivia, javaElement.Value));
+                    }
+                }
+                else if (javaContext.NodeType == System.Xml.XmlNodeType.SignificantWhitespace || javaContext.NodeType == System.Xml.XmlNodeType.Whitespace)
+                {
+                    trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.WhitespaceTrivia, javaContext.ToString()));
+                }
+                currentNode = currentNode.NextNode;
+            }
+            T newNode = csharpContext;
+            if (trivias.Count > 0)
+            {
+                newNode = newNode.WithTrailingTrivia(trivias);
+            }
+            return newNode;
+        }
+
+        private NamespaceDeclarationSyntax TranslatePackageDeclaration(XElement element)
+        {
+            foreach (XNode node in element.Nodes())
+            {
+                switch(node.NodeType){
+                    case System.Xml.XmlNodeType.Text:
                         break;
-                    case "ImportDeclaration":
-                        break;
-                    case "TypeDeclaration":
-                        break;
-                    default:
-                        throw new InvalidJavaSyntaxException(element);
+                    case System.Xml.XmlNodeType.Element:
+                        XElement elem = node as XElement;
+                        switch(elem.Name.LocalName){
+                            case "Symbol":
+                                break;
+                            case "Comment":
+                                break;
+                            case "LineComment":
+                                break;
+                            case "Identifier":
+                                break;
+                        }
                         break;
                 }
             }
+            QualifiedNameSyntax qualifiedName =
+                SyntaxFactory.QualifiedName(
+                    SyntaxFactory.QualifiedName(
+                        SyntaxFactory.IdentifierName("Baz"),
+                        SyntaxFactory.IdentifierName("Bar")),
+                    SyntaxFactory.IdentifierName("Foo"));
+            NamespaceDeclarationSyntax nameSpaceSyntax = SyntaxFactory.NamespaceDeclaration(qualifiedName);
+            return nameSpaceSyntax;
         }
-    }
-
-    [Serializable]
-    public class InvalidJavaSyntaxException : Exception
-    {
-        public InvalidJavaSyntaxException() { }
-        public InvalidJavaSyntaxException(XElement child) : this(string.Format("Unexpected {0} child element of {1} element", child.Name.LocalName, child.Parent.Name.LocalName)) { }
-        public InvalidJavaSyntaxException(string message) : base(message) { }
-        public InvalidJavaSyntaxException(string message, Exception inner) : base(message, inner) { }
-        protected InvalidJavaSyntaxException(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context)
-            : base(info, context) { }
     }
 }
