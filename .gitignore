@@ -17,3 +17,6 @@ target
 *.suo
 obj
 packages
+bin
+*.sln.ide
+
