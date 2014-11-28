@@ -3,6 +3,8 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using System;
+using System.Linq;
 
 namespace JavaAstReader
 {
@@ -31,7 +33,7 @@ namespace JavaAstReader
 
         private CompilationUnitSyntax TranslateCompilationUnit(XElement javaElement, CompilationUnitSyntax cSharpContext)
         {
-            CSharpSyntaxNode csSyntaxNode = cSharpContext;
+            CSharpSyntaxNode csSyntaxNode = TranslateDefaults(javaElement, cSharpContext);
             javaElement.Element("PackageDeclaration");
 
             SyntaxList<UsingDirectiveSyntax> usings = new SyntaxList<UsingDirectiveSyntax>();
@@ -52,27 +54,40 @@ namespace JavaAstReader
                             csSyntaxNode = namespaceDeclaration;
                             break;
                         case "ImportDeclaration":
-                            //usings.Add(TranslateImportDeclaration(element));
+                            usings = usings.Add(TranslateImportDeclaration(element));
                             break;
                         case "TypeDeclaration":
+                            break;
+                        case "Symbol":
                             break;
                         case "Comment":
                             break;
                         case "LineComment":
-                            break;
-                        case "Symbol":
                             break;
                         default:
                             throw new InvalidJavaSyntaxException(element);
                     }
                 }
             }
+            cSharpContext = cSharpContext.WithUsings(usings);
             return cSharpContext;
         }
 
         private UsingDirectiveSyntax TranslateImportDeclaration(XElement element)
         {
-            return null;
+            NameSyntax nameSpaceName = SyntaxFactory.IdentifierName("Nop");
+            foreach (XNode node in element.Nodes())
+            {
+                if (node.NodeType == System.Xml.XmlNodeType.Element)
+                {
+                    XElement elem = node as XElement;
+                    if (elem.Name.LocalName == "QualifiedName")
+                    {
+                        nameSpaceName = TranslateQualifiedName(elem);
+                    }
+                }
+            }
+            return SyntaxFactory.UsingDirective(nameSpaceName);
         }
 
         private T TranslateDefaults<T>(XNode javaContext, T csharpContext) where T : CSharpSyntaxNode
@@ -111,34 +126,56 @@ namespace JavaAstReader
 
         private NamespaceDeclarationSyntax TranslatePackageDeclaration(XElement element)
         {
+            var nameSpaceSyntax = SyntaxFactory.NamespaceDeclaration(SyntaxFactory.IdentifierName("DefaultNameSpace"));
             foreach (XNode node in element.Nodes())
             {
-                switch(node.NodeType){
-                    case System.Xml.XmlNodeType.Text:
-                        break;
-                    case System.Xml.XmlNodeType.Element:
-                        XElement elem = node as XElement;
-                        switch(elem.Name.LocalName){
-                            case "Symbol":
-                                break;
-                            case "Comment":
-                                break;
-                            case "LineComment":
-                                break;
-                            case "Identifier":
-                                break;
-                        }
-                        break;
+                if (node.NodeType == System.Xml.XmlNodeType.Element)
+                {
+                    XElement elem = node as XElement;
+                    if (elem.Name.LocalName == "QualifiedName")
+                    {
+                        nameSpaceSyntax = SyntaxFactory.NamespaceDeclaration(TranslateQualifiedName(elem));
+                    }
                 }
             }
-            QualifiedNameSyntax qualifiedName =
-                SyntaxFactory.QualifiedName(
-                    SyntaxFactory.QualifiedName(
-                        SyntaxFactory.IdentifierName("Baz"),
-                        SyntaxFactory.IdentifierName("Bar")),
-                    SyntaxFactory.IdentifierName("Foo"));
-            NamespaceDeclarationSyntax nameSpaceSyntax = SyntaxFactory.NamespaceDeclaration(qualifiedName);
             return nameSpaceSyntax;
+        }
+
+        NameSyntax TranslateQualifiedName(XElement element)
+        {
+            List<IdentifierNameSyntax> identifiers = new List<IdentifierNameSyntax>();
+            foreach (XNode node in element.Nodes())
+            {
+                if (node.NodeType == System.Xml.XmlNodeType.Element)
+                {
+                    XElement elem = node as XElement;
+                    if (elem.Name.LocalName == "Symbol" && elem.FirstAttribute.Value == "Identifier")
+                    {
+                        var identifier = SyntaxFactory.IdentifierName(elem.Value);
+                        identifier = TranslateDefaults(elem, identifier);
+                        identifiers.Add(identifier);
+                    }
+                }
+            }
+            NameSyntax qualifiedName;
+            if (identifiers.Count >= 2)
+            {
+                qualifiedName = SyntaxFactory.QualifiedName(identifiers[0], identifiers[1]);
+                for (int i = 2; i <identifiers.Count; i++)
+                {
+                    qualifiedName = SyntaxFactory.QualifiedName(qualifiedName, identifiers[i]);
+                }
+            }
+            else if (identifiers.Count == 1)
+            {
+                qualifiedName = identifiers[0];
+            }
+            else
+            {
+                return SyntaxFactory.ParseName("Default");
+            }
+            return qualifiedName;
+
         }
     }
 }
