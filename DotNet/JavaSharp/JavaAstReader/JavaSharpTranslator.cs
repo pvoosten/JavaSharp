@@ -1,4 +1,23 @@
-﻿using Microsoft.CodeAnalysis;
+﻿/*
+ * JavaSharp, a free Java to C# translator based on ANTLRv4
+ * Copyright (C) 2014  Philip van Oosten
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * https://github.com/pvoosten
+ */
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Generic;
@@ -16,9 +35,7 @@ namespace JavaAstReader
     {
         public JavaSharpTranslator()
         {
-
         }
-
 
         public SyntaxTree Translate(XDocument javaSyntaxTreeDocument)
         {
@@ -33,7 +50,7 @@ namespace JavaAstReader
 
         private CompilationUnitSyntax TranslateCompilationUnit(XElement javaElement, CompilationUnitSyntax cSharpContext)
         {
-            CSharpSyntaxNode csSyntaxNode = TranslateDefaults(javaElement, cSharpContext);
+            CSharpSyntaxNode csSyntaxNode = cSharpContext;
             javaElement.Element("PackageDeclaration");
 
             SyntaxList<UsingDirectiveSyntax> usings = new SyntaxList<UsingDirectiveSyntax>();
@@ -90,40 +107,6 @@ namespace JavaAstReader
             return SyntaxFactory.UsingDirective(nameSpaceName);
         }
 
-        private T TranslateDefaults<T>(XNode javaContext, T csharpContext) where T : CSharpSyntaxNode
-        {
-            int triviaCount = -1;
-            SyntaxTriviaList trivias = new SyntaxTriviaList();
-            XNode currentNode = javaContext;
-            while (triviaCount < trivias.Count)
-            {
-                triviaCount = trivias.Count;
-                if (javaContext.NodeType == System.Xml.XmlNodeType.Element)
-                {
-                    XElement javaElement = javaContext as XElement;
-                    if (javaElement.Name.LocalName == "Comment")
-                    {
-                        trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.MultiLineCommentTrivia, javaElement.Value));
-                    }
-                    else if (javaElement.Name.LocalName == "LineComment")
-                    {
-                        trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.SingleLineCommentTrivia, javaElement.Value));
-                    }
-                }
-                else if (javaContext.NodeType == System.Xml.XmlNodeType.SignificantWhitespace || javaContext.NodeType == System.Xml.XmlNodeType.Whitespace)
-                {
-                    trivias.Add(SyntaxFactory.SyntaxTrivia(SyntaxKind.WhitespaceTrivia, javaContext.ToString()));
-                }
-                currentNode = currentNode.NextNode;
-            }
-            T newNode = csharpContext;
-            if (trivias.Count > 0)
-            {
-                newNode = newNode.WithTrailingTrivia(trivias);
-            }
-            return newNode;
-        }
-
         private NamespaceDeclarationSyntax TranslatePackageDeclaration(XElement element)
         {
             var nameSpaceSyntax = SyntaxFactory.NamespaceDeclaration(SyntaxFactory.IdentifierName("DefaultNameSpace"));
@@ -151,9 +134,7 @@ namespace JavaAstReader
                     XElement elem = node as XElement;
                     if (elem.Name.LocalName == "Symbol" && elem.FirstAttribute.Value == "Identifier")
                     {
-                        var identifier = SyntaxFactory.IdentifierName(elem.Value);
-                        identifier = TranslateDefaults(elem, identifier);
-                        identifiers.Add(identifier);
+                        identifiers.Add(SyntaxFactory.IdentifierName(elem.Value));
                     }
                 }
             }
@@ -175,7 +156,14 @@ namespace JavaAstReader
                 return SyntaxFactory.ParseName("Default");
             }
             return qualifiedName;
+        }
+    }
 
+    static class Extensions
+    {
+        internal static T WithTrivia<T>(this T csNode,  XNode javaNode) where T : CSharpSyntaxNode
+        {
+            throw new NotImplementedException();
         }
     }
 }

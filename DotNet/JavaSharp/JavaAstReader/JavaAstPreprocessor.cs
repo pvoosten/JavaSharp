@@ -22,20 +22,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using System.Xml;
+using System.Xml.Xsl;
 
 namespace JavaAstReader
 {
-    [Serializable]
-    public class InvalidJavaSyntaxException : Exception
+    /// <summary>
+    /// Transforms the Java AST into a form that is more easy to turn into a CSharp AST.
+    /// </summary>
+    public class JavaAstPreprocessor
     {
-        public InvalidJavaSyntaxException() { }
-        public InvalidJavaSyntaxException(XElement child) : this(string.Format("Unexpected {0} child element of {1} element", child.Name.LocalName, child.Parent.Name.LocalName)) { }
-        public InvalidJavaSyntaxException(string message) : base(message) { }
-        public InvalidJavaSyntaxException(string message, Exception inner) : base(message, inner) { }
-        protected InvalidJavaSyntaxException(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context)
-            : base(info, context) { }
+
+        private XslCompiledTransform xslt;
+
+        public JavaAstPreprocessor()
+        {
+            xslt = new XslCompiledTransform();
+            xslt.Load("JavaAstPreprocessor.xslt");
+        }
+
+        public void PrepareJavaAst(string inputUri, string resultsFile)
+        {
+            xslt.Transform(inputUri, resultsFile);
+        }
+
+        public void PrepareJavaAst(XmlReader xmlReader, XmlWriter xmlWriter)
+        {
+            XsltArgumentList args = new XsltArgumentList();    
+            xslt.Transform(xmlReader, xmlWriter);
+        }
+
     }
 }
