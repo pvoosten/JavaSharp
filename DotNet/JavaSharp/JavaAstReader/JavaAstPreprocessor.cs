@@ -51,6 +51,5 @@ namespace JavaAstReader
             XsltArgumentList args = new XsltArgumentList();    
             xslt.Transform(xmlReader, xmlWriter);
         }
-
     }
 }

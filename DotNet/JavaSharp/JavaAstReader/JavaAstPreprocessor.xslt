@@ -29,21 +29,52 @@ https://github.com/pvoosten
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="LineComment|Comment">
+  <xsl:template match="CompilationUnit">
+    <CSharp>
+      <xsl:apply-templates select="./TypeDeclaration/preceding-sibling::*" />
+      <xsl:text>
+namespace </xsl:text>
+      <xsl:choose>
+        <xsl:when test="./PackageDeclaration">
+          <xsl:apply-templates select="PackageDeclaration/QualifiedName/*" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>Default</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:text>
+{
+    </xsl:text>
+      <xsl:apply-templates select="./TypeDeclaration" />
+      <xsl:text>
+}
+</xsl:text>
+      <xsl:apply-templates select="./TypeDeclaration[last()]/following-sibling::*" />
+    </CSharp>
+  </xsl:template>
+
+  <xsl:template match="LineComment">
+    <xsl:value-of select="text()"/>
+    <xsl:text>
+</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="Comment">
     <xsl:value-of select="text()"/>
   </xsl:template>
 
   <xsl:template match="ImportDeclaration">
+    <xsl:text>
+</xsl:text>
     <Using>
-      <xsl:apply-templates select="./QualifiedName" />
+      <xsl:apply-templates select="./QualifiedName/*" />
     </Using>
+    <xsl:text>
+</xsl:text>
   </xsl:template>
 
-  <xsl:template match="PackageDeclaration">
-    <Namespace>
-    <xsl:comment>pkg must be turned into name space</xsl:comment>
-    <xsl:apply-templates/>
-    </Namespace>
+  <xsl:template match="ClassOrInterfaceModifier">
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="Symbol">
@@ -54,7 +85,15 @@ https://github.com/pvoosten
     <xsl:text>}</xsl:text>
   </xsl:template>
 
+  <xsl:template match="Symbol[@type='HIDDEN']">
+    <xsl:text>
+</xsl:text>
+  </xsl:template>
+
   <xsl:template match="Symbol[@type='DOT']|Symbol[@type='SEMI']|Symbol[@type='RPAREN']|Symbol[@type='LPAREN']|Symbol[@type='RBRACE']|Symbol[@type='LBRACE']|Symbol[@type='COMMA']|Symbol[@type='ASSIGN']|Symbol[@type='Identifier']">
+    <xsl:value-of select="text()"/>
+  </xsl:template>
+  <xsl:template match="Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']">
     <xsl:value-of select="text()"/>
   </xsl:template>
 
