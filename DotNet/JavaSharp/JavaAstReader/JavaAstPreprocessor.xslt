@@ -23,12 +23,6 @@ https://github.com/pvoosten
 >
   <xsl:output method="xml" indent="yes"/>
 
-  <xsl:template match="@* | node()">
-    <xsl:copy>
-      <xsl:apply-templates select="@* | node()"/>
-    </xsl:copy>
-  </xsl:template>
-
   <xsl:template match="CompilationUnit">
     <CSharp>
       <xsl:apply-templates select="./TypeDeclaration/preceding-sibling::*" />
@@ -53,27 +47,42 @@ namespace </xsl:text>
     </CSharp>
   </xsl:template>
 
+  <!-- toss the throws clause from method declarations -->
+  <xsl:template match="MethodDeclaration">
+    <xsl:apply-templates select="./*[not(self::Symbol[@type='THROWS'])][not(self::QualifiedNameList)]" />
+  </xsl:template>
+
+  <!-- toss package declaration -->
+  <xsl:template match="PackageDeclaration"/>
+
+  <!-- copy line comments, including newline -->
   <xsl:template match="LineComment">
     <xsl:value-of select="text()"/>
     <xsl:text>
 </xsl:text>
   </xsl:template>
 
+  <!-- copy comments -->
   <xsl:template match="Comment">
-    <xsl:value-of select="text()"/>
+    <xsl:value-of select="text()" />
   </xsl:template>
 
+  <!-- translate import statements to using statements -->
   <xsl:template match="ImportDeclaration">
     <xsl:text>
-</xsl:text>
-    <Using>
-      <xsl:apply-templates select="./QualifiedName/*" />
-    </Using>
-    <xsl:text>
+using </xsl:text>
+    <xsl:apply-templates select="./QualifiedName/*" />
+    <xsl:text>;
 </xsl:text>
   </xsl:template>
 
-  <xsl:template match="ClassOrInterfaceModifier">
+  <xsl:template match="QualifiedName|ClassOrInterfaceModifier|BlockStatement|LocalVariableDeclarationStatement|ClassOrInterfaceType|VariableDeclarators|VariableDeclarator|VariableDeclaratorId|Literal">
+    <xsl:apply-templates />
+  </xsl:template>
+  <xsl:template match="Statement|StatementExpression|Expression|Primary|ExpressionList|MethodBody|ClassBody|ClassBodyDeclaration|TypeDeclaration|MemberDeclaration|LocalVariableDeclaration|Type|VariableInitializer">
+    <xsl:apply-templates />
+  </xsl:template>
+  <xsl:template match="FormalParameters|FormalParameter|FormalParameterList|Creator|CreatedName|ClassCreatorRest|Arguments|Block|ClassDeclaration|Modifier|CatchClause|CatchType">
     <xsl:apply-templates />
   </xsl:template>
 
@@ -93,8 +102,14 @@ namespace </xsl:text>
   <xsl:template match="Symbol[@type='DOT']|Symbol[@type='SEMI']|Symbol[@type='RPAREN']|Symbol[@type='LPAREN']|Symbol[@type='RBRACE']|Symbol[@type='LBRACE']|Symbol[@type='COMMA']|Symbol[@type='ASSIGN']|Symbol[@type='Identifier']">
     <xsl:value-of select="text()"/>
   </xsl:template>
-  <xsl:template match="Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']">
+  <xsl:template match="Symbol[@type='PRIVATE']|Symbol[@type='TRY']|Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']|Symbol[@type='StringLiteral']|Symbol[@type='STATIC']|Symbol[@type='VOID']|Symbol[@type='CATCH']|Symbol[@type='NullLiteral']">
     <xsl:value-of select="text()"/>
+  </xsl:template>
+
+  <xsl:template match="@* | node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>
