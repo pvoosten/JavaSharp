@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="InvalidJavaSyntaxException.cs" />
     <Compile Include="JavaAstPreprocessor.cs" />
-    <Compile Include="JavaSharpTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

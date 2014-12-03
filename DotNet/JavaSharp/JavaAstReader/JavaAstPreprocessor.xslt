@@ -52,6 +52,11 @@ namespace </xsl:text>
     <xsl:apply-templates select="./*[not(self::Symbol[@type='THROWS'])][not(self::QualifiedNameList)]" />
   </xsl:template>
 
+  <xsl:template match="Symbol[@type='VOID']">
+    <xsl:apply-templates />
+    <xsl:text> </xsl:text>
+  </xsl:template>
+
   <!-- toss package declaration -->
   <xsl:template match="PackageDeclaration"/>
 
@@ -99,10 +104,10 @@ using </xsl:text>
 </xsl:text>
   </xsl:template>
 
-  <xsl:template match="Symbol[@type='DOT']|Symbol[@type='SEMI']|Symbol[@type='RPAREN']|Symbol[@type='LPAREN']|Symbol[@type='RBRACE']|Symbol[@type='LBRACE']|Symbol[@type='COMMA']|Symbol[@type='ASSIGN']|Symbol[@type='Identifier']">
+  <xsl:template match="Symbol[@type='DOT']|Symbol[@type='SEMI']|Symbol[@type='RPAREN']|Symbol[@type='LPAREN']|Symbol[@type='RBRACE']|Symbol[@type='LBRACE']|Symbol[@type='COMMA']|Symbol[@type='ASSIGN']">
     <xsl:value-of select="text()"/>
   </xsl:template>
-  <xsl:template match="Symbol[@type='PRIVATE']|Symbol[@type='TRY']|Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']|Symbol[@type='StringLiteral']|Symbol[@type='STATIC']|Symbol[@type='VOID']|Symbol[@type='CATCH']|Symbol[@type='NullLiteral']">
+  <xsl:template match="Symbol[@type='PRIVATE']|Symbol[@type='TRY']|Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']|Symbol[@type='StringLiteral']|Symbol[@type='STATIC']|Symbol[@type='Identifier']|Symbol[@type='CATCH']|Symbol[@type='NullLiteral']">
     <xsl:value-of select="text()"/>
   </xsl:template>
 

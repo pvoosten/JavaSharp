@@ -28,6 +28,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -35,26 +36,16 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-
             var reader = XmlReader.Create(System.IO.File.OpenRead(@"D:\workspace\JavaSharp\JavaSharp\src\main\java\javasharp\Tool.xml"));
-            XmlWriter writer = XmlWriter.Create(Console.Out);
-            new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
-
-
-            //            CompilationUnitSyntax cu = SyntaxFactory.ParseCompilationUnit(@"
-            //using System;
-            //using System.Xml.Ble.Bla;
-
-            //namespace Foo.Bar.Baz
-            //{
-            //}
-            //", options: new CSharpParseOptions(kind: SourceCodeKind.Regular));
-
-            //            var translator = new JavaAstReader.JavaSharpTranslator();
-            //            var xDoc = XDocument.Load(reader, LoadOptions.PreserveWhitespace);
-            //            SyntaxTree syntaxTree = translator.Translate(xDoc);
-            //            Console.WriteLine(syntaxTree.GetText());
-
+            using (MemoryStream stream = new MemoryStream()) {
+                XmlWriter writer = XmlWriter.Create(stream);
+                new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
+                XDocument preprocessedJava = XDocument.Load(new MemoryStream(stream.GetBuffer()));
+                SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(preprocessedJava.Document.Root.Value);
+                var root = tree.GetRoot().NormalizeWhitespace();
+                tree = SyntaxFactory.SyntaxTree(root);
+                Console.WriteLine(tree.GetText().ToString());
+            }
             Console.ReadKey();
         }
     }
