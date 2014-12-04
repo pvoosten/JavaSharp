@@ -37,8 +37,11 @@ namespace JavaAstReader
 
         public JavaAstPreprocessor()
         {
+            string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            path = System.IO.Path.GetDirectoryName(path);
+            path = System.IO.Path.Combine(path, "JavaAstPreprocessor.xslt");
             xslt = new XslCompiledTransform();
-            xslt.Load("JavaAstPreprocessor.xslt");
+            xslt.Load(path);
         }
 
         public void PrepareJavaAst(string inputUri, string resultsFile)

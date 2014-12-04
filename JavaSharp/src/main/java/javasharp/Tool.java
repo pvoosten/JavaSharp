@@ -1,6 +1,4 @@
-
-
- /*
+/*
  * JavaSharp, a free Java to C# translator based on ANTLRv4
  * Copyright (C) 2014  Philip van Oosten
  * 
@@ -23,8 +21,8 @@ package javasharp;
 
 import java.io./* a comment withing a qualified name*/File;
 import java.util.logging.Level/* after a qualified name */;
-import /* Before a qualified name */java.util.logging.Logger;
-import javax.xml.transform . Result; // added white space within qualified name on purpose
+import /* Before a qualified name */ java.util.logging.Logger;
+import javax.xml.transform.Result; // added white space within qualified name on purpose
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -41,21 +39,26 @@ public class Tool {
 
     private void convertJavaToXmlSyntaxTree(String javaSourceFile, String xmlOutputFile) {
         try {
-        Transformer transformer = TransformerFactory.newInstance().newTransformer();
-        SyntaxTreeXmlFilter xmlEmitter = new SyntaxTreeXmlFilter();
-        Source source = new SAXSource(xmlEmitter, new InputSource(javaSourceFile));
-        Result result = new StreamResult(new File(xmlOutputFile));
-        transformer.transform(source, result);
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            SyntaxTreeXmlFilter xmlEmitter = new SyntaxTreeXmlFilter();
+            Source source = new SAXSource(xmlEmitter, new InputSource(javaSourceFile));
+            Result result = new StreamResult(new File(xmlOutputFile));
+            transformer.transform(source, result);
         } catch (TransformerException ex) {
             Logger.getLogger(Tool.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public static void main(String[] args) throws Exception {
-        Tool tool = new Tool();
-        String javaInputFile = "D:\\workspace\\JavaSharp\\JavaSharp\\src\\main\\java\\javasharp\\Tool.java";
-        String xmlOutputFile = "D:\\workspace\\JavaSharp\\JavaSharp\\src\\main\\java\\javasharp\\Tool.xml";
-        tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
+        if (args.length == 2) {
+            Tool tool = new Tool();
+            String javaInputFile = args[0];
+            String xmlOutputFile = args[1];
+            tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
+        } else {
+            System.err.println("2 arguments required: <java input file> <xml output file>");
+            System.exit(1);
+        }
     }
 }
 

@@ -36,17 +36,26 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            var reader = XmlReader.Create(System.IO.File.OpenRead(@"D:\workspace\JavaSharp\JavaSharp\src\main\java\javasharp\Tool.xml"));
-            using (MemoryStream stream = new MemoryStream()) {
+            if (args.Length != 2)
+            {
+                Console.Error.WriteLine("Expected 2 parameters: <java ast xml file> <c sharp target file>");
+                return;
+            }
+
+            string javaAstFile = args[0];
+            string csFile = args[1];
+
+            var reader = XmlReader.Create(System.IO.File.OpenRead(javaAstFile));
+            using (MemoryStream stream = new MemoryStream())
+            {
                 XmlWriter writer = XmlWriter.Create(stream);
                 new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
                 XDocument preprocessedJava = XDocument.Load(new MemoryStream(stream.GetBuffer()));
                 SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(preprocessedJava.Document.Root.Value);
                 var root = tree.GetRoot().NormalizeWhitespace();
                 tree = SyntaxFactory.SyntaxTree(root);
-                Console.WriteLine(tree.GetText().ToString());
+                File.WriteAllText(csFile, tree.GetText().ToString());
             }
-            Console.ReadKey();
         }
     }
 }
