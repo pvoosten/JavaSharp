@@ -52,6 +52,10 @@ namespace </xsl:text>
     <xsl:apply-templates select="./*[not(self::Symbol[@type='THROWS'])][not(self::QualifiedNameList)]" />
   </xsl:template>
 
+  <xsl:template match="*/ClassBodyDeclaration/Modifier/ClassOrInterfaceModifier/Symbol[type='FINAL']">
+    <xsl:text>sealed</xsl:text>
+  </xsl:template>
+
   <xsl:template match="Symbol[@type='VOID']">
     <xsl:apply-templates />
     <xsl:text> </xsl:text>

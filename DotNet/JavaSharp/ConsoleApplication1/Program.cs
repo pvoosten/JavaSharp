@@ -34,6 +34,9 @@ namespace ConsoleApplication1
 {
     class Program
     {
+
+        private const int ERROR_CONTEXT_LINES = 2;
+
         static void Main(string[] args)
         {
             if (args.Length != 2)
@@ -47,14 +50,38 @@ namespace ConsoleApplication1
 
             var reader = XmlReader.Create(System.IO.File.OpenRead(javaAstFile));
             using (MemoryStream stream = new MemoryStream())
-            {
-                XmlWriter writer = XmlWriter.Create(stream);
-                new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
-                XDocument preprocessedJava = XDocument.Load(new MemoryStream(stream.GetBuffer()));
-                SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(preprocessedJava.Document.Root.Value);
-                var root = tree.GetRoot().NormalizeWhitespace();
-                tree = SyntaxFactory.SyntaxTree(root);
-                File.WriteAllText(csFile, tree.GetText().ToString());
+            { 
+                try
+                {
+                    XmlWriter writer = XmlWriter.Create(stream);
+                    new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
+                    var newStream = new MemoryStream(stream.GetBuffer());
+                    newStream.SetLength(stream.Length);
+                    XDocument preprocessedJava = XDocument.Load(newStream);
+                    SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(preprocessedJava.Document.Root.Value);
+                    var root = tree.GetRoot().NormalizeWhitespace();
+                    tree = SyntaxFactory.SyntaxTree(root);
+                    File.WriteAllText(csFile, tree.GetText().ToString());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(javaAstFile + " ==> " + csFile);
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine(ex.StackTrace);
+                    Console.WriteLine(string.Join("\n", ex.Data.Keys.Cast<object>()
+                        .Select(k => "[" + k + "]: " + ex.Data[k])));
+                    XmlException xmlEx = ex as XmlException;
+                    if (xmlEx != null)
+                    {
+                        var lines = File.ReadAllLines(javaAstFile);
+                        int startLine = Math.Max(0, xmlEx.LineNumber - ERROR_CONTEXT_LINES);
+                        int endLine = Math.Min(lines.Length - 1, xmlEx.LineNumber + ERROR_CONTEXT_LINES);
+                        for (int i = startLine; i <= endLine; i++)
+                        {
+                            Console.WriteLine("" + i + "\t" + lines[i]);
+                        }
+                    }
+                }
             }
         }
     }
