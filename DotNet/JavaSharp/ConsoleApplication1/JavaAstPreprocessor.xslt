@@ -85,7 +85,7 @@ using </xsl:text>
 </xsl:text>
   </xsl:template>
 
-  <xsl:template match="QualifiedName|ClassOrInterfaceModifier|BlockStatement|LocalVariableDeclarationStatement|ClassOrInterfaceType|VariableDeclarators|VariableDeclarator|VariableDeclaratorId|Literal">
+  <xsl:template match="QualifiedName|BlockStatement|LocalVariableDeclarationStatement|ClassOrInterfaceType|VariableDeclarators|VariableDeclarator|VariableDeclaratorId|Literal">
     <xsl:apply-templates />
   </xsl:template>
   <xsl:template match="Statement|StatementExpression|Expression|Primary|ExpressionList|MethodBody|ClassBody|ClassBodyDeclaration|TypeDeclaration|MemberDeclaration|LocalVariableDeclaration|Type|VariableInitializer">
@@ -112,6 +112,9 @@ using </xsl:text>
     <xsl:value-of select="text()"/>
   </xsl:template>
   <xsl:template match="Symbol[@type='PRIVATE']|Symbol[@type='TRY']|Symbol[@type='PUBLIC']|Symbol[@type='CLASS']|Symbol[@type='LBRACK']|Symbol[@type='RBRACK']|Symbol[@type='NEW']|Symbol[@type='StringLiteral']|Symbol[@type='STATIC']|Symbol[@type='Identifier']|Symbol[@type='CATCH']|Symbol[@type='NullLiteral']">
+    <xsl:value-of select="text()"/>
+  </xsl:template>
+  <xsl:template match="Symbol[@type='LT']|Symbol[@type='GT']|Symbol[@type='INT']|Symbol[@type='THIS']|Symbol[@type='SUB']|Symbol[@type='IntegerLiteral']|Symbol[@type='RETURN']|Symbol[@type='THROW']|Symbol[@type='IF']|Symbol[@type='AND']|Symbol[@type='NOTEQUAL']|Symbol[@type='ADD']|Symbol[@type='INC']|Symbol[@type='EQUAL']|Symbol[@type='ELSE']|Symbol[@type='LE']|Symbol[@type='QUESTION']|Symbol[@type='COLON']">
     <xsl:value-of select="text()"/>
   </xsl:template>
 

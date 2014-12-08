@@ -11,37 +11,30 @@ namespace javasharp
      *
      * @param <T> The return type of the visit operation. Use {@link Void} for
      * operations with no return type.
-     */    public class JavaBaseVisitor
+     */    public class JavaBaseVisitor<T>
     {
-        LT | <    }
+        EXTENDS |extends
+    }
 
-    T {
-    GT | >} {
+    AbstractParseTreeVisitor<T> {
+    IMPLEMENTS |implements
+}
 
-EXTENDS |extends }
-AbstractParseTreeVisitor {
-LT | < }T {
-GT | > } {IMPLEMENTS |implements }
-JavaVisitor {
-LT | < }T {
-GT | > } { 
+JavaVisitor<T> { 
 /**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {AT | @ }Override public TvisitMemberDeclaration(
+	 */ {
+AT | @ }Overridepublic TvisitMemberDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.MemberDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -50,18 +43,14 @@ NotNull JavaParser.MemberDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitDefaultValue(
+AT | @ }Overridepublic TvisitDefaultValue(
 {
     AT |  @
 }
 
 NotNull JavaParser.DefaultValueContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -70,18 +59,14 @@ NotNull JavaParser.DefaultValueContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationTypeElementDeclaration(
+AT | @ }Overridepublic TvisitAnnotationTypeElementDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -90,18 +75,14 @@ NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitType(
+AT | @ }Overridepublic TvisitType(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -110,18 +91,14 @@ NotNull JavaParser.TypeContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationTypeBody(
+AT | @ }Overridepublic TvisitAnnotationTypeBody(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationTypeBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -130,18 +107,14 @@ NotNull JavaParser.AnnotationTypeBodyContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitGenericInterfaceMethodDeclaration(
+AT | @ }Overridepublic TvisitGenericInterfaceMethodDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -150,18 +123,14 @@ NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassBodyDeclaration(
+AT | @ }Overridepublic TvisitClassBodyDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassBodyDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -170,18 +139,14 @@ NotNull JavaParser.ClassBodyDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitBlock(
+AT | @ }Overridepublic TvisitBlock(
 {
     AT |  @
 }
 
 NotNull JavaParser.BlockContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -190,18 +155,14 @@ NotNull JavaParser.BlockContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnumBodyDeclarations(
+AT | @ }Overridepublic TvisitEnumBodyDeclarations(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnumBodyDeclarationsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -210,18 +171,14 @@ NotNull JavaParser.EnumBodyDeclarationsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitForUpdate(
+AT | @ }Overridepublic TvisitForUpdate(
 {
     AT |  @
 }
 
 NotNull JavaParser.ForUpdateContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -230,18 +187,14 @@ NotNull JavaParser.ForUpdateContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnhancedForControl(
+AT | @ }Overridepublic TvisitEnhancedForControl(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnhancedForControlContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -250,18 +203,14 @@ NotNull JavaParser.EnhancedForControlContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationConstantRest(
+AT | @ }Overridepublic TvisitAnnotationConstantRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationConstantRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -270,18 +219,14 @@ NotNull JavaParser.AnnotationConstantRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitExplicitGenericInvocation(
+AT | @ }Overridepublic TvisitExplicitGenericInvocation(
 {
     AT |  @
 }
 
 NotNull JavaParser.ExplicitGenericInvocationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -290,18 +235,14 @@ NotNull JavaParser.ExplicitGenericInvocationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitNonWildcardTypeArgumentsOrDiamond(
+AT | @ }Overridepublic TvisitNonWildcardTypeArgumentsOrDiamond(
 {
     AT |  @
 }
 
 NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -310,18 +251,14 @@ NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitExpressionList(
+AT | @ }Overridepublic TvisitExpressionList(
 {
     AT |  @
 }
 
 NotNull JavaParser.ExpressionListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -330,18 +267,14 @@ NotNull JavaParser.ExpressionListContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationTypeElementRest(
+AT | @ }Overridepublic TvisitAnnotationTypeElementRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationTypeElementRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -350,18 +283,14 @@ NotNull JavaParser.AnnotationTypeElementRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassOrInterfaceType(
+AT | @ }Overridepublic TvisitClassOrInterfaceType(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -370,18 +299,14 @@ NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeBound(
+AT | @ }Overridepublic TvisitTypeBound(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeBoundContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -390,18 +315,14 @@ NotNull JavaParser.TypeBoundContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitVariableDeclaratorId(
+AT | @ }Overridepublic TvisitVariableDeclaratorId(
 {
     AT |  @
 }
 
 NotNull JavaParser.VariableDeclaratorIdContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -410,18 +331,14 @@ NotNull JavaParser.VariableDeclaratorIdContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitPrimary(
+AT | @ }Overridepublic TvisitPrimary(
 {
     AT |  @
 }
 
 NotNull JavaParser.PrimaryContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -430,18 +347,14 @@ NotNull JavaParser.PrimaryContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassCreatorRest(
+AT | @ }Overridepublic TvisitClassCreatorRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassCreatorRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -450,18 +363,14 @@ NotNull JavaParser.ClassCreatorRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInterfaceBodyDeclaration(
+AT | @ }Overridepublic TvisitInterfaceBodyDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -470,18 +379,14 @@ NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeArguments(
+AT | @ }Overridepublic TvisitTypeArguments(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -490,18 +395,14 @@ NotNull JavaParser.TypeArgumentsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationName(
+AT | @ }Overridepublic TvisitAnnotationName(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -510,18 +411,14 @@ NotNull JavaParser.AnnotationNameContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitFinallyBlock(
+AT | @ }Overridepublic TvisitFinallyBlock(
 {
     AT |  @
 }
 
 NotNull JavaParser.FinallyBlockContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -530,18 +427,14 @@ NotNull JavaParser.FinallyBlockContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeParameters(
+AT | @ }Overridepublic TvisitTypeParameters(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeParametersContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -550,18 +443,14 @@ NotNull JavaParser.TypeParametersContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitLastFormalParameter(
+AT | @ }Overridepublic TvisitLastFormalParameter(
 {
     AT |  @
 }
 
 NotNull JavaParser.LastFormalParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -570,18 +459,14 @@ NotNull JavaParser.LastFormalParameterContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitConstructorBody(
+AT | @ }Overridepublic TvisitConstructorBody(
 {
     AT |  @
 }
 
 NotNull JavaParser.ConstructorBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -590,18 +475,14 @@ NotNull JavaParser.ConstructorBodyContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitLiteral(
+AT | @ }Overridepublic TvisitLiteral(
 {
     AT |  @
 }
 
 NotNull JavaParser.LiteralContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -610,18 +491,14 @@ NotNull JavaParser.LiteralContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationMethodOrConstantRest(
+AT | @ }Overridepublic TvisitAnnotationMethodOrConstantRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -630,18 +507,14 @@ NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitCatchClause(
+AT | @ }Overridepublic TvisitCatchClause(
 {
     AT |  @
 }
 
 NotNull JavaParser.CatchClauseContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -650,18 +523,14 @@ NotNull JavaParser.CatchClauseContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitVariableDeclarator(
+AT | @ }Overridepublic TvisitVariableDeclarator(
 {
     AT |  @
 }
 
 NotNull JavaParser.VariableDeclaratorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -670,18 +539,14 @@ NotNull JavaParser.VariableDeclaratorContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeList(
+AT | @ }Overridepublic TvisitTypeList(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -690,18 +555,14 @@ NotNull JavaParser.TypeListContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnumConstants(
+AT | @ }Overridepublic TvisitEnumConstants(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnumConstantsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -710,18 +571,14 @@ NotNull JavaParser.EnumConstantsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassBody(
+AT | @ }Overridepublic TvisitClassBody(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -730,18 +587,14 @@ NotNull JavaParser.ClassBodyContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitCreatedName(
+AT | @ }Overridepublic TvisitCreatedName(
 {
     AT |  @
 }
 
 NotNull JavaParser.CreatedNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -750,18 +603,14 @@ NotNull JavaParser.CreatedNameContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnumDeclaration(
+AT | @ }Overridepublic TvisitEnumDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnumDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -770,18 +619,14 @@ NotNull JavaParser.EnumDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitFormalParameter(
+AT | @ }Overridepublic TvisitFormalParameter(
 {
     AT |  @
 }
 
 NotNull JavaParser.FormalParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -790,18 +635,14 @@ NotNull JavaParser.FormalParameterContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitParExpression(
+AT | @ }Overridepublic TvisitParExpression(
 {
     AT |  @
 }
 
 NotNull JavaParser.ParExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -810,18 +651,14 @@ NotNull JavaParser.ParExpressionContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotation(
+AT | @ }Overridepublic TvisitAnnotation(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -830,18 +667,14 @@ NotNull JavaParser.AnnotationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitVariableInitializer(
+AT | @ }Overridepublic TvisitVariableInitializer(
 {
     AT |  @
 }
 
 NotNull JavaParser.VariableInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -850,18 +683,14 @@ NotNull JavaParser.VariableInitializerContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitElementValueArrayInitializer(
+AT | @ }Overridepublic TvisitElementValueArrayInitializer(
 {
     AT |  @
 }
 
 NotNull JavaParser.ElementValueArrayInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -870,18 +699,14 @@ NotNull JavaParser.ElementValueArrayInitializerContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitCreator(
+AT | @ }Overridepublic TvisitCreator(
 {
     AT |  @
 }
 
 NotNull JavaParser.CreatorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -890,18 +715,14 @@ NotNull JavaParser.CreatorContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitArrayCreatorRest(
+AT | @ }Overridepublic TvisitArrayCreatorRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.ArrayCreatorRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -910,18 +731,14 @@ NotNull JavaParser.ArrayCreatorRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitExpression(
+AT | @ }Overridepublic TvisitExpression(
 {
     AT |  @
 }
 
 NotNull JavaParser.ExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -930,18 +747,14 @@ NotNull JavaParser.ExpressionContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitConstantExpression(
+AT | @ }Overridepublic TvisitConstantExpression(
 {
     AT |  @
 }
 
 NotNull JavaParser.ConstantExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -950,18 +763,14 @@ NotNull JavaParser.ConstantExpressionContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitQualifiedNameList(
+AT | @ }Overridepublic TvisitQualifiedNameList(
 {
     AT |  @
 }
 
 NotNull JavaParser.QualifiedNameListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -970,18 +779,14 @@ NotNull JavaParser.QualifiedNameListContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitConstructorDeclaration(
+AT | @ }Overridepublic TvisitConstructorDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.ConstructorDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -990,18 +795,14 @@ NotNull JavaParser.ConstructorDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitForControl(
+AT | @ }Overridepublic TvisitForControl(
 {
     AT |  @
 }
 
 NotNull JavaParser.ForControlContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1010,18 +811,14 @@ NotNull JavaParser.ForControlContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitSuperSuffix(
+AT | @ }Overridepublic TvisitSuperSuffix(
 {
     AT |  @
 }
 
 NotNull JavaParser.SuperSuffixContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1030,18 +827,14 @@ NotNull JavaParser.SuperSuffixContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitVariableDeclarators(
+AT | @ }Overridepublic TvisitVariableDeclarators(
 {
     AT |  @
 }
 
 NotNull JavaParser.VariableDeclaratorsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1050,18 +843,14 @@ NotNull JavaParser.VariableDeclaratorsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitCatchType(
+AT | @ }Overridepublic TvisitCatchType(
 {
     AT |  @
 }
 
 NotNull JavaParser.CatchTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1070,18 +859,14 @@ NotNull JavaParser.CatchTypeContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassOrInterfaceModifier(
+AT | @ }Overridepublic TvisitClassOrInterfaceModifier(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1090,18 +875,14 @@ NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnumConstantName(
+AT | @ }Overridepublic TvisitEnumConstantName(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnumConstantNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1110,18 +891,14 @@ NotNull JavaParser.EnumConstantNameContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitModifier(
+AT | @ }Overridepublic TvisitModifier(
 {
     AT |  @
 }
 
 NotNull JavaParser.ModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1130,18 +907,14 @@ NotNull JavaParser.ModifierContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInnerCreator(
+AT | @ }Overridepublic TvisitInnerCreator(
 {
     AT |  @
 }
 
 NotNull JavaParser.InnerCreatorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1150,18 +923,14 @@ NotNull JavaParser.InnerCreatorContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitExplicitGenericInvocationSuffix(
+AT | @ }Overridepublic TvisitExplicitGenericInvocationSuffix(
 {
     AT |  @
 }
 
 NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1170,18 +939,14 @@ NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitVariableModifier(
+AT | @ }Overridepublic TvisitVariableModifier(
 {
     AT |  @
 }
 
 NotNull JavaParser.VariableModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1190,18 +955,14 @@ NotNull JavaParser.VariableModifierContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitElementValuePair(
+AT | @ }Overridepublic TvisitElementValuePair(
 {
     AT |  @
 }
 
 NotNull JavaParser.ElementValuePairContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1210,18 +971,14 @@ NotNull JavaParser.ElementValuePairContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitArrayInitializer(
+AT | @ }Overridepublic TvisitArrayInitializer(
 {
     AT |  @
 }
 
 NotNull JavaParser.ArrayInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1230,18 +987,14 @@ NotNull JavaParser.ArrayInitializerContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitElementValue(
+AT | @ }Overridepublic TvisitElementValue(
 {
     AT |  @
 }
 
 NotNull JavaParser.ElementValueContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1250,18 +1003,14 @@ NotNull JavaParser.ElementValueContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitConstDeclaration(
+AT | @ }Overridepublic TvisitConstDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.ConstDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1270,18 +1019,14 @@ NotNull JavaParser.ConstDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitResource(
+AT | @ }Overridepublic TvisitResource(
 {
     AT |  @
 }
 
 NotNull JavaParser.ResourceContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1290,18 +1035,14 @@ NotNull JavaParser.ResourceContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitQualifiedName(
+AT | @ }Overridepublic TvisitQualifiedName(
 {
     AT |  @
 }
 
 NotNull JavaParser.QualifiedNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1310,18 +1051,14 @@ NotNull JavaParser.QualifiedNameContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitResourceSpecification(
+AT | @ }Overridepublic TvisitResourceSpecification(
 {
     AT |  @
 }
 
 NotNull JavaParser.ResourceSpecificationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1330,18 +1067,14 @@ NotNull JavaParser.ResourceSpecificationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitFormalParameterList(
+AT | @ }Overridepublic TvisitFormalParameterList(
 {
     AT |  @
 }
 
 NotNull JavaParser.FormalParameterListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1350,18 +1083,14 @@ NotNull JavaParser.FormalParameterListContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationTypeDeclaration(
+AT | @ }Overridepublic TvisitAnnotationTypeDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1370,18 +1099,14 @@ NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitCompilationUnit(
+AT | @ }Overridepublic TvisitCompilationUnit(
 {
     AT |  @
 }
 
 NotNull JavaParser.CompilationUnitContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1390,18 +1115,14 @@ NotNull JavaParser.CompilationUnitContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitAnnotationMethodRest(
+AT | @ }Overridepublic TvisitAnnotationMethodRest(
 {
     AT |  @
 }
 
 NotNull JavaParser.AnnotationMethodRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1410,18 +1131,14 @@ NotNull JavaParser.AnnotationMethodRestContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitSwitchBlockStatementGroup(
+AT | @ }Overridepublic TvisitSwitchBlockStatementGroup(
 {
     AT |  @
 }
 
 NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1430,18 +1147,14 @@ NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeParameter(
+AT | @ }Overridepublic TvisitTypeParameter(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1450,18 +1163,14 @@ NotNull JavaParser.TypeParameterContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInterfaceBody(
+AT | @ }Overridepublic TvisitInterfaceBody(
 {
     AT |  @
 }
 
 NotNull JavaParser.InterfaceBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1470,18 +1179,14 @@ NotNull JavaParser.InterfaceBodyContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitMethodDeclaration(
+AT | @ }Overridepublic TvisitMethodDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.MethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1490,18 +1195,14 @@ NotNull JavaParser.MethodDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitMethodBody(
+AT | @ }Overridepublic TvisitMethodBody(
 {
     AT |  @
 }
 
 NotNull JavaParser.MethodBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1510,18 +1211,14 @@ NotNull JavaParser.MethodBodyContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeArgument(
+AT | @ }Overridepublic TvisitTypeArgument(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeArgumentContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1530,18 +1227,14 @@ NotNull JavaParser.TypeArgumentContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeDeclaration(
+AT | @ }Overridepublic TvisitTypeDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1550,18 +1243,14 @@ NotNull JavaParser.TypeDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitGenericConstructorDeclaration(
+AT | @ }Overridepublic TvisitGenericConstructorDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.GenericConstructorDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1570,18 +1259,14 @@ NotNull JavaParser.GenericConstructorDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitClassDeclaration(
+AT | @ }Overridepublic TvisitClassDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.ClassDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1590,18 +1275,14 @@ NotNull JavaParser.ClassDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitEnumConstant(
+AT | @ }Overridepublic TvisitEnumConstant(
 {
     AT |  @
 }
 
 NotNull JavaParser.EnumConstantContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1610,18 +1291,14 @@ NotNull JavaParser.EnumConstantContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitStatement(
+AT | @ }Overridepublic TvisitStatement(
 {
     AT |  @
 }
 
 NotNull JavaParser.StatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1630,18 +1307,14 @@ NotNull JavaParser.StatementContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitImportDeclaration(
+AT | @ }Overridepublic TvisitImportDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.ImportDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1650,18 +1323,14 @@ NotNull JavaParser.ImportDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitPrimitiveType(
+AT | @ }Overridepublic TvisitPrimitiveType(
 {
     AT |  @
 }
 
 NotNull JavaParser.PrimitiveTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1670,18 +1339,14 @@ NotNull JavaParser.PrimitiveTypeContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInterfaceDeclaration(
+AT | @ }Overridepublic TvisitInterfaceDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.InterfaceDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1690,18 +1355,14 @@ NotNull JavaParser.InterfaceDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitLocalVariableDeclarationStatement(
+AT | @ }Overridepublic TvisitLocalVariableDeclarationStatement(
 {
     AT |  @
 }
 
 NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1710,18 +1371,14 @@ NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitBlockStatement(
+AT | @ }Overridepublic TvisitBlockStatement(
 {
     AT |  @
 }
 
 NotNull JavaParser.BlockStatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1730,18 +1387,14 @@ NotNull JavaParser.BlockStatementContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitFieldDeclaration(
+AT | @ }Overridepublic TvisitFieldDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.FieldDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1750,18 +1403,14 @@ NotNull JavaParser.FieldDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitConstantDeclarator(
+AT | @ }Overridepublic TvisitConstantDeclarator(
 {
     AT |  @
 }
 
 NotNull JavaParser.ConstantDeclaratorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1770,18 +1419,14 @@ NotNull JavaParser.ConstantDeclaratorContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitResources(
+AT | @ }Overridepublic TvisitResources(
 {
     AT |  @
 }
 
 NotNull JavaParser.ResourcesContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1790,18 +1435,14 @@ NotNull JavaParser.ResourcesContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitStatementExpression(
+AT | @ }Overridepublic TvisitStatementExpression(
 {
     AT |  @
 }
 
 NotNull JavaParser.StatementExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1810,18 +1451,14 @@ NotNull JavaParser.StatementExpressionContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInterfaceMethodDeclaration(
+AT | @ }Overridepublic TvisitInterfaceMethodDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1830,18 +1467,14 @@ NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitPackageDeclaration(
+AT | @ }Overridepublic TvisitPackageDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.PackageDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1850,18 +1483,14 @@ NotNull JavaParser.PackageDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitElementValuePairs(
+AT | @ }Overridepublic TvisitElementValuePairs(
 {
     AT |  @
 }
 
 NotNull JavaParser.ElementValuePairsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1870,18 +1499,14 @@ NotNull JavaParser.ElementValuePairsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitLocalVariableDeclaration(
+AT | @ }Overridepublic TvisitLocalVariableDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.LocalVariableDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1890,18 +1515,14 @@ NotNull JavaParser.LocalVariableDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitNonWildcardTypeArguments(
+AT | @ }Overridepublic TvisitNonWildcardTypeArguments(
 {
     AT |  @
 }
 
 NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1910,18 +1531,14 @@ NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitInterfaceMemberDeclaration(
+AT | @ }Overridepublic TvisitInterfaceMemberDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1930,18 +1547,14 @@ NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitSwitchLabel(
+AT | @ }Overridepublic TvisitSwitchLabel(
 {
     AT |  @
 }
 
 NotNull JavaParser.SwitchLabelContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1950,18 +1563,14 @@ NotNull JavaParser.SwitchLabelContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitForInit(
+AT | @ }Overridepublic TvisitForInit(
 {
     AT |  @
 }
 
 NotNull JavaParser.ForInitContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1970,18 +1579,14 @@ NotNull JavaParser.ForInitContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitFormalParameters(
+AT | @ }Overridepublic TvisitFormalParameters(
 {
     AT |  @
 }
 
 NotNull JavaParser.FormalParametersContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -1990,18 +1595,14 @@ NotNull JavaParser.FormalParametersContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitArguments(
+AT | @ }Overridepublic TvisitArguments(
 {
     AT |  @
 }
 
 NotNull JavaParser.ArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -2010,18 +1611,14 @@ NotNull JavaParser.ArgumentsContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitGenericMethodDeclaration(
+AT | @ }Overridepublic TvisitGenericMethodDeclaration(
 {
     AT |  @
 }
 
 NotNull JavaParser.GenericMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } 
 /**
 	 * {@inheritDoc}
@@ -2030,16 +1627,12 @@ NotNull JavaParser.GenericMethodDeclarationContext ctx)
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */ {
 
-AT | @ }Override public TvisitTypeArgumentsOrDiamond(
+AT | @ }Overridepublic TvisitTypeArgumentsOrDiamond(
 {
     AT |  @
 }
 
 NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    visitChildren(ctx);
+    return visitChildren(ctx);
 } } }

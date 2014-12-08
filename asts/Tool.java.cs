@@ -55,51 +55,19 @@ namespace javasharp
     }
 }
 
-public static void main(String[] args)
+publicstatic void main(String[] args)
 {
-    {
-        IF | if
-    }
-
-    (args.length
-    {
-        EQUAL |= =
-    }
-
-    {
-        IntegerLiteral | 2
-    } )
-
+    if (args.length == 2)
     {
         Tool tool = new Tool();
-        String javaInputFile = args[
-        {
-            IntegerLiteral | 0
-        } ]
-
-        ;
-        String xmlOutputFile = args[
-        {
-            IntegerLiteral | 1
-        } ]
-
-        ;
+        String javaInputFile = args[0];
+        String xmlOutputFile = args[1];
         tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
     }
-
-    {
-        ELSE |
-         else
-    }
-
+    else
     {
         System.err.println("2 arguments required: <java input file> <xml output file>");
-        System.exit(
-        {
-            IntegerLiteral | 1
-        } )
-
-        ;
+        System.exit(1);
     }
 } } }
 // Comment at the end of the file

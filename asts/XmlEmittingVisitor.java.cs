@@ -38,57 +38,33 @@ namespace javasharp
         EXTENDS |extends
     }
 
-    AbstractParseTreeVisitor {
-    LT | <}
+    AbstractParseTreeVisitor<Object> {
+    IMPLEMENTS |implements
+}
 
-Object {
-GT | > } {IMPLEMENTS |implements }
-JavaVisitor {
-LT | < }Object {
-GT | > } {private {
+JavaVisitor<Object> {
+private {
 FINAL |final }
 BufferedTokenStream bufferedTokenStream;
 private {
 FINAL |final }
 ContentHandler contentHandler;
-private static {
+privatestatic {
 FINAL |final }
 Attributes noAtts = new AttributesImpl();
-private {
-INT |int }
-cursor ; XmlEmittingVisitor(ContentHandler contentHandler, BufferedTokenStream bufferedTokenStream)
+privateint cursor;
+XmlEmittingVisitor(ContentHandler contentHandler, BufferedTokenStream bufferedTokenStream)
 {
-    {
-        THIS | this
-    } .
-
-    contentHandler = contentHandler;
-    {
-        THIS | this
-    } .
-
-    bufferedTokenStream = bufferedTokenStream;
-    cursor =
-    {
-        SUB | -
-    }
-
-    {
-        IntegerLiteral | 1
-    }
-
-    ;
+    this.contentHandler = contentHandler;
+    this.bufferedTokenStream = bufferedTokenStream;
+    cursor = -1;
 }
 
 private ObjectemitXmlElement(String elementName, ParserRuleContext ctx)
 {
     try
     {
-        {
-            INT | int
-        }
-
-        tokenIndex = ctx.start.getTokenIndex();
+        int tokenIndex = ctx.start.getTokenIndex();
         emitWhiteSpace(tokenIndex);
         contentHandler.startElement("", elementName, elementName, noAtts);
         emitComments(tokenIndex);
@@ -100,81 +76,65 @@ private ObjectemitXmlElement(String elementName, ParserRuleContext ctx)
         Logger.getLogger(XmlEmittingVisitor.class .
 
 getName() ) .
-log(Level.SEVERE,  null , ex); {
-THROW | throw }new RuntimeException(ex); } {
-RETURN | return } null ;  }private void emitWhiteSpace(
+log(Level.SEVERE,  null , ex); throw 
+new RuntimeException(ex); } return  null ;  }
+private void emitWhiteSpace(int tokenIndex)
 {
-    INT | int
+    if (tokenIndex > cursor)
+    {
+        List<Token> hiddenTokens = bufferedTokenStream.getHiddenTokensToLeft(tokenIndex);
+        if (hiddenTokens != null)
+        {
+            emitWhiteSpace(hiddenTokens.get(0));
+        }
+    }
 }
 
-tokenIndex ) { {IF | if } (tokenIndex {
-GT | > }cursor ) {List {
-LT | < }Token {
-GT | > }hiddenTokens =  bufferedTokenStream.getHiddenTokensToLeft (tokenIndex ) ;  {IF | if } (hiddenTokens {
-NOTEQUAL | != } null ) {emitWhiteSpace(hiddenTokens.get ({
-    IntegerLiteral | 0
-} ) ) ;  } } }
-
-private void emitComments(
+private void emitComments(int tokenIndex)
 {
-    INT | int
+    if (tokenIndex > cursor)
+    {
+        List<Token> hiddenTokens = bufferedTokenStream.getHiddenTokensToLeft(tokenIndex);
+        if (hiddenTokens != null && (hiddenTokens.size() > 0))
+        {
+            int offset = cursor - hiddenTokens.get(0).getTokenIndex() + 1;
+            {
+                FOR | for
+            }
+
+            (int i = offset;
+            i < hiddenTokens.size();
+            i++ )
+            {
+                Token t = hiddenTokens.get(i);
+                if (t.getType() == JavaLexer.COMMENT)
+                {
+                    emitToken("Comment", t);
+                }
+                else if (t.getType() == JavaLexer.LINE_COMMENT)
+                {
+                    emitToken("LineComment", t);
+                }
+                else
+                {
+                    emitWhiteSpace(t);
+                }
+            }
+        }
+
+        cursor = tokenIndex;
+    }
 }
 
-tokenIndex ) { {IF | if } (tokenIndex {
-GT | > }cursor ) {List {
-LT | < }Token {
-GT | > }hiddenTokens =  bufferedTokenStream.getHiddenTokensToLeft (tokenIndex ) ;  {IF | if } (hiddenTokens {
-NOTEQUAL | != } null  {AND | && } (hiddenTokens.size ( ) {GT | > } {IntegerLiteral | 0 } ) ) { {INT |int }
-offset =  cursor {
-SUB | - }hiddenTokens.get ( {IntegerLiteral | 0 } ) .getTokenIndex()
+private void emitWhiteSpace(Token t)
 {
-    ADD | +
-} {
-
-IntegerLiteral | 1 } ;  {FOR | for } ( {INT |int }
-i =  offset ; i {
-LT | < }hiddenTokens.size ( ) ; i {
-INC | ++ } ) {Token t = hiddenTokens.get(i); {
-IF | if } (t.getType ( ) {EQUAL |=  =  }JavaLexer.COMMENT ) {emitToken( "Comment", t); } {
-ELSE | else } {IF | if } (t.getType ( ) {EQUAL |=  =  }JavaLexer.LINE_COMMENT ) {emitToken( "LineComment", t); } {
-ELSE | else } {emitWhiteSpace(t); } } }
-cursor =  tokenIndex ;  } }private void emitWhiteSpace(Token t)
-{
-    {
-        INT | int
-    }
-
-    tokenIndex = t.getTokenIndex();
-    {
-        IF | if
-    }
-
-    (tokenIndex
-    {
-        GT | >
-    }
-
-    cursor
-    {
-        AND | &&
-    }
-
-    t.getType()
-    {
-        EQUAL |= =
-    }
-
-    JavaLexer.WS )
+    int tokenIndex = t.getTokenIndex();
+    if (tokenIndex > cursor && t.getType() == JavaLexer.WS)
     {
         String ws = t.getText().replaceAll("\r\n", "\n");
         try
         {
-            contentHandler.characters(ws.toCharArray(), {
-                IntegerLiteral | 0
-            } , 
-
-            ws.length() )
-            ;
+            contentHandler.characters(ws.toCharArray(), 0, ws.length());
         }
         catch (SAXException ex)
         {
@@ -184,60 +144,21 @@ getName() ) .
 log(Level.SEVERE,  null , ex); }
 cursor =  t.getTokenIndex ( ) ;  } }void emitToken(String elementName, Token token)
 {
-    {
-        INT | int
-    }
-
-    tokenIndex = token.getTokenIndex();
+    int tokenIndex = token.getTokenIndex();
     {
         ASSERT | assert
     }
 
-    tokenIndex
-    {
-        GT | >
-    }
-
-    cursor;
+    tokenIndex > cursor;
     String tokenText = token.getText().replaceAll("\r\n", "\n");
     try
     {
         AttributesImpl atts = new AttributesImpl();
-        {
-            INT | int
-        }
-
-        tokenType = token.getType();
-        tokenType = tokenType
-        {
-            LE | <=
-        }
-
-        {
-            IntegerLiteral | 0
-        }
-
-        {
-            QUESTION | ?
-        }
-
-        {
-            IntegerLiteral | 0
-        }
-
-        {
-            COLON |  : 
-        }
-
-        tokenType;
+        int tokenType = token.getType();
+        tokenType = tokenType <= 0 ? 0 : tokenType;
         atts.addAttribute("", "type", "type", "", JavaLexer.tokenTypes[tokenType]);
         contentHandler.startElement("", elementName, elementName, atts);
-        contentHandler.characters(tokenText.toCharArray(), {
-            IntegerLiteral | 0
-        } , 
-
-        tokenText.length() )
-        ;
+        contentHandler.characters(tokenText.toCharArray(), 0, tokenText.length());
         contentHandler.endElement("", elementName, elementName);
     }
     catch (SAXException ex)
@@ -245,931 +166,519 @@ cursor =  t.getTokenIndex ( ) ;  } }void emitToken(String elementName, Token tok
         Logger.getLogger(XmlEmittingVisitor.class .
 
 getName() ) .
-log(Level.SEVERE,  null , ex); {
-THROW | throw }new RuntimeException(ex); }
-cursor =  tokenIndex ;  } {AT | @ }Override public ObjectvisitTerminal(TerminalNode node)
+log(Level.SEVERE,  null , ex); throw 
+new RuntimeException(ex); }
+cursor =  tokenIndex ;  } {AT | @ }Overridepublic ObjectvisitTerminal(TerminalNode node)
 {
     Token symbol = node.getSymbol();
-    {
-        INT | int
-    }
-
-    tokenIndex = symbol.getTokenIndex();
+    int tokenIndex = symbol.getTokenIndex();
     emitComments(tokenIndex);
     TokenSource tokenSource = symbol.getTokenSource();
     emitToken("Symbol", symbol);
-    {
-        RETURN | return
-    }
-
-    null;
+    return null;
 } {
 
-AT | @ }Override public ObjectvisitMemberDeclaration(JavaParser.MemberDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitMemberDeclaration(JavaParser.MemberDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("MemberDeclaration", ctx);
+    return emitXmlElement("MemberDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitDefaultValue(JavaParser.DefaultValueContext ctx)
+AT | @ }Overridepublic ObjectvisitDefaultValue(JavaParser.DefaultValueContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("DefaultValue", ctx);
+    return emitXmlElement("DefaultValue", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationTypeElementDeclaration(JavaParser.AnnotationTypeElementDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationTypeElementDeclaration(JavaParser.AnnotationTypeElementDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationTypeElementDeclaration", ctx);
+    return emitXmlElement("AnnotationTypeElementDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitType(JavaParser.TypeContext ctx)
+AT | @ }Overridepublic ObjectvisitType(JavaParser.TypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Type", ctx);
+    return emitXmlElement("Type", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationTypeBody(JavaParser.AnnotationTypeBodyContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationTypeBody(JavaParser.AnnotationTypeBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationTypeBody", ctx);
+    return emitXmlElement("AnnotationTypeBody", ctx);
 } {
 
-AT | @ }Override public ObjectvisitGenericInterfaceMethodDeclaration(JavaParser.GenericInterfaceMethodDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitGenericInterfaceMethodDeclaration(JavaParser.GenericInterfaceMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("GenericInterfaceMethodDeclaration", ctx);
+    return emitXmlElement("GenericInterfaceMethodDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassBodyDeclaration(JavaParser.ClassBodyDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitClassBodyDeclaration(JavaParser.ClassBodyDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassBodyDeclaration", ctx);
+    return emitXmlElement("ClassBodyDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitBlock(JavaParser.BlockContext ctx)
+AT | @ }Overridepublic ObjectvisitBlock(JavaParser.BlockContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Block", ctx);
+    return emitXmlElement("Block", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnumBodyDeclarations(JavaParser.EnumBodyDeclarationsContext ctx)
+AT | @ }Overridepublic ObjectvisitEnumBodyDeclarations(JavaParser.EnumBodyDeclarationsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnumBodyDeclarations", ctx);
+    return emitXmlElement("EnumBodyDeclarations", ctx);
 } {
 
-AT | @ }Override public ObjectvisitForUpdate(JavaParser.ForUpdateContext ctx)
+AT | @ }Overridepublic ObjectvisitForUpdate(JavaParser.ForUpdateContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ForUpdate", ctx);
+    return emitXmlElement("ForUpdate", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnhancedForControl(JavaParser.EnhancedForControlContext ctx)
+AT | @ }Overridepublic ObjectvisitEnhancedForControl(JavaParser.EnhancedForControlContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnhancedForControl", ctx);
+    return emitXmlElement("EnhancedForControl", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationConstantRest(JavaParser.AnnotationConstantRestContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationConstantRest(JavaParser.AnnotationConstantRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationConstantRest", ctx);
+    return emitXmlElement("AnnotationConstantRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitExplicitGenericInvocation(JavaParser.ExplicitGenericInvocationContext ctx)
+AT | @ }Overridepublic ObjectvisitExplicitGenericInvocation(JavaParser.ExplicitGenericInvocationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ExplicitGenericInvocation", ctx);
+    return emitXmlElement("ExplicitGenericInvocation", ctx);
 } {
 
-AT | @ }Override public ObjectvisitNonWildcardTypeArgumentsOrDiamond(JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
+AT | @ }Overridepublic ObjectvisitNonWildcardTypeArgumentsOrDiamond(JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("NonWildcardTypeArgumentsOrDiamond", ctx);
+    return emitXmlElement("NonWildcardTypeArgumentsOrDiamond", ctx);
 } {
 
-AT | @ }Override public ObjectvisitExpressionList(JavaParser.ExpressionListContext ctx)
+AT | @ }Overridepublic ObjectvisitExpressionList(JavaParser.ExpressionListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ExpressionList", ctx);
+    return emitXmlElement("ExpressionList", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationTypeElementRest(JavaParser.AnnotationTypeElementRestContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationTypeElementRest(JavaParser.AnnotationTypeElementRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationTypeElementRest", ctx);
+    return emitXmlElement("AnnotationTypeElementRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassOrInterfaceType(JavaParser.ClassOrInterfaceTypeContext ctx)
+AT | @ }Overridepublic ObjectvisitClassOrInterfaceType(JavaParser.ClassOrInterfaceTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassOrInterfaceType", ctx);
+    return emitXmlElement("ClassOrInterfaceType", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeBound(JavaParser.TypeBoundContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeBound(JavaParser.TypeBoundContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeBound", ctx);
+    return emitXmlElement("TypeBound", ctx);
 } {
 
-AT | @ }Override public ObjectvisitVariableDeclaratorId(JavaParser.VariableDeclaratorIdContext ctx)
+AT | @ }Overridepublic ObjectvisitVariableDeclaratorId(JavaParser.VariableDeclaratorIdContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("VariableDeclaratorId", ctx);
+    return emitXmlElement("VariableDeclaratorId", ctx);
 } {
 
-AT | @ }Override public ObjectvisitPrimary(JavaParser.PrimaryContext ctx)
+AT | @ }Overridepublic ObjectvisitPrimary(JavaParser.PrimaryContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Primary", ctx);
+    return emitXmlElement("Primary", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassCreatorRest(JavaParser.ClassCreatorRestContext ctx)
+AT | @ }Overridepublic ObjectvisitClassCreatorRest(JavaParser.ClassCreatorRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassCreatorRest", ctx);
+    return emitXmlElement("ClassCreatorRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInterfaceBodyDeclaration(JavaParser.InterfaceBodyDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitInterfaceBodyDeclaration(JavaParser.InterfaceBodyDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InterfaceBodyDeclaration", ctx);
+    return emitXmlElement("InterfaceBodyDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeArguments(JavaParser.TypeArgumentsContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeArguments(JavaParser.TypeArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeArguments", ctx);
+    return emitXmlElement("TypeArguments", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationName(JavaParser.AnnotationNameContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationName(JavaParser.AnnotationNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationName", ctx);
+    return emitXmlElement("AnnotationName", ctx);
 } {
 
-AT | @ }Override public ObjectvisitFinallyBlock(JavaParser.FinallyBlockContext ctx)
+AT | @ }Overridepublic ObjectvisitFinallyBlock(JavaParser.FinallyBlockContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("FinallyBlock", ctx);
+    return emitXmlElement("FinallyBlock", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeParameters(JavaParser.TypeParametersContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeParameters(JavaParser.TypeParametersContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeParameters", ctx);
+    return emitXmlElement("TypeParameters", ctx);
 } {
 
-AT | @ }Override public ObjectvisitLastFormalParameter(JavaParser.LastFormalParameterContext ctx)
+AT | @ }Overridepublic ObjectvisitLastFormalParameter(JavaParser.LastFormalParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("LastFormalParameter", ctx);
+    return emitXmlElement("LastFormalParameter", ctx);
 } {
 
-AT | @ }Override public ObjectvisitConstructorBody(JavaParser.ConstructorBodyContext ctx)
+AT | @ }Overridepublic ObjectvisitConstructorBody(JavaParser.ConstructorBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ConstructorBody", ctx);
+    return emitXmlElement("ConstructorBody", ctx);
 } {
 
-AT | @ }Override public ObjectvisitLiteral(JavaParser.LiteralContext ctx)
+AT | @ }Overridepublic ObjectvisitLiteral(JavaParser.LiteralContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Literal", ctx);
+    return emitXmlElement("Literal", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationMethodOrConstantRest(JavaParser.AnnotationMethodOrConstantRestContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationMethodOrConstantRest(JavaParser.AnnotationMethodOrConstantRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationMethodOrConstantRest", ctx);
+    return emitXmlElement("AnnotationMethodOrConstantRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitCatchClause(JavaParser.CatchClauseContext ctx)
+AT | @ }Overridepublic ObjectvisitCatchClause(JavaParser.CatchClauseContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("CatchClause", ctx);
+    return emitXmlElement("CatchClause", ctx);
 } {
 
-AT | @ }Override public ObjectvisitVariableDeclarator(JavaParser.VariableDeclaratorContext ctx)
+AT | @ }Overridepublic ObjectvisitVariableDeclarator(JavaParser.VariableDeclaratorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("VariableDeclarator", ctx);
+    return emitXmlElement("VariableDeclarator", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeList(JavaParser.TypeListContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeList(JavaParser.TypeListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeList", ctx);
+    return emitXmlElement("TypeList", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnumConstants(JavaParser.EnumConstantsContext ctx)
+AT | @ }Overridepublic ObjectvisitEnumConstants(JavaParser.EnumConstantsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnumConstants", ctx);
+    return emitXmlElement("EnumConstants", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassBody(JavaParser.ClassBodyContext ctx)
+AT | @ }Overridepublic ObjectvisitClassBody(JavaParser.ClassBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassBody", ctx);
+    return emitXmlElement("ClassBody", ctx);
 } {
 
-AT | @ }Override public ObjectvisitCreatedName(JavaParser.CreatedNameContext ctx)
+AT | @ }Overridepublic ObjectvisitCreatedName(JavaParser.CreatedNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("CreatedName", ctx);
+    return emitXmlElement("CreatedName", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnumDeclaration(JavaParser.EnumDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitEnumDeclaration(JavaParser.EnumDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnumDeclaration", ctx);
+    return emitXmlElement("EnumDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitFormalParameter(JavaParser.FormalParameterContext ctx)
+AT | @ }Overridepublic ObjectvisitFormalParameter(JavaParser.FormalParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("FormalParameter", ctx);
+    return emitXmlElement("FormalParameter", ctx);
 } {
 
-AT | @ }Override public ObjectvisitParExpression(JavaParser.ParExpressionContext ctx)
+AT | @ }Overridepublic ObjectvisitParExpression(JavaParser.ParExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ParExpression", ctx);
+    return emitXmlElement("ParExpression", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotation(JavaParser.AnnotationContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotation(JavaParser.AnnotationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Annotation", ctx);
+    return emitXmlElement("Annotation", ctx);
 } {
 
-AT | @ }Override public ObjectvisitVariableInitializer(JavaParser.VariableInitializerContext ctx)
+AT | @ }Overridepublic ObjectvisitVariableInitializer(JavaParser.VariableInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("VariableInitializer", ctx);
+    return emitXmlElement("VariableInitializer", ctx);
 } {
 
-AT | @ }Override public ObjectvisitElementValueArrayInitializer(JavaParser.ElementValueArrayInitializerContext ctx)
+AT | @ }Overridepublic ObjectvisitElementValueArrayInitializer(JavaParser.ElementValueArrayInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ElementValueArrayInitializer", ctx);
+    return emitXmlElement("ElementValueArrayInitializer", ctx);
 } {
 
-AT | @ }Override public ObjectvisitCreator(JavaParser.CreatorContext ctx)
+AT | @ }Overridepublic ObjectvisitCreator(JavaParser.CreatorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Creator", ctx);
+    return emitXmlElement("Creator", ctx);
 } {
 
-AT | @ }Override public ObjectvisitArrayCreatorRest(JavaParser.ArrayCreatorRestContext ctx)
+AT | @ }Overridepublic ObjectvisitArrayCreatorRest(JavaParser.ArrayCreatorRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ArrayCreatorRest", ctx);
+    return emitXmlElement("ArrayCreatorRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitExpression(JavaParser.ExpressionContext ctx)
+AT | @ }Overridepublic ObjectvisitExpression(JavaParser.ExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Expression", ctx);
+    return emitXmlElement("Expression", ctx);
 } {
 
-AT | @ }Override public ObjectvisitConstantExpression(JavaParser.ConstantExpressionContext ctx)
+AT | @ }Overridepublic ObjectvisitConstantExpression(JavaParser.ConstantExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ConstantExpression", ctx);
+    return emitXmlElement("ConstantExpression", ctx);
 } {
 
-AT | @ }Override public ObjectvisitQualifiedNameList(JavaParser.QualifiedNameListContext ctx)
+AT | @ }Overridepublic ObjectvisitQualifiedNameList(JavaParser.QualifiedNameListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("QualifiedNameList", ctx);
+    return emitXmlElement("QualifiedNameList", ctx);
 } {
 
-AT | @ }Override public ObjectvisitConstructorDeclaration(JavaParser.ConstructorDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitConstructorDeclaration(JavaParser.ConstructorDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ConstructorDeclaration", ctx);
+    return emitXmlElement("ConstructorDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitForControl(JavaParser.ForControlContext ctx)
+AT | @ }Overridepublic ObjectvisitForControl(JavaParser.ForControlContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ForControl", ctx);
+    return emitXmlElement("ForControl", ctx);
 } {
 
-AT | @ }Override public ObjectvisitSuperSuffix(JavaParser.SuperSuffixContext ctx)
+AT | @ }Overridepublic ObjectvisitSuperSuffix(JavaParser.SuperSuffixContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("SuperSuffix", ctx);
+    return emitXmlElement("SuperSuffix", ctx);
 } {
 
-AT | @ }Override public ObjectvisitVariableDeclarators(JavaParser.VariableDeclaratorsContext ctx)
+AT | @ }Overridepublic ObjectvisitVariableDeclarators(JavaParser.VariableDeclaratorsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("VariableDeclarators", ctx);
+    return emitXmlElement("VariableDeclarators", ctx);
 } {
 
-AT | @ }Override public ObjectvisitCatchType(JavaParser.CatchTypeContext ctx)
+AT | @ }Overridepublic ObjectvisitCatchType(JavaParser.CatchTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("CatchType", ctx);
+    return emitXmlElement("CatchType", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassOrInterfaceModifier(JavaParser.ClassOrInterfaceModifierContext ctx)
+AT | @ }Overridepublic ObjectvisitClassOrInterfaceModifier(JavaParser.ClassOrInterfaceModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassOrInterfaceModifier", ctx);
+    return emitXmlElement("ClassOrInterfaceModifier", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnumConstantName(JavaParser.EnumConstantNameContext ctx)
+AT | @ }Overridepublic ObjectvisitEnumConstantName(JavaParser.EnumConstantNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnumConstantName", ctx);
+    return emitXmlElement("EnumConstantName", ctx);
 } {
 
-AT | @ }Override public ObjectvisitModifier(JavaParser.ModifierContext ctx)
+AT | @ }Overridepublic ObjectvisitModifier(JavaParser.ModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Modifier", ctx);
+    return emitXmlElement("Modifier", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInnerCreator(JavaParser.InnerCreatorContext ctx)
+AT | @ }Overridepublic ObjectvisitInnerCreator(JavaParser.InnerCreatorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InnerCreator", ctx);
+    return emitXmlElement("InnerCreator", ctx);
 } {
 
-AT | @ }Override public ObjectvisitExplicitGenericInvocationSuffix(JavaParser.ExplicitGenericInvocationSuffixContext ctx)
+AT | @ }Overridepublic ObjectvisitExplicitGenericInvocationSuffix(JavaParser.ExplicitGenericInvocationSuffixContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ExplicitGenericInvocationSuffix", ctx);
+    return emitXmlElement("ExplicitGenericInvocationSuffix", ctx);
 } {
 
-AT | @ }Override public ObjectvisitVariableModifier(JavaParser.VariableModifierContext ctx)
+AT | @ }Overridepublic ObjectvisitVariableModifier(JavaParser.VariableModifierContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("VariableModifier", ctx);
+    return emitXmlElement("VariableModifier", ctx);
 } {
 
-AT | @ }Override public ObjectvisitElementValuePair(JavaParser.ElementValuePairContext ctx)
+AT | @ }Overridepublic ObjectvisitElementValuePair(JavaParser.ElementValuePairContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ElementValuePair", ctx);
+    return emitXmlElement("ElementValuePair", ctx);
 } {
 
-AT | @ }Override public ObjectvisitArrayInitializer(JavaParser.ArrayInitializerContext ctx)
+AT | @ }Overridepublic ObjectvisitArrayInitializer(JavaParser.ArrayInitializerContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ArrayInitializer", ctx);
+    return emitXmlElement("ArrayInitializer", ctx);
 } {
 
-AT | @ }Override public ObjectvisitElementValue(JavaParser.ElementValueContext ctx)
+AT | @ }Overridepublic ObjectvisitElementValue(JavaParser.ElementValueContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ElementValue", ctx);
+    return emitXmlElement("ElementValue", ctx);
 } {
 
-AT | @ }Override public ObjectvisitConstDeclaration(JavaParser.ConstDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitConstDeclaration(JavaParser.ConstDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ConstDeclaration", ctx);
+    return emitXmlElement("ConstDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitResource(JavaParser.ResourceContext ctx)
+AT | @ }Overridepublic ObjectvisitResource(JavaParser.ResourceContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Resource", ctx);
+    return emitXmlElement("Resource", ctx);
 } {
 
-AT | @ }Override public ObjectvisitQualifiedName(JavaParser.QualifiedNameContext ctx)
+AT | @ }Overridepublic ObjectvisitQualifiedName(JavaParser.QualifiedNameContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("QualifiedName", ctx);
+    return emitXmlElement("QualifiedName", ctx);
 } {
 
-AT | @ }Override public ObjectvisitResourceSpecification(JavaParser.ResourceSpecificationContext ctx)
+AT | @ }Overridepublic ObjectvisitResourceSpecification(JavaParser.ResourceSpecificationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ResourceSpecification", ctx);
+    return emitXmlElement("ResourceSpecification", ctx);
 } {
 
-AT | @ }Override public ObjectvisitFormalParameterList(JavaParser.FormalParameterListContext ctx)
+AT | @ }Overridepublic ObjectvisitFormalParameterList(JavaParser.FormalParameterListContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("FormalParameterList", ctx);
+    return emitXmlElement("FormalParameterList", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationTypeDeclaration(JavaParser.AnnotationTypeDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationTypeDeclaration(JavaParser.AnnotationTypeDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationTypeDeclaration", ctx);
+    return emitXmlElement("AnnotationTypeDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitAnnotationMethodRest(JavaParser.AnnotationMethodRestContext ctx)
+AT | @ }Overridepublic ObjectvisitAnnotationMethodRest(JavaParser.AnnotationMethodRestContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("AnnotationMethodRest", ctx);
+    return emitXmlElement("AnnotationMethodRest", ctx);
 } {
 
-AT | @ }Override public ObjectvisitSwitchBlockStatementGroup(JavaParser.SwitchBlockStatementGroupContext ctx)
+AT | @ }Overridepublic ObjectvisitSwitchBlockStatementGroup(JavaParser.SwitchBlockStatementGroupContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("SwitchBlockStatementGroup", ctx);
+    return emitXmlElement("SwitchBlockStatementGroup", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeParameter(JavaParser.TypeParameterContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeParameter(JavaParser.TypeParameterContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeParameter", ctx);
+    return emitXmlElement("TypeParameter", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInterfaceBody(JavaParser.InterfaceBodyContext ctx)
+AT | @ }Overridepublic ObjectvisitInterfaceBody(JavaParser.InterfaceBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InterfaceBody", ctx);
+    return emitXmlElement("InterfaceBody", ctx);
 } {
 
-AT | @ }Override public ObjectvisitMethodDeclaration(JavaParser.MethodDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitMethodDeclaration(JavaParser.MethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("MethodDeclaration", ctx);
+    return emitXmlElement("MethodDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitMethodBody(JavaParser.MethodBodyContext ctx)
+AT | @ }Overridepublic ObjectvisitMethodBody(JavaParser.MethodBodyContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("MethodBody", ctx);
+    return emitXmlElement("MethodBody", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeArgument(JavaParser.TypeArgumentContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeArgument(JavaParser.TypeArgumentContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeArgument", ctx);
+    return emitXmlElement("TypeArgument", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeDeclaration(JavaParser.TypeDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeDeclaration(JavaParser.TypeDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeDeclaration", ctx);
+    return emitXmlElement("TypeDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitGenericConstructorDeclaration(JavaParser.GenericConstructorDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitGenericConstructorDeclaration(JavaParser.GenericConstructorDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("GenericConstructorDeclaration", ctx);
+    return emitXmlElement("GenericConstructorDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitClassDeclaration(JavaParser.ClassDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitClassDeclaration(JavaParser.ClassDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ClassDeclaration", ctx);
+    return emitXmlElement("ClassDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitEnumConstant(JavaParser.EnumConstantContext ctx)
+AT | @ }Overridepublic ObjectvisitEnumConstant(JavaParser.EnumConstantContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("EnumConstant", ctx);
+    return emitXmlElement("EnumConstant", ctx);
 } {
 
-AT | @ }Override public ObjectvisitStatement(JavaParser.StatementContext ctx)
+AT | @ }Overridepublic ObjectvisitStatement(JavaParser.StatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Statement", ctx);
+    return emitXmlElement("Statement", ctx);
 } {
 
-AT | @ }Override public ObjectvisitImportDeclaration(JavaParser.ImportDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitImportDeclaration(JavaParser.ImportDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ImportDeclaration", ctx);
+    return emitXmlElement("ImportDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitPrimitiveType(JavaParser.PrimitiveTypeContext ctx)
+AT | @ }Overridepublic ObjectvisitPrimitiveType(JavaParser.PrimitiveTypeContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("PrimitiveType", ctx);
+    return emitXmlElement("PrimitiveType", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInterfaceDeclaration(JavaParser.InterfaceDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitInterfaceDeclaration(JavaParser.InterfaceDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InterfaceDeclaration", ctx);
+    return emitXmlElement("InterfaceDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitLocalVariableDeclarationStatement(JavaParser.LocalVariableDeclarationStatementContext ctx)
+AT | @ }Overridepublic ObjectvisitLocalVariableDeclarationStatement(JavaParser.LocalVariableDeclarationStatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("LocalVariableDeclarationStatement", ctx);
+    return emitXmlElement("LocalVariableDeclarationStatement", ctx);
 } {
 
-AT | @ }Override public ObjectvisitBlockStatement(JavaParser.BlockStatementContext ctx)
+AT | @ }Overridepublic ObjectvisitBlockStatement(JavaParser.BlockStatementContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("BlockStatement", ctx);
+    return emitXmlElement("BlockStatement", ctx);
 } {
 
-AT | @ }Override public ObjectvisitFieldDeclaration(JavaParser.FieldDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitFieldDeclaration(JavaParser.FieldDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("FieldDeclaration", ctx);
+    return emitXmlElement("FieldDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitConstantDeclarator(JavaParser.ConstantDeclaratorContext ctx)
+AT | @ }Overridepublic ObjectvisitConstantDeclarator(JavaParser.ConstantDeclaratorContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ConstantDeclarator", ctx);
+    return emitXmlElement("ConstantDeclarator", ctx);
 } {
 
-AT | @ }Override public ObjectvisitResources(JavaParser.ResourcesContext ctx)
+AT | @ }Overridepublic ObjectvisitResources(JavaParser.ResourcesContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Resources", ctx);
+    return emitXmlElement("Resources", ctx);
 } {
 
-AT | @ }Override public ObjectvisitStatementExpression(JavaParser.StatementExpressionContext ctx)
+AT | @ }Overridepublic ObjectvisitStatementExpression(JavaParser.StatementExpressionContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("StatementExpression", ctx);
+    return emitXmlElement("StatementExpression", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInterfaceMethodDeclaration(JavaParser.InterfaceMethodDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitInterfaceMethodDeclaration(JavaParser.InterfaceMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InterfaceMethodDeclaration", ctx);
+    return emitXmlElement("InterfaceMethodDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitPackageDeclaration(JavaParser.PackageDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitPackageDeclaration(JavaParser.PackageDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("PackageDeclaration", ctx);
+    return emitXmlElement("PackageDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitElementValuePairs(JavaParser.ElementValuePairsContext ctx)
+AT | @ }Overridepublic ObjectvisitElementValuePairs(JavaParser.ElementValuePairsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ElementValuePairs", ctx);
+    return emitXmlElement("ElementValuePairs", ctx);
 } {
 
-AT | @ }Override public ObjectvisitLocalVariableDeclaration(JavaParser.LocalVariableDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitLocalVariableDeclaration(JavaParser.LocalVariableDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("LocalVariableDeclaration", ctx);
+    return emitXmlElement("LocalVariableDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitNonWildcardTypeArguments(JavaParser.NonWildcardTypeArgumentsContext ctx)
+AT | @ }Overridepublic ObjectvisitNonWildcardTypeArguments(JavaParser.NonWildcardTypeArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("NonWildcardTypeArguments", ctx);
+    return emitXmlElement("NonWildcardTypeArguments", ctx);
 } {
 
-AT | @ }Override public ObjectvisitInterfaceMemberDeclaration(JavaParser.InterfaceMemberDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitInterfaceMemberDeclaration(JavaParser.InterfaceMemberDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("InterfaceMemberDeclaration", ctx);
+    return emitXmlElement("InterfaceMemberDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitSwitchLabel(JavaParser.SwitchLabelContext ctx)
+AT | @ }Overridepublic ObjectvisitSwitchLabel(JavaParser.SwitchLabelContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("SwitchLabel", ctx);
+    return emitXmlElement("SwitchLabel", ctx);
 } {
 
-AT | @ }Override public ObjectvisitForInit(JavaParser.ForInitContext ctx)
+AT | @ }Overridepublic ObjectvisitForInit(JavaParser.ForInitContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("ForInit", ctx);
+    return emitXmlElement("ForInit", ctx);
 } {
 
-AT | @ }Override public ObjectvisitFormalParameters(JavaParser.FormalParametersContext ctx)
+AT | @ }Overridepublic ObjectvisitFormalParameters(JavaParser.FormalParametersContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("FormalParameters", ctx);
+    return emitXmlElement("FormalParameters", ctx);
 } {
 
-AT | @ }Override public ObjectvisitArguments(JavaParser.ArgumentsContext ctx)
+AT | @ }Overridepublic ObjectvisitArguments(JavaParser.ArgumentsContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("Arguments", ctx);
+    return emitXmlElement("Arguments", ctx);
 } {
 
-AT | @ }Override public ObjectvisitGenericMethodDeclaration(JavaParser.GenericMethodDeclarationContext ctx)
+AT | @ }Overridepublic ObjectvisitGenericMethodDeclaration(JavaParser.GenericMethodDeclarationContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("GenericMethodDeclaration", ctx);
+    return emitXmlElement("GenericMethodDeclaration", ctx);
 } {
 
-AT | @ }Override public ObjectvisitTypeArgumentsOrDiamond(JavaParser.TypeArgumentsOrDiamondContext ctx)
+AT | @ }Overridepublic ObjectvisitTypeArgumentsOrDiamond(JavaParser.TypeArgumentsOrDiamondContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("TypeArgumentsOrDiamond", ctx);
+    return emitXmlElement("TypeArgumentsOrDiamond", ctx);
 } {
 
-AT | @ }Override public ObjectvisitCompilationUnit(JavaParser.CompilationUnitContext ctx)
+AT | @ }Overridepublic ObjectvisitCompilationUnit(JavaParser.CompilationUnitContext ctx)
 {
-    {
-        RETURN | return
-    }
-
-    emitXmlElement("CompilationUnit", ctx);
+    return emitXmlElement("CompilationUnit", ctx);
 } } }

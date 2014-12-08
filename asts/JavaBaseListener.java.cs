@@ -23,7 +23,7 @@ namespace javasharp
     	 */ {
     AT | @}
 
-Override public void enterMemberDeclaration(
+Overridepublic void enterMemberDeclaration(
 {
     AT |  @
 }
@@ -37,7 +37,7 @@ NotNull JavaParser.MemberDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitMemberDeclaration(
+AT | @ }Overridepublic void exitMemberDeclaration(
 {
     AT |  @
 }
@@ -51,7 +51,7 @@ NotNull JavaParser.MemberDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterDefaultValue(
+AT | @ }Overridepublic void enterDefaultValue(
 {
     AT |  @
 }
@@ -65,7 +65,7 @@ NotNull JavaParser.DefaultValueContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitDefaultValue(
+AT | @ }Overridepublic void exitDefaultValue(
 {
     AT |  @
 }
@@ -79,7 +79,7 @@ NotNull JavaParser.DefaultValueContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationTypeElementDeclaration(
+AT | @ }Overridepublic void enterAnnotationTypeElementDeclaration(
 {
     AT |  @
 }
@@ -93,7 +93,7 @@ NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationTypeElementDeclaration(
+AT | @ }Overridepublic void exitAnnotationTypeElementDeclaration(
 {
     AT |  @
 }
@@ -107,7 +107,7 @@ NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterType(
+AT | @ }Overridepublic void enterType(
 {
     AT |  @
 }
@@ -121,7 +121,7 @@ NotNull JavaParser.TypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitType(
+AT | @ }Overridepublic void exitType(
 {
     AT |  @
 }
@@ -135,7 +135,7 @@ NotNull JavaParser.TypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationTypeBody(
+AT | @ }Overridepublic void enterAnnotationTypeBody(
 {
     AT |  @
 }
@@ -149,7 +149,7 @@ NotNull JavaParser.AnnotationTypeBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationTypeBody(
+AT | @ }Overridepublic void exitAnnotationTypeBody(
 {
     AT |  @
 }
@@ -163,7 +163,7 @@ NotNull JavaParser.AnnotationTypeBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterGenericInterfaceMethodDeclaration(
+AT | @ }Overridepublic void enterGenericInterfaceMethodDeclaration(
 {
     AT |  @
 }
@@ -177,7 +177,7 @@ NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitGenericInterfaceMethodDeclaration(
+AT | @ }Overridepublic void exitGenericInterfaceMethodDeclaration(
 {
     AT |  @
 }
@@ -191,7 +191,7 @@ NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassBodyDeclaration(
+AT | @ }Overridepublic void enterClassBodyDeclaration(
 {
     AT |  @
 }
@@ -205,7 +205,7 @@ NotNull JavaParser.ClassBodyDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassBodyDeclaration(
+AT | @ }Overridepublic void exitClassBodyDeclaration(
 {
     AT |  @
 }
@@ -219,7 +219,7 @@ NotNull JavaParser.ClassBodyDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterBlock(
+AT | @ }Overridepublic void enterBlock(
 {
     AT |  @
 }
@@ -233,7 +233,7 @@ NotNull JavaParser.BlockContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitBlock(
+AT | @ }Overridepublic void exitBlock(
 {
     AT |  @
 }
@@ -247,7 +247,7 @@ NotNull JavaParser.BlockContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnumBodyDeclarations(
+AT | @ }Overridepublic void enterEnumBodyDeclarations(
 {
     AT |  @
 }
@@ -261,7 +261,7 @@ NotNull JavaParser.EnumBodyDeclarationsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnumBodyDeclarations(
+AT | @ }Overridepublic void exitEnumBodyDeclarations(
 {
     AT |  @
 }
@@ -275,7 +275,7 @@ NotNull JavaParser.EnumBodyDeclarationsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterForUpdate(
+AT | @ }Overridepublic void enterForUpdate(
 {
     AT |  @
 }
@@ -289,7 +289,7 @@ NotNull JavaParser.ForUpdateContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitForUpdate(
+AT | @ }Overridepublic void exitForUpdate(
 {
     AT |  @
 }
@@ -303,7 +303,7 @@ NotNull JavaParser.ForUpdateContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnhancedForControl(
+AT | @ }Overridepublic void enterEnhancedForControl(
 {
     AT |  @
 }
@@ -317,7 +317,7 @@ NotNull JavaParser.EnhancedForControlContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnhancedForControl(
+AT | @ }Overridepublic void exitEnhancedForControl(
 {
     AT |  @
 }
@@ -331,7 +331,7 @@ NotNull JavaParser.EnhancedForControlContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationConstantRest(
+AT | @ }Overridepublic void enterAnnotationConstantRest(
 {
     AT |  @
 }
@@ -345,7 +345,7 @@ NotNull JavaParser.AnnotationConstantRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationConstantRest(
+AT | @ }Overridepublic void exitAnnotationConstantRest(
 {
     AT |  @
 }
@@ -359,7 +359,7 @@ NotNull JavaParser.AnnotationConstantRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterExplicitGenericInvocation(
+AT | @ }Overridepublic void enterExplicitGenericInvocation(
 {
     AT |  @
 }
@@ -373,7 +373,7 @@ NotNull JavaParser.ExplicitGenericInvocationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitExplicitGenericInvocation(
+AT | @ }Overridepublic void exitExplicitGenericInvocation(
 {
     AT |  @
 }
@@ -387,7 +387,7 @@ NotNull JavaParser.ExplicitGenericInvocationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterNonWildcardTypeArgumentsOrDiamond(
+AT | @ }Overridepublic void enterNonWildcardTypeArgumentsOrDiamond(
 {
     AT |  @
 }
@@ -401,7 +401,7 @@ NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitNonWildcardTypeArgumentsOrDiamond(
+AT | @ }Overridepublic void exitNonWildcardTypeArgumentsOrDiamond(
 {
     AT |  @
 }
@@ -415,7 +415,7 @@ NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterExpressionList(
+AT | @ }Overridepublic void enterExpressionList(
 {
     AT |  @
 }
@@ -429,7 +429,7 @@ NotNull JavaParser.ExpressionListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitExpressionList(
+AT | @ }Overridepublic void exitExpressionList(
 {
     AT |  @
 }
@@ -443,7 +443,7 @@ NotNull JavaParser.ExpressionListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationTypeElementRest(
+AT | @ }Overridepublic void enterAnnotationTypeElementRest(
 {
     AT |  @
 }
@@ -457,7 +457,7 @@ NotNull JavaParser.AnnotationTypeElementRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationTypeElementRest(
+AT | @ }Overridepublic void exitAnnotationTypeElementRest(
 {
     AT |  @
 }
@@ -471,7 +471,7 @@ NotNull JavaParser.AnnotationTypeElementRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassOrInterfaceType(
+AT | @ }Overridepublic void enterClassOrInterfaceType(
 {
     AT |  @
 }
@@ -485,7 +485,7 @@ NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassOrInterfaceType(
+AT | @ }Overridepublic void exitClassOrInterfaceType(
 {
     AT |  @
 }
@@ -499,7 +499,7 @@ NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeBound(
+AT | @ }Overridepublic void enterTypeBound(
 {
     AT |  @
 }
@@ -513,7 +513,7 @@ NotNull JavaParser.TypeBoundContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeBound(
+AT | @ }Overridepublic void exitTypeBound(
 {
     AT |  @
 }
@@ -527,7 +527,7 @@ NotNull JavaParser.TypeBoundContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterVariableDeclaratorId(
+AT | @ }Overridepublic void enterVariableDeclaratorId(
 {
     AT |  @
 }
@@ -541,7 +541,7 @@ NotNull JavaParser.VariableDeclaratorIdContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitVariableDeclaratorId(
+AT | @ }Overridepublic void exitVariableDeclaratorId(
 {
     AT |  @
 }
@@ -555,7 +555,7 @@ NotNull JavaParser.VariableDeclaratorIdContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterPrimary(
+AT | @ }Overridepublic void enterPrimary(
 {
     AT |  @
 }
@@ -569,7 +569,7 @@ NotNull JavaParser.PrimaryContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitPrimary(
+AT | @ }Overridepublic void exitPrimary(
 {
     AT |  @
 }
@@ -583,7 +583,7 @@ NotNull JavaParser.PrimaryContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassCreatorRest(
+AT | @ }Overridepublic void enterClassCreatorRest(
 {
     AT |  @
 }
@@ -597,7 +597,7 @@ NotNull JavaParser.ClassCreatorRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassCreatorRest(
+AT | @ }Overridepublic void exitClassCreatorRest(
 {
     AT |  @
 }
@@ -611,7 +611,7 @@ NotNull JavaParser.ClassCreatorRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInterfaceBodyDeclaration(
+AT | @ }Overridepublic void enterInterfaceBodyDeclaration(
 {
     AT |  @
 }
@@ -625,7 +625,7 @@ NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInterfaceBodyDeclaration(
+AT | @ }Overridepublic void exitInterfaceBodyDeclaration(
 {
     AT |  @
 }
@@ -639,7 +639,7 @@ NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeArguments(
+AT | @ }Overridepublic void enterTypeArguments(
 {
     AT |  @
 }
@@ -653,7 +653,7 @@ NotNull JavaParser.TypeArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeArguments(
+AT | @ }Overridepublic void exitTypeArguments(
 {
     AT |  @
 }
@@ -667,7 +667,7 @@ NotNull JavaParser.TypeArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationName(
+AT | @ }Overridepublic void enterAnnotationName(
 {
     AT |  @
 }
@@ -681,7 +681,7 @@ NotNull JavaParser.AnnotationNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationName(
+AT | @ }Overridepublic void exitAnnotationName(
 {
     AT |  @
 }
@@ -695,7 +695,7 @@ NotNull JavaParser.AnnotationNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterFinallyBlock(
+AT | @ }Overridepublic void enterFinallyBlock(
 {
     AT |  @
 }
@@ -709,7 +709,7 @@ NotNull JavaParser.FinallyBlockContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitFinallyBlock(
+AT | @ }Overridepublic void exitFinallyBlock(
 {
     AT |  @
 }
@@ -723,7 +723,7 @@ NotNull JavaParser.FinallyBlockContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeParameters(
+AT | @ }Overridepublic void enterTypeParameters(
 {
     AT |  @
 }
@@ -737,7 +737,7 @@ NotNull JavaParser.TypeParametersContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeParameters(
+AT | @ }Overridepublic void exitTypeParameters(
 {
     AT |  @
 }
@@ -751,7 +751,7 @@ NotNull JavaParser.TypeParametersContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterLastFormalParameter(
+AT | @ }Overridepublic void enterLastFormalParameter(
 {
     AT |  @
 }
@@ -765,7 +765,7 @@ NotNull JavaParser.LastFormalParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitLastFormalParameter(
+AT | @ }Overridepublic void exitLastFormalParameter(
 {
     AT |  @
 }
@@ -779,7 +779,7 @@ NotNull JavaParser.LastFormalParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterConstructorBody(
+AT | @ }Overridepublic void enterConstructorBody(
 {
     AT |  @
 }
@@ -793,7 +793,7 @@ NotNull JavaParser.ConstructorBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitConstructorBody(
+AT | @ }Overridepublic void exitConstructorBody(
 {
     AT |  @
 }
@@ -807,7 +807,7 @@ NotNull JavaParser.ConstructorBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterLiteral(
+AT | @ }Overridepublic void enterLiteral(
 {
     AT |  @
 }
@@ -821,7 +821,7 @@ NotNull JavaParser.LiteralContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitLiteral(
+AT | @ }Overridepublic void exitLiteral(
 {
     AT |  @
 }
@@ -835,7 +835,7 @@ NotNull JavaParser.LiteralContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationMethodOrConstantRest(
+AT | @ }Overridepublic void enterAnnotationMethodOrConstantRest(
 {
     AT |  @
 }
@@ -849,7 +849,7 @@ NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationMethodOrConstantRest(
+AT | @ }Overridepublic void exitAnnotationMethodOrConstantRest(
 {
     AT |  @
 }
@@ -863,7 +863,7 @@ NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterCatchClause(
+AT | @ }Overridepublic void enterCatchClause(
 {
     AT |  @
 }
@@ -877,7 +877,7 @@ NotNull JavaParser.CatchClauseContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitCatchClause(
+AT | @ }Overridepublic void exitCatchClause(
 {
     AT |  @
 }
@@ -891,7 +891,7 @@ NotNull JavaParser.CatchClauseContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterVariableDeclarator(
+AT | @ }Overridepublic void enterVariableDeclarator(
 {
     AT |  @
 }
@@ -905,7 +905,7 @@ NotNull JavaParser.VariableDeclaratorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitVariableDeclarator(
+AT | @ }Overridepublic void exitVariableDeclarator(
 {
     AT |  @
 }
@@ -919,7 +919,7 @@ NotNull JavaParser.VariableDeclaratorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeList(
+AT | @ }Overridepublic void enterTypeList(
 {
     AT |  @
 }
@@ -933,7 +933,7 @@ NotNull JavaParser.TypeListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeList(
+AT | @ }Overridepublic void exitTypeList(
 {
     AT |  @
 }
@@ -947,7 +947,7 @@ NotNull JavaParser.TypeListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnumConstants(
+AT | @ }Overridepublic void enterEnumConstants(
 {
     AT |  @
 }
@@ -961,7 +961,7 @@ NotNull JavaParser.EnumConstantsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnumConstants(
+AT | @ }Overridepublic void exitEnumConstants(
 {
     AT |  @
 }
@@ -975,7 +975,7 @@ NotNull JavaParser.EnumConstantsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassBody(
+AT | @ }Overridepublic void enterClassBody(
 {
     AT |  @
 }
@@ -989,7 +989,7 @@ NotNull JavaParser.ClassBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassBody(
+AT | @ }Overridepublic void exitClassBody(
 {
     AT |  @
 }
@@ -1003,7 +1003,7 @@ NotNull JavaParser.ClassBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterCreatedName(
+AT | @ }Overridepublic void enterCreatedName(
 {
     AT |  @
 }
@@ -1017,7 +1017,7 @@ NotNull JavaParser.CreatedNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitCreatedName(
+AT | @ }Overridepublic void exitCreatedName(
 {
     AT |  @
 }
@@ -1031,7 +1031,7 @@ NotNull JavaParser.CreatedNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnumDeclaration(
+AT | @ }Overridepublic void enterEnumDeclaration(
 {
     AT |  @
 }
@@ -1045,7 +1045,7 @@ NotNull JavaParser.EnumDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnumDeclaration(
+AT | @ }Overridepublic void exitEnumDeclaration(
 {
     AT |  @
 }
@@ -1059,7 +1059,7 @@ NotNull JavaParser.EnumDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterFormalParameter(
+AT | @ }Overridepublic void enterFormalParameter(
 {
     AT |  @
 }
@@ -1073,7 +1073,7 @@ NotNull JavaParser.FormalParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitFormalParameter(
+AT | @ }Overridepublic void exitFormalParameter(
 {
     AT |  @
 }
@@ -1087,7 +1087,7 @@ NotNull JavaParser.FormalParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterParExpression(
+AT | @ }Overridepublic void enterParExpression(
 {
     AT |  @
 }
@@ -1101,7 +1101,7 @@ NotNull JavaParser.ParExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitParExpression(
+AT | @ }Overridepublic void exitParExpression(
 {
     AT |  @
 }
@@ -1115,7 +1115,7 @@ NotNull JavaParser.ParExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotation(
+AT | @ }Overridepublic void enterAnnotation(
 {
     AT |  @
 }
@@ -1129,7 +1129,7 @@ NotNull JavaParser.AnnotationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotation(
+AT | @ }Overridepublic void exitAnnotation(
 {
     AT |  @
 }
@@ -1143,7 +1143,7 @@ NotNull JavaParser.AnnotationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterVariableInitializer(
+AT | @ }Overridepublic void enterVariableInitializer(
 {
     AT |  @
 }
@@ -1157,7 +1157,7 @@ NotNull JavaParser.VariableInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitVariableInitializer(
+AT | @ }Overridepublic void exitVariableInitializer(
 {
     AT |  @
 }
@@ -1171,7 +1171,7 @@ NotNull JavaParser.VariableInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterElementValueArrayInitializer(
+AT | @ }Overridepublic void enterElementValueArrayInitializer(
 {
     AT |  @
 }
@@ -1185,7 +1185,7 @@ NotNull JavaParser.ElementValueArrayInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitElementValueArrayInitializer(
+AT | @ }Overridepublic void exitElementValueArrayInitializer(
 {
     AT |  @
 }
@@ -1199,7 +1199,7 @@ NotNull JavaParser.ElementValueArrayInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterCreator(
+AT | @ }Overridepublic void enterCreator(
 {
     AT |  @
 }
@@ -1213,7 +1213,7 @@ NotNull JavaParser.CreatorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitCreator(
+AT | @ }Overridepublic void exitCreator(
 {
     AT |  @
 }
@@ -1227,7 +1227,7 @@ NotNull JavaParser.CreatorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterArrayCreatorRest(
+AT | @ }Overridepublic void enterArrayCreatorRest(
 {
     AT |  @
 }
@@ -1241,7 +1241,7 @@ NotNull JavaParser.ArrayCreatorRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitArrayCreatorRest(
+AT | @ }Overridepublic void exitArrayCreatorRest(
 {
     AT |  @
 }
@@ -1255,7 +1255,7 @@ NotNull JavaParser.ArrayCreatorRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterExpression(
+AT | @ }Overridepublic void enterExpression(
 {
     AT |  @
 }
@@ -1269,7 +1269,7 @@ NotNull JavaParser.ExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitExpression(
+AT | @ }Overridepublic void exitExpression(
 {
     AT |  @
 }
@@ -1283,7 +1283,7 @@ NotNull JavaParser.ExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterConstantExpression(
+AT | @ }Overridepublic void enterConstantExpression(
 {
     AT |  @
 }
@@ -1297,7 +1297,7 @@ NotNull JavaParser.ConstantExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitConstantExpression(
+AT | @ }Overridepublic void exitConstantExpression(
 {
     AT |  @
 }
@@ -1311,7 +1311,7 @@ NotNull JavaParser.ConstantExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterQualifiedNameList(
+AT | @ }Overridepublic void enterQualifiedNameList(
 {
     AT |  @
 }
@@ -1325,7 +1325,7 @@ NotNull JavaParser.QualifiedNameListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitQualifiedNameList(
+AT | @ }Overridepublic void exitQualifiedNameList(
 {
     AT |  @
 }
@@ -1339,7 +1339,7 @@ NotNull JavaParser.QualifiedNameListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterConstructorDeclaration(
+AT | @ }Overridepublic void enterConstructorDeclaration(
 {
     AT |  @
 }
@@ -1353,7 +1353,7 @@ NotNull JavaParser.ConstructorDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitConstructorDeclaration(
+AT | @ }Overridepublic void exitConstructorDeclaration(
 {
     AT |  @
 }
@@ -1367,7 +1367,7 @@ NotNull JavaParser.ConstructorDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterForControl(
+AT | @ }Overridepublic void enterForControl(
 {
     AT |  @
 }
@@ -1381,7 +1381,7 @@ NotNull JavaParser.ForControlContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitForControl(
+AT | @ }Overridepublic void exitForControl(
 {
     AT |  @
 }
@@ -1395,7 +1395,7 @@ NotNull JavaParser.ForControlContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterSuperSuffix(
+AT | @ }Overridepublic void enterSuperSuffix(
 {
     AT |  @
 }
@@ -1409,7 +1409,7 @@ NotNull JavaParser.SuperSuffixContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitSuperSuffix(
+AT | @ }Overridepublic void exitSuperSuffix(
 {
     AT |  @
 }
@@ -1423,7 +1423,7 @@ NotNull JavaParser.SuperSuffixContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterVariableDeclarators(
+AT | @ }Overridepublic void enterVariableDeclarators(
 {
     AT |  @
 }
@@ -1437,7 +1437,7 @@ NotNull JavaParser.VariableDeclaratorsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitVariableDeclarators(
+AT | @ }Overridepublic void exitVariableDeclarators(
 {
     AT |  @
 }
@@ -1451,7 +1451,7 @@ NotNull JavaParser.VariableDeclaratorsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterCatchType(
+AT | @ }Overridepublic void enterCatchType(
 {
     AT |  @
 }
@@ -1465,7 +1465,7 @@ NotNull JavaParser.CatchTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitCatchType(
+AT | @ }Overridepublic void exitCatchType(
 {
     AT |  @
 }
@@ -1479,7 +1479,7 @@ NotNull JavaParser.CatchTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassOrInterfaceModifier(
+AT | @ }Overridepublic void enterClassOrInterfaceModifier(
 {
     AT |  @
 }
@@ -1493,7 +1493,7 @@ NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassOrInterfaceModifier(
+AT | @ }Overridepublic void exitClassOrInterfaceModifier(
 {
     AT |  @
 }
@@ -1507,7 +1507,7 @@ NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnumConstantName(
+AT | @ }Overridepublic void enterEnumConstantName(
 {
     AT |  @
 }
@@ -1521,7 +1521,7 @@ NotNull JavaParser.EnumConstantNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnumConstantName(
+AT | @ }Overridepublic void exitEnumConstantName(
 {
     AT |  @
 }
@@ -1535,7 +1535,7 @@ NotNull JavaParser.EnumConstantNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterModifier(
+AT | @ }Overridepublic void enterModifier(
 {
     AT |  @
 }
@@ -1549,7 +1549,7 @@ NotNull JavaParser.ModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitModifier(
+AT | @ }Overridepublic void exitModifier(
 {
     AT |  @
 }
@@ -1563,7 +1563,7 @@ NotNull JavaParser.ModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInnerCreator(
+AT | @ }Overridepublic void enterInnerCreator(
 {
     AT |  @
 }
@@ -1577,7 +1577,7 @@ NotNull JavaParser.InnerCreatorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInnerCreator(
+AT | @ }Overridepublic void exitInnerCreator(
 {
     AT |  @
 }
@@ -1591,7 +1591,7 @@ NotNull JavaParser.InnerCreatorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterExplicitGenericInvocationSuffix(
+AT | @ }Overridepublic void enterExplicitGenericInvocationSuffix(
 {
     AT |  @
 }
@@ -1605,7 +1605,7 @@ NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitExplicitGenericInvocationSuffix(
+AT | @ }Overridepublic void exitExplicitGenericInvocationSuffix(
 {
     AT |  @
 }
@@ -1619,7 +1619,7 @@ NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterVariableModifier(
+AT | @ }Overridepublic void enterVariableModifier(
 {
     AT |  @
 }
@@ -1633,7 +1633,7 @@ NotNull JavaParser.VariableModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitVariableModifier(
+AT | @ }Overridepublic void exitVariableModifier(
 {
     AT |  @
 }
@@ -1647,7 +1647,7 @@ NotNull JavaParser.VariableModifierContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterElementValuePair(
+AT | @ }Overridepublic void enterElementValuePair(
 {
     AT |  @
 }
@@ -1661,7 +1661,7 @@ NotNull JavaParser.ElementValuePairContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitElementValuePair(
+AT | @ }Overridepublic void exitElementValuePair(
 {
     AT |  @
 }
@@ -1675,7 +1675,7 @@ NotNull JavaParser.ElementValuePairContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterArrayInitializer(
+AT | @ }Overridepublic void enterArrayInitializer(
 {
     AT |  @
 }
@@ -1689,7 +1689,7 @@ NotNull JavaParser.ArrayInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitArrayInitializer(
+AT | @ }Overridepublic void exitArrayInitializer(
 {
     AT |  @
 }
@@ -1703,7 +1703,7 @@ NotNull JavaParser.ArrayInitializerContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterElementValue(
+AT | @ }Overridepublic void enterElementValue(
 {
     AT |  @
 }
@@ -1717,7 +1717,7 @@ NotNull JavaParser.ElementValueContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitElementValue(
+AT | @ }Overridepublic void exitElementValue(
 {
     AT |  @
 }
@@ -1731,7 +1731,7 @@ NotNull JavaParser.ElementValueContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterConstDeclaration(
+AT | @ }Overridepublic void enterConstDeclaration(
 {
     AT |  @
 }
@@ -1745,7 +1745,7 @@ NotNull JavaParser.ConstDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitConstDeclaration(
+AT | @ }Overridepublic void exitConstDeclaration(
 {
     AT |  @
 }
@@ -1759,7 +1759,7 @@ NotNull JavaParser.ConstDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterResource(
+AT | @ }Overridepublic void enterResource(
 {
     AT |  @
 }
@@ -1773,7 +1773,7 @@ NotNull JavaParser.ResourceContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitResource(
+AT | @ }Overridepublic void exitResource(
 {
     AT |  @
 }
@@ -1787,7 +1787,7 @@ NotNull JavaParser.ResourceContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterQualifiedName(
+AT | @ }Overridepublic void enterQualifiedName(
 {
     AT |  @
 }
@@ -1801,7 +1801,7 @@ NotNull JavaParser.QualifiedNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitQualifiedName(
+AT | @ }Overridepublic void exitQualifiedName(
 {
     AT |  @
 }
@@ -1815,7 +1815,7 @@ NotNull JavaParser.QualifiedNameContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterResourceSpecification(
+AT | @ }Overridepublic void enterResourceSpecification(
 {
     AT |  @
 }
@@ -1829,7 +1829,7 @@ NotNull JavaParser.ResourceSpecificationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitResourceSpecification(
+AT | @ }Overridepublic void exitResourceSpecification(
 {
     AT |  @
 }
@@ -1843,7 +1843,7 @@ NotNull JavaParser.ResourceSpecificationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterFormalParameterList(
+AT | @ }Overridepublic void enterFormalParameterList(
 {
     AT |  @
 }
@@ -1857,7 +1857,7 @@ NotNull JavaParser.FormalParameterListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitFormalParameterList(
+AT | @ }Overridepublic void exitFormalParameterList(
 {
     AT |  @
 }
@@ -1871,7 +1871,7 @@ NotNull JavaParser.FormalParameterListContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationTypeDeclaration(
+AT | @ }Overridepublic void enterAnnotationTypeDeclaration(
 {
     AT |  @
 }
@@ -1885,7 +1885,7 @@ NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationTypeDeclaration(
+AT | @ }Overridepublic void exitAnnotationTypeDeclaration(
 {
     AT |  @
 }
@@ -1899,7 +1899,7 @@ NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterCompilationUnit(
+AT | @ }Overridepublic void enterCompilationUnit(
 {
     AT |  @
 }
@@ -1913,7 +1913,7 @@ NotNull JavaParser.CompilationUnitContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitCompilationUnit(
+AT | @ }Overridepublic void exitCompilationUnit(
 {
     AT |  @
 }
@@ -1927,7 +1927,7 @@ NotNull JavaParser.CompilationUnitContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterAnnotationMethodRest(
+AT | @ }Overridepublic void enterAnnotationMethodRest(
 {
     AT |  @
 }
@@ -1941,7 +1941,7 @@ NotNull JavaParser.AnnotationMethodRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitAnnotationMethodRest(
+AT | @ }Overridepublic void exitAnnotationMethodRest(
 {
     AT |  @
 }
@@ -1955,7 +1955,7 @@ NotNull JavaParser.AnnotationMethodRestContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterSwitchBlockStatementGroup(
+AT | @ }Overridepublic void enterSwitchBlockStatementGroup(
 {
     AT |  @
 }
@@ -1969,7 +1969,7 @@ NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitSwitchBlockStatementGroup(
+AT | @ }Overridepublic void exitSwitchBlockStatementGroup(
 {
     AT |  @
 }
@@ -1983,7 +1983,7 @@ NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeParameter(
+AT | @ }Overridepublic void enterTypeParameter(
 {
     AT |  @
 }
@@ -1997,7 +1997,7 @@ NotNull JavaParser.TypeParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeParameter(
+AT | @ }Overridepublic void exitTypeParameter(
 {
     AT |  @
 }
@@ -2011,7 +2011,7 @@ NotNull JavaParser.TypeParameterContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInterfaceBody(
+AT | @ }Overridepublic void enterInterfaceBody(
 {
     AT |  @
 }
@@ -2025,7 +2025,7 @@ NotNull JavaParser.InterfaceBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInterfaceBody(
+AT | @ }Overridepublic void exitInterfaceBody(
 {
     AT |  @
 }
@@ -2039,7 +2039,7 @@ NotNull JavaParser.InterfaceBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterMethodDeclaration(
+AT | @ }Overridepublic void enterMethodDeclaration(
 {
     AT |  @
 }
@@ -2053,7 +2053,7 @@ NotNull JavaParser.MethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitMethodDeclaration(
+AT | @ }Overridepublic void exitMethodDeclaration(
 {
     AT |  @
 }
@@ -2067,7 +2067,7 @@ NotNull JavaParser.MethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterMethodBody(
+AT | @ }Overridepublic void enterMethodBody(
 {
     AT |  @
 }
@@ -2081,7 +2081,7 @@ NotNull JavaParser.MethodBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitMethodBody(
+AT | @ }Overridepublic void exitMethodBody(
 {
     AT |  @
 }
@@ -2095,7 +2095,7 @@ NotNull JavaParser.MethodBodyContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeArgument(
+AT | @ }Overridepublic void enterTypeArgument(
 {
     AT |  @
 }
@@ -2109,7 +2109,7 @@ NotNull JavaParser.TypeArgumentContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeArgument(
+AT | @ }Overridepublic void exitTypeArgument(
 {
     AT |  @
 }
@@ -2123,7 +2123,7 @@ NotNull JavaParser.TypeArgumentContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeDeclaration(
+AT | @ }Overridepublic void enterTypeDeclaration(
 {
     AT |  @
 }
@@ -2137,7 +2137,7 @@ NotNull JavaParser.TypeDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeDeclaration(
+AT | @ }Overridepublic void exitTypeDeclaration(
 {
     AT |  @
 }
@@ -2151,7 +2151,7 @@ NotNull JavaParser.TypeDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterGenericConstructorDeclaration(
+AT | @ }Overridepublic void enterGenericConstructorDeclaration(
 {
     AT |  @
 }
@@ -2165,7 +2165,7 @@ NotNull JavaParser.GenericConstructorDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitGenericConstructorDeclaration(
+AT | @ }Overridepublic void exitGenericConstructorDeclaration(
 {
     AT |  @
 }
@@ -2179,7 +2179,7 @@ NotNull JavaParser.GenericConstructorDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterClassDeclaration(
+AT | @ }Overridepublic void enterClassDeclaration(
 {
     AT |  @
 }
@@ -2193,7 +2193,7 @@ NotNull JavaParser.ClassDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitClassDeclaration(
+AT | @ }Overridepublic void exitClassDeclaration(
 {
     AT |  @
 }
@@ -2207,7 +2207,7 @@ NotNull JavaParser.ClassDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEnumConstant(
+AT | @ }Overridepublic void enterEnumConstant(
 {
     AT |  @
 }
@@ -2221,7 +2221,7 @@ NotNull JavaParser.EnumConstantContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitEnumConstant(
+AT | @ }Overridepublic void exitEnumConstant(
 {
     AT |  @
 }
@@ -2235,7 +2235,7 @@ NotNull JavaParser.EnumConstantContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterStatement(
+AT | @ }Overridepublic void enterStatement(
 {
     AT |  @
 }
@@ -2249,7 +2249,7 @@ NotNull JavaParser.StatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitStatement(
+AT | @ }Overridepublic void exitStatement(
 {
     AT |  @
 }
@@ -2263,7 +2263,7 @@ NotNull JavaParser.StatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterImportDeclaration(
+AT | @ }Overridepublic void enterImportDeclaration(
 {
     AT |  @
 }
@@ -2277,7 +2277,7 @@ NotNull JavaParser.ImportDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitImportDeclaration(
+AT | @ }Overridepublic void exitImportDeclaration(
 {
     AT |  @
 }
@@ -2291,7 +2291,7 @@ NotNull JavaParser.ImportDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterPrimitiveType(
+AT | @ }Overridepublic void enterPrimitiveType(
 {
     AT |  @
 }
@@ -2305,7 +2305,7 @@ NotNull JavaParser.PrimitiveTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitPrimitiveType(
+AT | @ }Overridepublic void exitPrimitiveType(
 {
     AT |  @
 }
@@ -2319,7 +2319,7 @@ NotNull JavaParser.PrimitiveTypeContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInterfaceDeclaration(
+AT | @ }Overridepublic void enterInterfaceDeclaration(
 {
     AT |  @
 }
@@ -2333,7 +2333,7 @@ NotNull JavaParser.InterfaceDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInterfaceDeclaration(
+AT | @ }Overridepublic void exitInterfaceDeclaration(
 {
     AT |  @
 }
@@ -2347,7 +2347,7 @@ NotNull JavaParser.InterfaceDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterLocalVariableDeclarationStatement(
+AT | @ }Overridepublic void enterLocalVariableDeclarationStatement(
 {
     AT |  @
 }
@@ -2361,7 +2361,7 @@ NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitLocalVariableDeclarationStatement(
+AT | @ }Overridepublic void exitLocalVariableDeclarationStatement(
 {
     AT |  @
 }
@@ -2375,7 +2375,7 @@ NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterBlockStatement(
+AT | @ }Overridepublic void enterBlockStatement(
 {
     AT |  @
 }
@@ -2389,7 +2389,7 @@ NotNull JavaParser.BlockStatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitBlockStatement(
+AT | @ }Overridepublic void exitBlockStatement(
 {
     AT |  @
 }
@@ -2403,7 +2403,7 @@ NotNull JavaParser.BlockStatementContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterFieldDeclaration(
+AT | @ }Overridepublic void enterFieldDeclaration(
 {
     AT |  @
 }
@@ -2417,7 +2417,7 @@ NotNull JavaParser.FieldDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitFieldDeclaration(
+AT | @ }Overridepublic void exitFieldDeclaration(
 {
     AT |  @
 }
@@ -2431,7 +2431,7 @@ NotNull JavaParser.FieldDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterConstantDeclarator(
+AT | @ }Overridepublic void enterConstantDeclarator(
 {
     AT |  @
 }
@@ -2445,7 +2445,7 @@ NotNull JavaParser.ConstantDeclaratorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitConstantDeclarator(
+AT | @ }Overridepublic void exitConstantDeclarator(
 {
     AT |  @
 }
@@ -2459,7 +2459,7 @@ NotNull JavaParser.ConstantDeclaratorContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterResources(
+AT | @ }Overridepublic void enterResources(
 {
     AT |  @
 }
@@ -2473,7 +2473,7 @@ NotNull JavaParser.ResourcesContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitResources(
+AT | @ }Overridepublic void exitResources(
 {
     AT |  @
 }
@@ -2487,7 +2487,7 @@ NotNull JavaParser.ResourcesContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterStatementExpression(
+AT | @ }Overridepublic void enterStatementExpression(
 {
     AT |  @
 }
@@ -2501,7 +2501,7 @@ NotNull JavaParser.StatementExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitStatementExpression(
+AT | @ }Overridepublic void exitStatementExpression(
 {
     AT |  @
 }
@@ -2515,7 +2515,7 @@ NotNull JavaParser.StatementExpressionContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInterfaceMethodDeclaration(
+AT | @ }Overridepublic void enterInterfaceMethodDeclaration(
 {
     AT |  @
 }
@@ -2529,7 +2529,7 @@ NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInterfaceMethodDeclaration(
+AT | @ }Overridepublic void exitInterfaceMethodDeclaration(
 {
     AT |  @
 }
@@ -2543,7 +2543,7 @@ NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterPackageDeclaration(
+AT | @ }Overridepublic void enterPackageDeclaration(
 {
     AT |  @
 }
@@ -2557,7 +2557,7 @@ NotNull JavaParser.PackageDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitPackageDeclaration(
+AT | @ }Overridepublic void exitPackageDeclaration(
 {
     AT |  @
 }
@@ -2571,7 +2571,7 @@ NotNull JavaParser.PackageDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterElementValuePairs(
+AT | @ }Overridepublic void enterElementValuePairs(
 {
     AT |  @
 }
@@ -2585,7 +2585,7 @@ NotNull JavaParser.ElementValuePairsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitElementValuePairs(
+AT | @ }Overridepublic void exitElementValuePairs(
 {
     AT |  @
 }
@@ -2599,7 +2599,7 @@ NotNull JavaParser.ElementValuePairsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterLocalVariableDeclaration(
+AT | @ }Overridepublic void enterLocalVariableDeclaration(
 {
     AT |  @
 }
@@ -2613,7 +2613,7 @@ NotNull JavaParser.LocalVariableDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitLocalVariableDeclaration(
+AT | @ }Overridepublic void exitLocalVariableDeclaration(
 {
     AT |  @
 }
@@ -2627,7 +2627,7 @@ NotNull JavaParser.LocalVariableDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterNonWildcardTypeArguments(
+AT | @ }Overridepublic void enterNonWildcardTypeArguments(
 {
     AT |  @
 }
@@ -2641,7 +2641,7 @@ NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitNonWildcardTypeArguments(
+AT | @ }Overridepublic void exitNonWildcardTypeArguments(
 {
     AT |  @
 }
@@ -2655,7 +2655,7 @@ NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterInterfaceMemberDeclaration(
+AT | @ }Overridepublic void enterInterfaceMemberDeclaration(
 {
     AT |  @
 }
@@ -2669,7 +2669,7 @@ NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitInterfaceMemberDeclaration(
+AT | @ }Overridepublic void exitInterfaceMemberDeclaration(
 {
     AT |  @
 }
@@ -2683,7 +2683,7 @@ NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterSwitchLabel(
+AT | @ }Overridepublic void enterSwitchLabel(
 {
     AT |  @
 }
@@ -2697,7 +2697,7 @@ NotNull JavaParser.SwitchLabelContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitSwitchLabel(
+AT | @ }Overridepublic void exitSwitchLabel(
 {
     AT |  @
 }
@@ -2711,7 +2711,7 @@ NotNull JavaParser.SwitchLabelContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterForInit(
+AT | @ }Overridepublic void enterForInit(
 {
     AT |  @
 }
@@ -2725,7 +2725,7 @@ NotNull JavaParser.ForInitContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitForInit(
+AT | @ }Overridepublic void exitForInit(
 {
     AT |  @
 }
@@ -2739,7 +2739,7 @@ NotNull JavaParser.ForInitContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterFormalParameters(
+AT | @ }Overridepublic void enterFormalParameters(
 {
     AT |  @
 }
@@ -2753,7 +2753,7 @@ NotNull JavaParser.FormalParametersContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitFormalParameters(
+AT | @ }Overridepublic void exitFormalParameters(
 {
     AT |  @
 }
@@ -2767,7 +2767,7 @@ NotNull JavaParser.FormalParametersContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterArguments(
+AT | @ }Overridepublic void enterArguments(
 {
     AT |  @
 }
@@ -2781,7 +2781,7 @@ NotNull JavaParser.ArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitArguments(
+AT | @ }Overridepublic void exitArguments(
 {
     AT |  @
 }
@@ -2795,7 +2795,7 @@ NotNull JavaParser.ArgumentsContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterGenericMethodDeclaration(
+AT | @ }Overridepublic void enterGenericMethodDeclaration(
 {
     AT |  @
 }
@@ -2809,7 +2809,7 @@ NotNull JavaParser.GenericMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitGenericMethodDeclaration(
+AT | @ }Overridepublic void exitGenericMethodDeclaration(
 {
     AT |  @
 }
@@ -2823,7 +2823,7 @@ NotNull JavaParser.GenericMethodDeclarationContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterTypeArgumentsOrDiamond(
+AT | @ }Overridepublic void enterTypeArgumentsOrDiamond(
 {
     AT |  @
 }
@@ -2837,7 +2837,7 @@ NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void exitTypeArgumentsOrDiamond(
+AT | @ }Overridepublic void exitTypeArgumentsOrDiamond(
 {
     AT |  @
 }
@@ -2851,7 +2851,7 @@ NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
 	 * <p>The default implementation does nothing.</p>
 	 */ {
 
-AT | @ }Override public void enterEveryRule(
+AT | @ }Overridepublic void enterEveryRule(
 {
     AT |  @
 }
@@ -2861,7 +2861,7 @@ NotNull ParserRuleContext ctx ) { }
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Override public void exitEveryRule(
+	 */ {AT | @ }Overridepublic void exitEveryRule(
 {
     AT |  @
 }
@@ -2871,7 +2871,7 @@ NotNull ParserRuleContext ctx ) { }
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Override public void visitTerminal(
+	 */ {AT | @ }Overridepublic void visitTerminal(
 {
     AT |  @
 }
@@ -2881,7 +2881,7 @@ NotNull TerminalNode node ) { }
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Override public void visitErrorNode(
+	 */ {AT | @ }Overridepublic void visitErrorNode(
 {
     AT |  @
 }

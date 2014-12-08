@@ -14,12 +14,9 @@ namespace javasharp
     interface
 }
 
-JavaVisitor {
-LT | < }T {
-GT | > } {EXTENDS |extends }
-ParseTreeVisitor {
-LT | < }T {
-GT | > } {
+JavaVisitor<T> {
+EXTENDS |extends }
+ParseTreeVisitor<T> {
 /**
 	 * Visit a parse tree produced by {@link JavaParser#memberDeclaration}.
 	 * @param ctx the parse tree

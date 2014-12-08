@@ -48,7 +48,7 @@ JavaLexer lexer;
 private {
 FINAL |final }
 JavaParser parser;
-public SyntaxTreeXmlFilter()
+publicSyntaxTreeXmlFilter()
 {
     lexer = new JavaLexer(null);
     parser = new JavaParser(null);
@@ -60,40 +60,30 @@ public SyntaxTreeXmlFilter()
     ;
 }
 
-private JavaParser.CompilationUnitContextreadSourceFile (String javaSourceFile ) { {
-RETURN | return }readSourceFile(new File(javaSourceFile) ) ;  }
+private JavaParser.CompilationUnitContextreadSourceFile (String javaSourceFile ) { return 
+readSourceFile(new File(javaSourceFile) ) ;  }
 private JavaParser.CompilationUnitContextreadSourceFile (File javaSourceFile ) {
 Reader fileReader = new FileReader(javaSourceFile);
 ANTLRInputStream is  =  new ANTLRInputStream(fileReader);
 lexer.setInputStream ( is ) ; CommonTokenStream tokens = new CommonTokenStream(lexer);
-tokens.fill ( ) ; parser.setTokenStream (tokens ) ; JavaParser.CompilationUnitContext ctx = parser.compilationUnit(); {
-RETURN | return }ctx ;  } {AT | @ }Override public void parse(InputSource input)
+tokens.fill ( ) ; parser.setTokenStream (tokens ) ; JavaParser.CompilationUnitContext ctx = parser.compilationUnit(); return 
+ctx ;  } {AT | @ }Overridepublic void parse(InputSource input)
 {
     parse(input.getSystemId());
 } {
 
-AT | @ }Override public void parse(String javaSourcePath)
+AT | @ }Overridepublic void parse(String javaSourcePath)
 {
     // parse the Java file(s) with the ANTLR generated parser
     JavaParser.CompilationUnitContext ctx = readSourceFile(javaSourcePath);
     // visit the AST with the XmlEmittingVisitor, which generates SAX events
     startDocument();
-    XmlEmittingVisitor visitor = new XmlEmittingVisitor(
-    {
-    THIS | this
-    }
-
-    , (BufferedTokenStream)parser.getTokenStream() )
-    ;
+    XmlEmittingVisitor visitor = new XmlEmittingVisitor(this, (BufferedTokenStream)parser.getTokenStream());
     visitor.visit(ctx);
     endDocument();
 } {
 
-AT | @ }Override public void setParent(XMLReader parent)
+AT | @ }Overridepublic void setParent(XMLReader parent)
 {
-    {
-        THROW | throw
-    }
-
-    new UnsupportedOperationException("This xml filter emits events that are linked to source code, without XML parser.");
+    throw new UnsupportedOperationException("This xml filter emits events that are linked to source code, without XML parser.");
 } } }
