@@ -28,7 +28,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ConsoleApplication1
+namespace JavaSharp
 {
     class Program
     {
@@ -36,9 +36,11 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
+            string javaCsFile, csFile;
             if (args.Length == 1)
             {
-
+                javaCsFile = WithExtension(args[0], ".java.cs");
+                csFile = WithExtension(args[0], ".cs");
             }
             else if (args.Length != 2)
             {
@@ -47,8 +49,8 @@ namespace ConsoleApplication1
             }
             else
             {
-                string javaCsFile = WithExtension(args[0], ".java.cs");
-                string csFile = WithExtension(args[1], ".cs");
+                javaCsFile = WithExtension(args[0], ".java.cs");
+                csFile = WithExtension(args[1], ".cs");
             }
 
             if (!File.Exists(javaCsFile))
@@ -61,7 +63,8 @@ namespace ConsoleApplication1
                 string javaCsContent = File.ReadAllText(javaCsFile);
                 SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(javaCsContent);
                 var root = tree.GetRoot().NormalizeWhitespace();
-                SyntaxProcessor processor = new SyntaxProcessor();
+                ITreeTransformer syntaxProcessor = new SyntaxProcessor();
+                root = syntaxProcessor.Transform(root);
                 tree = SyntaxFactory.SyntaxTree(root);
                 File.WriteAllText(csFile, tree.GetText().ToString());
             }
@@ -75,6 +78,12 @@ namespace ConsoleApplication1
             }
         }
 
-        private static void WithExt
+        private static string WithExtension(string filename, string extension)
+        {
+            string directory = Path.GetDirectoryName(filename);
+            string withoutExtension = Path.GetFileNameWithoutExtension(filename);
+            withoutExtension = Path.ChangeExtension(withoutExtension, null);
+            return Path.Combine(directory, Path.ChangeExtension(withoutExtension, extension));
+        }
     }
 }
