@@ -1,4 +1,4 @@
-/*
+﻿/*
  * JavaSharp, a free Java to C# translator based on ANTLRv4
  * Copyright (C) 2014  Philip van Oosten
  * 
@@ -17,11 +17,13 @@
  * 
  * https://github.com/pvoosten
  */
-using java.io. /* a comment withing a qualified name*/File;
+
+using java.io./* a comment withing a qualified name*/File;
 using java.util.logging.Level;
-using /* Before a qualified name */ java.util.logging.Logger;
+using /* Before a qualified name */java.util.logging.Logger;
 using javax.xml.transform.Result;
-using javax.xml.transform.Source;
+using
+ javax.xml.transform.Source;
 using javax.xml.transform.Transformer;
 using javax.xml.transform.TransformerException;
 using javax.xml.transform.TransformerFactory;
@@ -31,44 +33,36 @@ using org.xml.sax.InputSource;
 
 namespace javasharp
 {
-    /**
-     *
-     * @author PvO
-     */    public class Tool
-    {
-        private void convertJavaToXmlSyntaxTree(String javaSourceFile, String xmlOutputFile)
-        {
-            try
-            {
-                Transformer transformer = TransformerFactory.newInstance().newTransformer();
-                SyntaxTreeXmlFilter xmlEmitter = new SyntaxTreeXmlFilter();
-                Source source = new SAXSource(xmlEmitter, new InputSource(javaSourceFile));
-                Result result = new StreamResult(new File(xmlOutputFile));
-                transformer.transform(source, result);
-            }
-            catch (TransformerException ex)
-            {
-                Logger.getLogger(Tool.class         .
+/**
+ *
+ * @author PvO
+ */
+public class Tool {
 
-        getName() ) .
-        log(Level.SEVERE,  null , ex);
+    private void convertJavaToXmlSyntaxTree(String javaSourceFile, String xmlOutputFile) {
+        try {
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            SyntaxTreeXmlFilter xmlEmitter = new SyntaxTreeXmlFilter();
+            Source source = new SAXSource(xmlEmitter, new InputSource(javaSourceFile));
+            Result result = new StreamResult(new File(xmlOutputFile));
+            transformer.transform(source, result);
+        } catch (TransformerException ex) {
+            Logger.getLogger(Tool.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void main(String[] args)   {
+        if (args.length == 2) {
+            Tool tool = new Tool();
+            String javaInputFile = args[0];
+            String xmlOutputFile = args[1];
+            tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
+        } else {
+            System.err.println("2 arguments required: <java input file> <xml output file>");
+            System.exit(1);
+        }
     }
 }
-
-publicstatic void main(String[] args)
-{
-    if (args.length == 2)
-    {
-        Tool tool = new Tool();
-        String javaInputFile = args[0];
-        String xmlOutputFile = args[1];
-        tool.convertJavaToXmlSyntaxTree(javaInputFile, xmlOutputFile);
-    }
-    else
-    {
-        System.err.println("2 arguments required: <java input file> <xml output file>");
-        System.exit(1);
-    }
-} } }
+}
 // Comment at the end of the file
 /* Just to verify that it is included in the xml version of the AST */

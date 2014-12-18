@@ -26,8 +26,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 using System.IO;
 
 namespace ConsoleApplication1
@@ -35,54 +33,48 @@ namespace ConsoleApplication1
     class Program
     {
 
-        private const int ERROR_CONTEXT_LINES = 2;
 
         static void Main(string[] args)
         {
-            if (args.Length != 2)
+            if (args.Length == 1)
             {
-                Console.Error.WriteLine("Expected 2 parameters: <java ast xml file> <c sharp target file>");
+
+            }
+            else if (args.Length != 2)
+            {
+                Console.Error.WriteLine("Expected 2 parameters: <java.cs file> <c sharp target file>");
                 return;
             }
+            else
+            {
+                string javaCsFile = WithExtension(args[0], ".java.cs");
+                string csFile = WithExtension(args[1], ".cs");
+            }
 
-            string javaAstFile = args[0];
-            string csFile = args[1];
+            if (!File.Exists(javaCsFile))
+            {
+                Console.Error.WriteLine("File " + javaCsFile + " not found");
+            }
 
-            var reader = XmlReader.Create(System.IO.File.OpenRead(javaAstFile));
-            using (MemoryStream stream = new MemoryStream())
-            { 
-                try
-                {
-                    XmlWriter writer = XmlWriter.Create(stream);
-                    new JavaAstReader.JavaAstPreprocessor().PrepareJavaAst(reader, writer);
-                    var newStream = new MemoryStream(stream.GetBuffer());
-                    newStream.SetLength(stream.Length);
-                    XDocument preprocessedJava = XDocument.Load(newStream);
-                    SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(preprocessedJava.Document.Root.Value);
-                    var root = tree.GetRoot().NormalizeWhitespace();
-                    tree = SyntaxFactory.SyntaxTree(root);
-                    File.WriteAllText(csFile, tree.GetText().ToString());
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(javaAstFile + " ==> " + csFile);
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine(ex.StackTrace);
-                    Console.WriteLine(string.Join("\n", ex.Data.Keys.Cast<object>()
-                        .Select(k => "[" + k + "]: " + ex.Data[k])));
-                    XmlException xmlEx = ex as XmlException;
-                    if (xmlEx != null)
-                    {
-                        var lines = File.ReadAllLines(javaAstFile);
-                        int startLine = Math.Max(0, xmlEx.LineNumber - ERROR_CONTEXT_LINES);
-                        int endLine = Math.Min(lines.Length - 1, xmlEx.LineNumber + ERROR_CONTEXT_LINES);
-                        for (int i = startLine; i <= endLine; i++)
-                        {
-                            Console.WriteLine("" + i + "\t" + lines[i]);
-                        }
-                    }
-                }
+            try
+            {
+                string javaCsContent = File.ReadAllText(javaCsFile);
+                SyntaxTree tree = SyntaxFactory.ParseSyntaxTree(javaCsContent);
+                var root = tree.GetRoot().NormalizeWhitespace();
+                SyntaxProcessor processor = new SyntaxProcessor();
+                tree = SyntaxFactory.SyntaxTree(root);
+                File.WriteAllText(csFile, tree.GetText().ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(javaCsFile + " ==> " + csFile);
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine(string.Join("\n", ex.Data.Keys.Cast<object>()
+                    .Select(k => "[" + k + "]: " + ex.Data[k])));
             }
         }
+
+        private static void WithExt
     }
 }

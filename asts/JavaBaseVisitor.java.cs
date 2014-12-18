@@ -1,1638 +1,1028 @@
-// Generated from Java.g4 by ANTLR 4.3
+﻿// Generated from Java.g4 by ANTLR 4.3
+
+
 using org.antlr.v4.runtime.misc.NotNull;
 using org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 namespace javasharp
 {
-    /**
-     * This class provides an empty implementation of {@link JavaVisitor},
-     * which can be extended to create a visitor which only needs to handle a subset
-     * of the available methods.
-     *
-     * @param <T> The return type of the visit operation. Use {@link Void} for
-     * operations with no return type.
-     */    public class JavaBaseVisitor<T>
-    {
-        EXTENDS |extends
-    }
-
-    AbstractParseTreeVisitor<T> {
-    IMPLEMENTS |implements
-}
-
-JavaVisitor<T> { 
 /**
+ * This class provides an empty implementation of {@link JavaVisitor},
+ * which can be extended to create a visitor which only needs to handle a subset
+ * of the available methods.
+ *
+ * @param <T> The return type of the visit operation. Use {@link Void} for
+ * operations with no return type.
+ */
+public class JavaBaseVisitor<T> : AbstractParseTreeVisitor<T> : JavaVisitor<T> {
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-AT | @ }Overridepublic TvisitMemberDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitMemberDeclaration(@NotNull JavaParser.MemberDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.MemberDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitDefaultValue(@NotNull JavaParser.DefaultValueContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitDefaultValue(
-{
-    AT |  @
-}
-
-NotNull JavaParser.DefaultValueContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationTypeElementDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationTypeElementDeclaration(@NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitType(
-{
-    AT |  @
-}
+	 */
+	 public T visitType(@NotNull JavaParser.TypeContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.TypeContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationTypeBody(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationTypeBody(@NotNull JavaParser.AnnotationTypeBodyContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationTypeBodyContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitGenericInterfaceMethodDeclaration(@NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitGenericInterfaceMethodDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitClassBodyDeclaration(@NotNull JavaParser.ClassBodyDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitClassBodyDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassBodyDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitBlock(
-{
-    AT |  @
-}
+	 */
+	 public T visitBlock(@NotNull JavaParser.BlockContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.BlockContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitEnumBodyDeclarations(@NotNull JavaParser.EnumBodyDeclarationsContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitEnumBodyDeclarations(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumBodyDeclarationsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitForUpdate(@NotNull JavaParser.ForUpdateContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitForUpdate(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForUpdateContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitEnhancedForControl(
-{
-    AT |  @
-}
+	 */
+	 public T visitEnhancedForControl(@NotNull JavaParser.EnhancedForControlContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.EnhancedForControlContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationConstantRest(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationConstantRest(@NotNull JavaParser.AnnotationConstantRestContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationConstantRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitExplicitGenericInvocation(
-{
-    AT |  @
-}
+	 */
+	 public T visitExplicitGenericInvocation(@NotNull JavaParser.ExplicitGenericInvocationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ExplicitGenericInvocationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitNonWildcardTypeArgumentsOrDiamond(
-{
-    AT |  @
-}
+	 */
+	 public T visitNonWildcardTypeArgumentsOrDiamond(@NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitExpressionList(
-{
-    AT |  @
-}
+	 */
+	 public T visitExpressionList(@NotNull JavaParser.ExpressionListContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ExpressionListContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationTypeElementRest(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationTypeElementRest(@NotNull JavaParser.AnnotationTypeElementRestContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationTypeElementRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitClassOrInterfaceType(@NotNull JavaParser.ClassOrInterfaceTypeContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitClassOrInterfaceType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitTypeBound(@NotNull JavaParser.TypeBoundContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitTypeBound(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeBoundContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitVariableDeclaratorId(
-{
-    AT |  @
-}
+	 */
+	 public T visitVariableDeclaratorId(@NotNull JavaParser.VariableDeclaratorIdContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.VariableDeclaratorIdContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitPrimary(
-{
-    AT |  @
-}
+	 */
+	 public T visitPrimary(@NotNull JavaParser.PrimaryContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.PrimaryContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitClassCreatorRest(@NotNull JavaParser.ClassCreatorRestContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitClassCreatorRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassCreatorRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitInterfaceBodyDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitInterfaceBodyDeclaration(@NotNull JavaParser.InterfaceBodyDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitTypeArguments(
-{
-    AT |  @
-}
+	 */
+	 public T visitTypeArguments(@NotNull JavaParser.TypeArgumentsContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.TypeArgumentsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationName(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationName(@NotNull JavaParser.AnnotationNameContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationNameContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitFinallyBlock(@NotNull JavaParser.FinallyBlockContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitFinallyBlock(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FinallyBlockContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitTypeParameters(@NotNull JavaParser.TypeParametersContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitTypeParameters(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeParametersContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitLastFormalParameter(
-{
-    AT |  @
-}
+	 */
+	 public T visitLastFormalParameter(@NotNull JavaParser.LastFormalParameterContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.LastFormalParameterContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitConstructorBody(@NotNull JavaParser.ConstructorBodyContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitConstructorBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstructorBodyContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitLiteral(@NotNull JavaParser.LiteralContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitLiteral(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LiteralContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationMethodOrConstantRest(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationMethodOrConstantRest(@NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitCatchClause(
-{
-    AT |  @
-}
+	 */
+	 public T visitCatchClause(@NotNull JavaParser.CatchClauseContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.CatchClauseContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitVariableDeclarator(
-{
-    AT |  @
-}
+	 */
+	 public T visitVariableDeclarator(@NotNull JavaParser.VariableDeclaratorContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.VariableDeclaratorContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitTypeList(
-{
-    AT |  @
-}
+	 */
+	 public T visitTypeList(@NotNull JavaParser.TypeListContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.TypeListContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitEnumConstants(
-{
-    AT |  @
-}
+	 */
+	 public T visitEnumConstants(@NotNull JavaParser.EnumConstantsContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.EnumConstantsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitClassBody(
-{
-    AT |  @
-}
+	 */
+	 public T visitClassBody(@NotNull JavaParser.ClassBodyContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ClassBodyContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitCreatedName(@NotNull JavaParser.CreatedNameContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitCreatedName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CreatedNameContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitEnumDeclaration(@NotNull JavaParser.EnumDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitEnumDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitFormalParameter(
-{
-    AT |  @
-}
+	 */
+	 public T visitFormalParameter(@NotNull JavaParser.FormalParameterContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.FormalParameterContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitParExpression(
-{
-    AT |  @
-}
+	 */
+	 public T visitParExpression(@NotNull JavaParser.ParExpressionContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ParExpressionContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitAnnotation(@NotNull JavaParser.AnnotationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitAnnotation(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitVariableInitializer(
-{
-    AT |  @
-}
+	 */
+	 public T visitVariableInitializer(@NotNull JavaParser.VariableInitializerContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.VariableInitializerContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitElementValueArrayInitializer(
-{
-    AT |  @
-}
+	 */
+	 public T visitElementValueArrayInitializer(@NotNull JavaParser.ElementValueArrayInitializerContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ElementValueArrayInitializerContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitCreator(
-{
-    AT |  @
-}
+	 */
+	 public T visitCreator(@NotNull JavaParser.CreatorContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.CreatorContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitArrayCreatorRest(@NotNull JavaParser.ArrayCreatorRestContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitArrayCreatorRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArrayCreatorRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitExpression(@NotNull JavaParser.ExpressionContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ExpressionContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitConstantExpression(
-{
-    AT |  @
-}
+	 */
+	 public T visitConstantExpression(@NotNull JavaParser.ConstantExpressionContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ConstantExpressionContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitQualifiedNameList(@NotNull JavaParser.QualifiedNameListContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitQualifiedNameList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.QualifiedNameListContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitConstructorDeclaration(@NotNull JavaParser.ConstructorDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitConstructorDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstructorDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitForControl(
-{
-    AT |  @
-}
+	 */
+	 public T visitForControl(@NotNull JavaParser.ForControlContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ForControlContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitSuperSuffix(
-{
-    AT |  @
-}
+	 */
+	 public T visitSuperSuffix(@NotNull JavaParser.SuperSuffixContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.SuperSuffixContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitVariableDeclarators(
-{
-    AT |  @
-}
+	 */
+	 public T visitVariableDeclarators(@NotNull JavaParser.VariableDeclaratorsContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.VariableDeclaratorsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitCatchType(
-{
-    AT |  @
-}
+	 */
+	 public T visitCatchType(@NotNull JavaParser.CatchTypeContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.CatchTypeContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitClassOrInterfaceModifier(
-{
-    AT |  @
-}
+	 */
+	 public T visitClassOrInterfaceModifier(@NotNull JavaParser.ClassOrInterfaceModifierContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitEnumConstantName(
-{
-    AT |  @
-}
+	 */
+	 public T visitEnumConstantName(@NotNull JavaParser.EnumConstantNameContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.EnumConstantNameContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitModifier(@NotNull JavaParser.ModifierContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitModifier(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ModifierContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitInnerCreator(@NotNull JavaParser.InnerCreatorContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitInnerCreator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InnerCreatorContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitExplicitGenericInvocationSuffix(
-{
-    AT |  @
-}
+	 */
+	 public T visitExplicitGenericInvocationSuffix(@NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitVariableModifier(
-{
-    AT |  @
-}
+	 */
+	 public T visitVariableModifier(@NotNull JavaParser.VariableModifierContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.VariableModifierContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitElementValuePair(@NotNull JavaParser.ElementValuePairContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitElementValuePair(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValuePairContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitArrayInitializer(
-{
-    AT |  @
-}
+	 */
+	 public T visitArrayInitializer(@NotNull JavaParser.ArrayInitializerContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ArrayInitializerContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitElementValue(
-{
-    AT |  @
-}
+	 */
+	 public T visitElementValue(@NotNull JavaParser.ElementValueContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ElementValueContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitConstDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitConstDeclaration(@NotNull JavaParser.ConstDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ConstDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitResource(@NotNull JavaParser.ResourceContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitResource(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ResourceContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitQualifiedName(@NotNull JavaParser.QualifiedNameContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitQualifiedName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.QualifiedNameContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitResourceSpecification(
-{
-    AT |  @
-}
+	 */
+	 public T visitResourceSpecification(@NotNull JavaParser.ResourceSpecificationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ResourceSpecificationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitFormalParameterList(@NotNull JavaParser.FormalParameterListContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitFormalParameterList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FormalParameterListContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitAnnotationTypeDeclaration(@NotNull JavaParser.AnnotationTypeDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitAnnotationTypeDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitCompilationUnit(
-{
-    AT |  @
-}
+	 */
+	 public T visitCompilationUnit(@NotNull JavaParser.CompilationUnitContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.CompilationUnitContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitAnnotationMethodRest(
-{
-    AT |  @
-}
+	 */
+	 public T visitAnnotationMethodRest(@NotNull JavaParser.AnnotationMethodRestContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.AnnotationMethodRestContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitSwitchBlockStatementGroup(
-{
-    AT |  @
-}
+	 */
+	 public T visitSwitchBlockStatementGroup(@NotNull JavaParser.SwitchBlockStatementGroupContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitTypeParameter(
-{
-    AT |  @
-}
+	 */
+	 public T visitTypeParameter(@NotNull JavaParser.TypeParameterContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.TypeParameterContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitInterfaceBody(
-{
-    AT |  @
-}
+	 */
+	 public T visitInterfaceBody(@NotNull JavaParser.InterfaceBodyContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.InterfaceBodyContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitMethodDeclaration(@NotNull JavaParser.MethodDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.MethodDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitMethodBody(@NotNull JavaParser.MethodBodyContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitMethodBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.MethodBodyContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitTypeArgument(@NotNull JavaParser.TypeArgumentContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitTypeArgument(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeArgumentContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitTypeDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitTypeDeclaration(@NotNull JavaParser.TypeDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.TypeDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitGenericConstructorDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitGenericConstructorDeclaration(@NotNull JavaParser.GenericConstructorDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.GenericConstructorDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitClassDeclaration(@NotNull JavaParser.ClassDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitClassDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitEnumConstant(
-{
-    AT |  @
-}
+	 */
+	 public T visitEnumConstant(@NotNull JavaParser.EnumConstantContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.EnumConstantContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitStatement(
-{
-    AT |  @
-}
+	 */
+	 public T visitStatement(@NotNull JavaParser.StatementContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.StatementContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitImportDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitImportDeclaration(@NotNull JavaParser.ImportDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ImportDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitPrimitiveType(@NotNull JavaParser.PrimitiveTypeContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitPrimitiveType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PrimitiveTypeContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitInterfaceDeclaration(@NotNull JavaParser.InterfaceDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitInterfaceDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitLocalVariableDeclarationStatement(
-{
-    AT |  @
-}
+	 */
+	 public T visitLocalVariableDeclarationStatement(@NotNull JavaParser.LocalVariableDeclarationStatementContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitBlockStatement(@NotNull JavaParser.BlockStatementContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitBlockStatement(
-{
-    AT |  @
-}
-
-NotNull JavaParser.BlockStatementContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitFieldDeclaration(@NotNull JavaParser.FieldDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitFieldDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FieldDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitConstantDeclarator(
-{
-    AT |  @
-}
+	 */
+	 public T visitConstantDeclarator(@NotNull JavaParser.ConstantDeclaratorContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ConstantDeclaratorContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitResources(
-{
-    AT |  @
-}
+	 */
+	 public T visitResources(@NotNull JavaParser.ResourcesContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ResourcesContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitStatementExpression(
-{
-    AT |  @
-}
+	 */
+	 public T visitStatementExpression(@NotNull JavaParser.StatementExpressionContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.StatementExpressionContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitInterfaceMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitInterfaceMethodDeclaration(@NotNull JavaParser.InterfaceMethodDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitPackageDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitPackageDeclaration(@NotNull JavaParser.PackageDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.PackageDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitElementValuePairs(
-{
-    AT |  @
-}
+	 */
+	 public T visitElementValuePairs(@NotNull JavaParser.ElementValuePairsContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ElementValuePairsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitLocalVariableDeclaration(@NotNull JavaParser.LocalVariableDeclarationContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitLocalVariableDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LocalVariableDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitNonWildcardTypeArguments(@NotNull JavaParser.NonWildcardTypeArgumentsContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitNonWildcardTypeArguments(
-{
-    AT |  @
-}
-
-NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitInterfaceMemberDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitInterfaceMemberDeclaration(@NotNull JavaParser.InterfaceMemberDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitSwitchLabel(
-{
-    AT |  @
-}
+	 */
+	 public T visitSwitchLabel(@NotNull JavaParser.SwitchLabelContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.SwitchLabelContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
+	 */
+	 public T visitForInit(@NotNull JavaParser.ForInitContext ctx) { return visitChildren(ctx); }
 
-AT | @ }Overridepublic TvisitForInit(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForInitContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitFormalParameters(
-{
-    AT |  @
-}
+	 */
+	 public T visitFormalParameters(@NotNull JavaParser.FormalParametersContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.FormalParametersContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitArguments(
-{
-    AT |  @
-}
+	 */
+	 public T visitArguments(@NotNull JavaParser.ArgumentsContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.ArgumentsContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitGenericMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public T visitGenericMethodDeclaration(@NotNull JavaParser.GenericMethodDeclarationContext ctx) { return visitChildren(ctx); }
 
-NotNull JavaParser.GenericMethodDeclarationContext ctx)
-{
-    return visitChildren(ctx);
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */ {
-
-AT | @ }Overridepublic TvisitTypeArgumentsOrDiamond(
-{
-    AT |  @
+	 */
+	 public T visitTypeArgumentsOrDiamond(@NotNull JavaParser.TypeArgumentsOrDiamondContext ctx) { return visitChildren(ctx); }
 }
-
-NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
-{
-    return visitChildren(ctx);
-} } }
+}

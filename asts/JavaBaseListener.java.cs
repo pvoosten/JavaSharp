@@ -1,4 +1,6 @@
-// Generated from Java.g4 by ANTLR 4.3
+﻿// Generated from Java.g4 by ANTLR 4.3
+
+
 using org.antlr.v4.runtime.ParserRuleContext;
 using org.antlr.v4.runtime.misc.NotNull;
 using org.antlr.v4.runtime.tree.ErrorNode;
@@ -6,2884 +8,1760 @@ using org.antlr.v4.runtime.tree.TerminalNode;
 
 namespace javasharp
 {
-    /**
-     * This class provides an empty implementation of {@link JavaListener},
-     * which can be extended to create a listener which only needs to handle a subset
-     * of the available methods.
-     */    public class JavaBaseListener
-    {
-        IMPLEMENTS |implements
-    }
-
-    JavaListener { 
-    /**
-    	 * {@inheritDoc}
-    	 *
-    	 * <p>The default implementation does nothing.</p>
-    	 */ {
-    AT | @}
-
-Overridepublic void enterMemberDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.MemberDeclarationContext ctx)
-{
-} 
 /**
+ * This class provides an empty implementation of {@link JavaListener},
+ * which can be extended to create a listener which only needs to handle a subset
+ * of the available methods.
+ */
+public class JavaBaseListener : JavaListener {
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitMemberDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.MemberDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterMemberDeclaration(@NotNull JavaParser.MemberDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterDefaultValue(
-{
-    AT |  @
-}
+	 */
+	 public void exitMemberDeclaration(@NotNull JavaParser.MemberDeclarationContext ctx) { }
 
-NotNull JavaParser.DefaultValueContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitDefaultValue(
-{
-    AT |  @
-}
-
-NotNull JavaParser.DefaultValueContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterDefaultValue(@NotNull JavaParser.DefaultValueContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationTypeElementDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitDefaultValue(@NotNull JavaParser.DefaultValueContext ctx) { }
 
-NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationTypeElementDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationTypeElementDeclaration(@NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterType(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotationTypeElementDeclaration(@NotNull JavaParser.AnnotationTypeElementDeclarationContext ctx) { }
 
-NotNull JavaParser.TypeContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterType(@NotNull JavaParser.TypeContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationTypeBody(
-{
-    AT |  @
-}
+	 */
+	 public void exitType(@NotNull JavaParser.TypeContext ctx) { }
 
-NotNull JavaParser.AnnotationTypeBodyContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationTypeBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeBodyContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationTypeBody(@NotNull JavaParser.AnnotationTypeBodyContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterGenericInterfaceMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotationTypeBody(@NotNull JavaParser.AnnotationTypeBodyContext ctx) { }
 
-NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitGenericInterfaceMethodDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterGenericInterfaceMethodDeclaration(@NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterClassBodyDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitGenericInterfaceMethodDeclaration(@NotNull JavaParser.GenericInterfaceMethodDeclarationContext ctx) { }
 
-NotNull JavaParser.ClassBodyDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassBodyDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassBodyDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassBodyDeclaration(@NotNull JavaParser.ClassBodyDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterBlock(
-{
-    AT |  @
-}
+	 */
+	 public void exitClassBodyDeclaration(@NotNull JavaParser.ClassBodyDeclarationContext ctx) { }
 
-NotNull JavaParser.BlockContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitBlock(
-{
-    AT |  @
-}
-
-NotNull JavaParser.BlockContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterBlock(@NotNull JavaParser.BlockContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnumBodyDeclarations(
-{
-    AT |  @
-}
+	 */
+	 public void exitBlock(@NotNull JavaParser.BlockContext ctx) { }
 
-NotNull JavaParser.EnumBodyDeclarationsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitEnumBodyDeclarations(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumBodyDeclarationsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnumBodyDeclarations(@NotNull JavaParser.EnumBodyDeclarationsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterForUpdate(
-{
-    AT |  @
-}
+	 */
+	 public void exitEnumBodyDeclarations(@NotNull JavaParser.EnumBodyDeclarationsContext ctx) { }
 
-NotNull JavaParser.ForUpdateContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitForUpdate(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForUpdateContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterForUpdate(@NotNull JavaParser.ForUpdateContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnhancedForControl(
-{
-    AT |  @
-}
+	 */
+	 public void exitForUpdate(@NotNull JavaParser.ForUpdateContext ctx) { }
 
-NotNull JavaParser.EnhancedForControlContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitEnhancedForControl(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnhancedForControlContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnhancedForControl(@NotNull JavaParser.EnhancedForControlContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationConstantRest(
-{
-    AT |  @
-}
+	 */
+	 public void exitEnhancedForControl(@NotNull JavaParser.EnhancedForControlContext ctx) { }
 
-NotNull JavaParser.AnnotationConstantRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationConstantRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationConstantRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationConstantRest(@NotNull JavaParser.AnnotationConstantRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterExplicitGenericInvocation(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotationConstantRest(@NotNull JavaParser.AnnotationConstantRestContext ctx) { }
 
-NotNull JavaParser.ExplicitGenericInvocationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitExplicitGenericInvocation(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ExplicitGenericInvocationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterExplicitGenericInvocation(@NotNull JavaParser.ExplicitGenericInvocationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterNonWildcardTypeArgumentsOrDiamond(
-{
-    AT |  @
-}
+	 */
+	 public void exitExplicitGenericInvocation(@NotNull JavaParser.ExplicitGenericInvocationContext ctx) { }
 
-NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitNonWildcardTypeArgumentsOrDiamond(
-{
-    AT |  @
-}
-
-NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterNonWildcardTypeArgumentsOrDiamond(@NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterExpressionList(
-{
-    AT |  @
-}
+	 */
+	 public void exitNonWildcardTypeArgumentsOrDiamond(@NotNull JavaParser.NonWildcardTypeArgumentsOrDiamondContext ctx) { }
 
-NotNull JavaParser.ExpressionListContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitExpressionList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ExpressionListContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterExpressionList(@NotNull JavaParser.ExpressionListContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationTypeElementRest(
-{
-    AT |  @
-}
+	 */
+	 public void exitExpressionList(@NotNull JavaParser.ExpressionListContext ctx) { }
 
-NotNull JavaParser.AnnotationTypeElementRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationTypeElementRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeElementRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationTypeElementRest(@NotNull JavaParser.AnnotationTypeElementRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitAnnotationTypeElementRest(@NotNull JavaParser.AnnotationTypeElementRestContext ctx) { }
 
-AT | @ }Overridepublic void enterClassOrInterfaceType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassOrInterfaceType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassOrInterfaceTypeContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassOrInterfaceType(@NotNull JavaParser.ClassOrInterfaceTypeContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitClassOrInterfaceType(@NotNull JavaParser.ClassOrInterfaceTypeContext ctx) { }
 
-AT | @ }Overridepublic void enterTypeBound(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeBoundContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeBound(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeBoundContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeBound(@NotNull JavaParser.TypeBoundContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitTypeBound(@NotNull JavaParser.TypeBoundContext ctx) { }
 
-AT | @ }Overridepublic void enterVariableDeclaratorId(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableDeclaratorIdContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitVariableDeclaratorId(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableDeclaratorIdContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterVariableDeclaratorId(@NotNull JavaParser.VariableDeclaratorIdContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitVariableDeclaratorId(@NotNull JavaParser.VariableDeclaratorIdContext ctx) { }
 
-AT | @ }Overridepublic void enterPrimary(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PrimaryContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitPrimary(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PrimaryContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterPrimary(@NotNull JavaParser.PrimaryContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterClassCreatorRest(
-{
-    AT |  @
-}
+	 */
+	 public void exitPrimary(@NotNull JavaParser.PrimaryContext ctx) { }
 
-NotNull JavaParser.ClassCreatorRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassCreatorRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassCreatorRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassCreatorRest(@NotNull JavaParser.ClassCreatorRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInterfaceBodyDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitClassCreatorRest(@NotNull JavaParser.ClassCreatorRestContext ctx) { }
 
-NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitInterfaceBodyDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceBodyDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInterfaceBodyDeclaration(@NotNull JavaParser.InterfaceBodyDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeArguments(
-{
-    AT |  @
-}
+	 */
+	 public void exitInterfaceBodyDeclaration(@NotNull JavaParser.InterfaceBodyDeclarationContext ctx) { }
 
-NotNull JavaParser.TypeArgumentsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeArguments(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeArgumentsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeArguments(@NotNull JavaParser.TypeArgumentsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationName(
-{
-    AT |  @
-}
+	 */
+	 public void exitTypeArguments(@NotNull JavaParser.TypeArgumentsContext ctx) { }
 
-NotNull JavaParser.AnnotationNameContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationNameContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationName(@NotNull JavaParser.AnnotationNameContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterFinallyBlock(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotationName(@NotNull JavaParser.AnnotationNameContext ctx) { }
 
-NotNull JavaParser.FinallyBlockContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitFinallyBlock(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FinallyBlockContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterFinallyBlock(@NotNull JavaParser.FinallyBlockContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeParameters(
-{
-    AT |  @
-}
+	 */
+	 public void exitFinallyBlock(@NotNull JavaParser.FinallyBlockContext ctx) { }
 
-NotNull JavaParser.TypeParametersContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeParameters(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeParametersContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeParameters(@NotNull JavaParser.TypeParametersContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterLastFormalParameter(
-{
-    AT |  @
-}
+	 */
+	 public void exitTypeParameters(@NotNull JavaParser.TypeParametersContext ctx) { }
 
-NotNull JavaParser.LastFormalParameterContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitLastFormalParameter(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LastFormalParameterContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterLastFormalParameter(@NotNull JavaParser.LastFormalParameterContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterConstructorBody(
-{
-    AT |  @
-}
+	 */
+	 public void exitLastFormalParameter(@NotNull JavaParser.LastFormalParameterContext ctx) { }
 
-NotNull JavaParser.ConstructorBodyContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitConstructorBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstructorBodyContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterConstructorBody(@NotNull JavaParser.ConstructorBodyContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterLiteral(
-{
-    AT |  @
-}
+	 */
+	 public void exitConstructorBody(@NotNull JavaParser.ConstructorBodyContext ctx) { }
 
-NotNull JavaParser.LiteralContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitLiteral(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LiteralContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterLiteral(@NotNull JavaParser.LiteralContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitLiteral(@NotNull JavaParser.LiteralContext ctx) { }
 
-AT | @ }Overridepublic void enterAnnotationMethodOrConstantRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationMethodOrConstantRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationMethodOrConstantRest(@NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitAnnotationMethodOrConstantRest(@NotNull JavaParser.AnnotationMethodOrConstantRestContext ctx) { }
 
-AT | @ }Overridepublic void enterCatchClause(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CatchClauseContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitCatchClause(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CatchClauseContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterCatchClause(@NotNull JavaParser.CatchClauseContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitCatchClause(@NotNull JavaParser.CatchClauseContext ctx) { }
 
-AT | @ }Overridepublic void enterVariableDeclarator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableDeclaratorContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitVariableDeclarator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableDeclaratorContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterVariableDeclarator(@NotNull JavaParser.VariableDeclaratorContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitVariableDeclarator(@NotNull JavaParser.VariableDeclaratorContext ctx) { }
 
-AT | @ }Overridepublic void enterTypeList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeListContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeListContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeList(@NotNull JavaParser.TypeListContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnumConstants(
-{
-    AT |  @
-}
+	 */
+	 public void exitTypeList(@NotNull JavaParser.TypeListContext ctx) { }
 
-NotNull JavaParser.EnumConstantsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitEnumConstants(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumConstantsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnumConstants(@NotNull JavaParser.EnumConstantsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterClassBody(
-{
-    AT |  @
-}
+	 */
+	 public void exitEnumConstants(@NotNull JavaParser.EnumConstantsContext ctx) { }
 
-NotNull JavaParser.ClassBodyContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassBodyContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassBody(@NotNull JavaParser.ClassBodyContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterCreatedName(
-{
-    AT |  @
-}
+	 */
+	 public void exitClassBody(@NotNull JavaParser.ClassBodyContext ctx) { }
 
-NotNull JavaParser.CreatedNameContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitCreatedName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CreatedNameContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterCreatedName(@NotNull JavaParser.CreatedNameContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnumDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitCreatedName(@NotNull JavaParser.CreatedNameContext ctx) { }
 
-NotNull JavaParser.EnumDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitEnumDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnumDeclaration(@NotNull JavaParser.EnumDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterFormalParameter(
-{
-    AT |  @
-}
+	 */
+	 public void exitEnumDeclaration(@NotNull JavaParser.EnumDeclarationContext ctx) { }
 
-NotNull JavaParser.FormalParameterContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitFormalParameter(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FormalParameterContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterFormalParameter(@NotNull JavaParser.FormalParameterContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterParExpression(
-{
-    AT |  @
-}
+	 */
+	 public void exitFormalParameter(@NotNull JavaParser.FormalParameterContext ctx) { }
 
-NotNull JavaParser.ParExpressionContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitParExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ParExpressionContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterParExpression(@NotNull JavaParser.ParExpressionContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotation(
-{
-    AT |  @
-}
+	 */
+	 public void exitParExpression(@NotNull JavaParser.ParExpressionContext ctx) { }
 
-NotNull JavaParser.AnnotationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotation(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotation(@NotNull JavaParser.AnnotationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterVariableInitializer(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotation(@NotNull JavaParser.AnnotationContext ctx) { }
 
-NotNull JavaParser.VariableInitializerContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitVariableInitializer(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableInitializerContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterVariableInitializer(@NotNull JavaParser.VariableInitializerContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterElementValueArrayInitializer(
-{
-    AT |  @
-}
+	 */
+	 public void exitVariableInitializer(@NotNull JavaParser.VariableInitializerContext ctx) { }
 
-NotNull JavaParser.ElementValueArrayInitializerContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitElementValueArrayInitializer(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValueArrayInitializerContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterElementValueArrayInitializer(@NotNull JavaParser.ElementValueArrayInitializerContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterCreator(
-{
-    AT |  @
-}
+	 */
+	 public void exitElementValueArrayInitializer(@NotNull JavaParser.ElementValueArrayInitializerContext ctx) { }
 
-NotNull JavaParser.CreatorContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitCreator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CreatorContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterCreator(@NotNull JavaParser.CreatorContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterArrayCreatorRest(
-{
-    AT |  @
-}
+	 */
+	 public void exitCreator(@NotNull JavaParser.CreatorContext ctx) { }
 
-NotNull JavaParser.ArrayCreatorRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitArrayCreatorRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArrayCreatorRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterArrayCreatorRest(@NotNull JavaParser.ArrayCreatorRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterExpression(
-{
-    AT |  @
-}
+	 */
+	 public void exitArrayCreatorRest(@NotNull JavaParser.ArrayCreatorRestContext ctx) { }
 
-NotNull JavaParser.ExpressionContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ExpressionContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterExpression(@NotNull JavaParser.ExpressionContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitExpression(@NotNull JavaParser.ExpressionContext ctx) { }
 
-AT | @ }Overridepublic void enterConstantExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstantExpressionContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitConstantExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstantExpressionContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterConstantExpression(@NotNull JavaParser.ConstantExpressionContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitConstantExpression(@NotNull JavaParser.ConstantExpressionContext ctx) { }
 
-AT | @ }Overridepublic void enterQualifiedNameList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.QualifiedNameListContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitQualifiedNameList(
-{
-    AT |  @
-}
-
-NotNull JavaParser.QualifiedNameListContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterQualifiedNameList(@NotNull JavaParser.QualifiedNameListContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitQualifiedNameList(@NotNull JavaParser.QualifiedNameListContext ctx) { }
 
-AT | @ }Overridepublic void enterConstructorDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstructorDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitConstructorDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstructorDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterConstructorDeclaration(@NotNull JavaParser.ConstructorDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitConstructorDeclaration(@NotNull JavaParser.ConstructorDeclarationContext ctx) { }
 
-AT | @ }Overridepublic void enterForControl(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForControlContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitForControl(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForControlContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterForControl(@NotNull JavaParser.ForControlContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterSuperSuffix(
-{
-    AT |  @
-}
+	 */
+	 public void exitForControl(@NotNull JavaParser.ForControlContext ctx) { }
 
-NotNull JavaParser.SuperSuffixContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitSuperSuffix(
-{
-    AT |  @
-}
-
-NotNull JavaParser.SuperSuffixContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterSuperSuffix(@NotNull JavaParser.SuperSuffixContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterVariableDeclarators(
-{
-    AT |  @
-}
+	 */
+	 public void exitSuperSuffix(@NotNull JavaParser.SuperSuffixContext ctx) { }
 
-NotNull JavaParser.VariableDeclaratorsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitVariableDeclarators(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableDeclaratorsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterVariableDeclarators(@NotNull JavaParser.VariableDeclaratorsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterCatchType(
-{
-    AT |  @
-}
+	 */
+	 public void exitVariableDeclarators(@NotNull JavaParser.VariableDeclaratorsContext ctx) { }
 
-NotNull JavaParser.CatchTypeContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitCatchType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CatchTypeContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterCatchType(@NotNull JavaParser.CatchTypeContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterClassOrInterfaceModifier(
-{
-    AT |  @
-}
+	 */
+	 public void exitCatchType(@NotNull JavaParser.CatchTypeContext ctx) { }
 
-NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassOrInterfaceModifier(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassOrInterfaceModifierContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassOrInterfaceModifier(@NotNull JavaParser.ClassOrInterfaceModifierContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnumConstantName(
-{
-    AT |  @
-}
+	 */
+	 public void exitClassOrInterfaceModifier(@NotNull JavaParser.ClassOrInterfaceModifierContext ctx) { }
 
-NotNull JavaParser.EnumConstantNameContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitEnumConstantName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumConstantNameContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnumConstantName(@NotNull JavaParser.EnumConstantNameContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterModifier(
-{
-    AT |  @
-}
+	 */
+	 public void exitEnumConstantName(@NotNull JavaParser.EnumConstantNameContext ctx) { }
 
-NotNull JavaParser.ModifierContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitModifier(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ModifierContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterModifier(@NotNull JavaParser.ModifierContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInnerCreator(
-{
-    AT |  @
-}
+	 */
+	 public void exitModifier(@NotNull JavaParser.ModifierContext ctx) { }
 
-NotNull JavaParser.InnerCreatorContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitInnerCreator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InnerCreatorContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInnerCreator(@NotNull JavaParser.InnerCreatorContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterExplicitGenericInvocationSuffix(
-{
-    AT |  @
-}
+	 */
+	 public void exitInnerCreator(@NotNull JavaParser.InnerCreatorContext ctx) { }
 
-NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitExplicitGenericInvocationSuffix(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterExplicitGenericInvocationSuffix(@NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterVariableModifier(
-{
-    AT |  @
-}
+	 */
+	 public void exitExplicitGenericInvocationSuffix(@NotNull JavaParser.ExplicitGenericInvocationSuffixContext ctx) { }
 
-NotNull JavaParser.VariableModifierContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitVariableModifier(
-{
-    AT |  @
-}
-
-NotNull JavaParser.VariableModifierContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterVariableModifier(@NotNull JavaParser.VariableModifierContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitVariableModifier(@NotNull JavaParser.VariableModifierContext ctx) { }
 
-AT | @ }Overridepublic void enterElementValuePair(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValuePairContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitElementValuePair(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValuePairContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterElementValuePair(@NotNull JavaParser.ElementValuePairContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitElementValuePair(@NotNull JavaParser.ElementValuePairContext ctx) { }
 
-AT | @ }Overridepublic void enterArrayInitializer(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArrayInitializerContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitArrayInitializer(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArrayInitializerContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterArrayInitializer(@NotNull JavaParser.ArrayInitializerContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitArrayInitializer(@NotNull JavaParser.ArrayInitializerContext ctx) { }
 
-AT | @ }Overridepublic void enterElementValue(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValueContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitElementValue(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValueContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterElementValue(@NotNull JavaParser.ElementValueContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitElementValue(@NotNull JavaParser.ElementValueContext ctx) { }
 
-AT | @ }Overridepublic void enterConstDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitConstDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterConstDeclaration(@NotNull JavaParser.ConstDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterResource(
-{
-    AT |  @
-}
+	 */
+	 public void exitConstDeclaration(@NotNull JavaParser.ConstDeclarationContext ctx) { }
 
-NotNull JavaParser.ResourceContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitResource(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ResourceContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterResource(@NotNull JavaParser.ResourceContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterQualifiedName(
-{
-    AT |  @
-}
+	 */
+	 public void exitResource(@NotNull JavaParser.ResourceContext ctx) { }
 
-NotNull JavaParser.QualifiedNameContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitQualifiedName(
-{
-    AT |  @
-}
-
-NotNull JavaParser.QualifiedNameContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterQualifiedName(@NotNull JavaParser.QualifiedNameContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterResourceSpecification(
-{
-    AT |  @
-}
+	 */
+	 public void exitQualifiedName(@NotNull JavaParser.QualifiedNameContext ctx) { }
 
-NotNull JavaParser.ResourceSpecificationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitResourceSpecification(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ResourceSpecificationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterResourceSpecification(@NotNull JavaParser.ResourceSpecificationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterFormalParameterList(
-{
-    AT |  @
-}
+	 */
+	 public void exitResourceSpecification(@NotNull JavaParser.ResourceSpecificationContext ctx) { }
 
-NotNull JavaParser.FormalParameterListContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitFormalParameterList(
-{
-    AT |  @
-}
+	 */
+	 public void enterFormalParameterList(@NotNull JavaParser.FormalParameterListContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	 public void exitFormalParameterList(@NotNull JavaParser.FormalParameterListContext ctx) { }
 
-NotNull JavaParser.FormalParameterListContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationTypeDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationTypeDeclaration(@NotNull JavaParser.AnnotationTypeDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitAnnotationTypeDeclaration(@NotNull JavaParser.AnnotationTypeDeclarationContext ctx) { }
 
-AT | @ }Overridepublic void exitAnnotationTypeDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationTypeDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterCompilationUnit(
-{
-    AT |  @
-}
-
-NotNull JavaParser.CompilationUnitContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterCompilationUnit(@NotNull JavaParser.CompilationUnitContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitCompilationUnit(
-{
-    AT |  @
-}
+	 */
+	 public void exitCompilationUnit(@NotNull JavaParser.CompilationUnitContext ctx) { }
 
-NotNull JavaParser.CompilationUnitContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterAnnotationMethodRest(
-{
-    AT |  @
-}
-
-NotNull JavaParser.AnnotationMethodRestContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterAnnotationMethodRest(@NotNull JavaParser.AnnotationMethodRestContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitAnnotationMethodRest(
-{
-    AT |  @
-}
+	 */
+	 public void exitAnnotationMethodRest(@NotNull JavaParser.AnnotationMethodRestContext ctx) { }
 
-NotNull JavaParser.AnnotationMethodRestContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterSwitchBlockStatementGroup(
-{
-    AT |  @
-}
-
-NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterSwitchBlockStatementGroup(@NotNull JavaParser.SwitchBlockStatementGroupContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitSwitchBlockStatementGroup(
-{
-    AT |  @
-}
+	 */
+	 public void exitSwitchBlockStatementGroup(@NotNull JavaParser.SwitchBlockStatementGroupContext ctx) { }
 
-NotNull JavaParser.SwitchBlockStatementGroupContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeParameter(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeParameterContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeParameter(@NotNull JavaParser.TypeParameterContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitTypeParameter(@NotNull JavaParser.TypeParameterContext ctx) { }
 
-AT | @ }Overridepublic void exitTypeParameter(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeParameterContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInterfaceBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceBodyContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInterfaceBody(@NotNull JavaParser.InterfaceBodyContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitInterfaceBody(
-{
-    AT |  @
-}
+	 */
+	 public void exitInterfaceBody(@NotNull JavaParser.InterfaceBodyContext ctx) { }
 
-NotNull JavaParser.InterfaceBodyContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterMethodDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.MethodDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterMethodDeclaration(@NotNull JavaParser.MethodDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitMethodDeclaration(@NotNull JavaParser.MethodDeclarationContext ctx) { }
 
-NotNull JavaParser.MethodDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterMethodBody(
-{
-    AT |  @
-}
-
-NotNull JavaParser.MethodBodyContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterMethodBody(@NotNull JavaParser.MethodBodyContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitMethodBody(
-{
-    AT |  @
-}
+	 */
+	 public void exitMethodBody(@NotNull JavaParser.MethodBodyContext ctx) { }
 
-NotNull JavaParser.MethodBodyContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeArgument(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeArgumentContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeArgument(@NotNull JavaParser.TypeArgumentContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitTypeArgument(@NotNull JavaParser.TypeArgumentContext ctx) { }
 
-AT | @ }Overridepublic void exitTypeArgument(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeArgumentContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeDeclaration(@NotNull JavaParser.TypeDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitTypeDeclaration(@NotNull JavaParser.TypeDeclarationContext ctx) { }
 
-NotNull JavaParser.TypeDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterGenericConstructorDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.GenericConstructorDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterGenericConstructorDeclaration(@NotNull JavaParser.GenericConstructorDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitGenericConstructorDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitGenericConstructorDeclaration(@NotNull JavaParser.GenericConstructorDeclarationContext ctx) { }
 
-NotNull JavaParser.GenericConstructorDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterClassDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ClassDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterClassDeclaration(@NotNull JavaParser.ClassDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitClassDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitClassDeclaration(@NotNull JavaParser.ClassDeclarationContext ctx) { }
 
-NotNull JavaParser.ClassDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEnumConstant(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumConstantContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterEnumConstant(@NotNull JavaParser.EnumConstantContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitEnumConstant(@NotNull JavaParser.EnumConstantContext ctx) { }
 
-AT | @ }Overridepublic void exitEnumConstant(
-{
-    AT |  @
-}
-
-NotNull JavaParser.EnumConstantContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterStatement(
-{
-    AT |  @
-}
-
-NotNull JavaParser.StatementContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterStatement(@NotNull JavaParser.StatementContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitStatement(
-{
-    AT |  @
-}
+	 */
+	 public void exitStatement(@NotNull JavaParser.StatementContext ctx) { }
 
-NotNull JavaParser.StatementContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterImportDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ImportDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterImportDeclaration(@NotNull JavaParser.ImportDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitImportDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitImportDeclaration(@NotNull JavaParser.ImportDeclarationContext ctx) { }
 
-NotNull JavaParser.ImportDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterPrimitiveType(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PrimitiveTypeContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterPrimitiveType(@NotNull JavaParser.PrimitiveTypeContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitPrimitiveType(
-{
-    AT |  @
-}
+	 */
+	 public void exitPrimitiveType(@NotNull JavaParser.PrimitiveTypeContext ctx) { }
 
-NotNull JavaParser.PrimitiveTypeContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInterfaceDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInterfaceDeclaration(@NotNull JavaParser.InterfaceDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitInterfaceDeclaration(@NotNull JavaParser.InterfaceDeclarationContext ctx) { }
 
-AT | @ }Overridepublic void exitInterfaceDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterLocalVariableDeclarationStatement(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterLocalVariableDeclarationStatement(@NotNull JavaParser.LocalVariableDeclarationStatementContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitLocalVariableDeclarationStatement(
-{
-    AT |  @
-}
+	 */
+	 public void exitLocalVariableDeclarationStatement(@NotNull JavaParser.LocalVariableDeclarationStatementContext ctx) { }
 
-NotNull JavaParser.LocalVariableDeclarationStatementContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterBlockStatement(
-{
-    AT |  @
-}
-
-NotNull JavaParser.BlockStatementContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterBlockStatement(@NotNull JavaParser.BlockStatementContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitBlockStatement(
-{
-    AT |  @
-}
+	 */
+	 public void exitBlockStatement(@NotNull JavaParser.BlockStatementContext ctx) { }
 
-NotNull JavaParser.BlockStatementContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterFieldDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FieldDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterFieldDeclaration(@NotNull JavaParser.FieldDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitFieldDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitFieldDeclaration(@NotNull JavaParser.FieldDeclarationContext ctx) { }
 
-NotNull JavaParser.FieldDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterConstantDeclarator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstantDeclaratorContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterConstantDeclarator(@NotNull JavaParser.ConstantDeclaratorContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitConstantDeclarator(@NotNull JavaParser.ConstantDeclaratorContext ctx) { }
 
-AT | @ }Overridepublic void exitConstantDeclarator(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ConstantDeclaratorContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterResources(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ResourcesContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterResources(@NotNull JavaParser.ResourcesContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitResources(
-{
-    AT |  @
-}
+	 */
+	 public void exitResources(@NotNull JavaParser.ResourcesContext ctx) { }
 
-NotNull JavaParser.ResourcesContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterStatementExpression(
-{
-    AT |  @
-}
-
-NotNull JavaParser.StatementExpressionContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterStatementExpression(@NotNull JavaParser.StatementExpressionContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitStatementExpression(
-{
-    AT |  @
-}
+	 */
+	 public void exitStatementExpression(@NotNull JavaParser.StatementExpressionContext ctx) { }
 
-NotNull JavaParser.StatementExpressionContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInterfaceMethodDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInterfaceMethodDeclaration(@NotNull JavaParser.InterfaceMethodDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitInterfaceMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitInterfaceMethodDeclaration(@NotNull JavaParser.InterfaceMethodDeclarationContext ctx) { }
 
-NotNull JavaParser.InterfaceMethodDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterPackageDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PackageDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterPackageDeclaration(@NotNull JavaParser.PackageDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitPackageDeclaration(@NotNull JavaParser.PackageDeclarationContext ctx) { }
 
-AT | @ }Overridepublic void exitPackageDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.PackageDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterElementValuePairs(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ElementValuePairsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterElementValuePairs(@NotNull JavaParser.ElementValuePairsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitElementValuePairs(
-{
-    AT |  @
-}
+	 */
+	 public void exitElementValuePairs(@NotNull JavaParser.ElementValuePairsContext ctx) { }
 
-NotNull JavaParser.ElementValuePairsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterLocalVariableDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.LocalVariableDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterLocalVariableDeclaration(@NotNull JavaParser.LocalVariableDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitLocalVariableDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitLocalVariableDeclaration(@NotNull JavaParser.LocalVariableDeclarationContext ctx) { }
 
-NotNull JavaParser.LocalVariableDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterNonWildcardTypeArguments(
-{
-    AT |  @
-}
-
-NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterNonWildcardTypeArguments(@NotNull JavaParser.NonWildcardTypeArgumentsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitNonWildcardTypeArguments(
-{
-    AT |  @
-}
+	 */
+	 public void exitNonWildcardTypeArguments(@NotNull JavaParser.NonWildcardTypeArgumentsContext ctx) { }
 
-NotNull JavaParser.NonWildcardTypeArgumentsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterInterfaceMemberDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterInterfaceMemberDeclaration(@NotNull JavaParser.InterfaceMemberDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitInterfaceMemberDeclaration(@NotNull JavaParser.InterfaceMemberDeclarationContext ctx) { }
 
-AT | @ }Overridepublic void exitInterfaceMemberDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.InterfaceMemberDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterSwitchLabel(
-{
-    AT |  @
-}
-
-NotNull JavaParser.SwitchLabelContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterSwitchLabel(@NotNull JavaParser.SwitchLabelContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitSwitchLabel(
-{
-    AT |  @
-}
+	 */
+	 public void exitSwitchLabel(@NotNull JavaParser.SwitchLabelContext ctx) { }
 
-NotNull JavaParser.SwitchLabelContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterForInit(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ForInitContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterForInit(@NotNull JavaParser.ForInitContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitForInit(
-{
-    AT |  @
-}
+	 */
+	 public void exitForInit(@NotNull JavaParser.ForInitContext ctx) { }
 
-NotNull JavaParser.ForInitContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterFormalParameters(
-{
-    AT |  @
-}
-
-NotNull JavaParser.FormalParametersContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterFormalParameters(@NotNull JavaParser.FormalParametersContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitFormalParameters(
-{
-    AT |  @
-}
+	 */
+	 public void exitFormalParameters(@NotNull JavaParser.FormalParametersContext ctx) { }
 
-NotNull JavaParser.FormalParametersContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterArguments(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArgumentsContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterArguments(@NotNull JavaParser.ArgumentsContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
+	 */
+	 public void exitArguments(@NotNull JavaParser.ArgumentsContext ctx) { }
 
-AT | @ }Overridepublic void exitArguments(
-{
-    AT |  @
-}
-
-NotNull JavaParser.ArgumentsContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterGenericMethodDeclaration(
-{
-    AT |  @
-}
-
-NotNull JavaParser.GenericMethodDeclarationContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterGenericMethodDeclaration(@NotNull JavaParser.GenericMethodDeclarationContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitGenericMethodDeclaration(
-{
-    AT |  @
-}
+	 */
+	 public void exitGenericMethodDeclaration(@NotNull JavaParser.GenericMethodDeclarationContext ctx) { }
 
-NotNull JavaParser.GenericMethodDeclarationContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterTypeArgumentsOrDiamond(
-{
-    AT |  @
-}
-
-NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
-{
-} 
-/**
+	 */
+	 public void enterTypeArgumentsOrDiamond(@NotNull JavaParser.TypeArgumentsOrDiamondContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void exitTypeArgumentsOrDiamond(
-{
-    AT |  @
-}
+	 */
+	 public void exitTypeArgumentsOrDiamond(@NotNull JavaParser.TypeArgumentsOrDiamondContext ctx) { }
 
-NotNull JavaParser.TypeArgumentsOrDiamondContext ctx)
-{
-} 
-/**
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {
-
-AT | @ }Overridepublic void enterEveryRule(
-{
-    AT |  @
-}
-
-NotNull ParserRuleContext ctx ) { } 
-/**
+	 */
+	 public void enterEveryRule(@NotNull ParserRuleContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Overridepublic void exitEveryRule(
-{
-    AT |  @
-}
-
-NotNull ParserRuleContext ctx ) { } 
-/**
+	 */
+	 public void exitEveryRule(@NotNull ParserRuleContext ctx) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Overridepublic void visitTerminal(
-{
-    AT |  @
-}
-
-NotNull TerminalNode node ) { } 
-/**
+	 */
+	 public void visitTerminal(@NotNull TerminalNode node) { }
+	
+    [JavaSharp.Syntax.JavaOverrideAnnotation]
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
-	 */ {AT | @ }Overridepublic void visitErrorNode(
-{
-    AT |  @
+	 */
+	 public void visitErrorNode(@NotNull ErrorNode node) { }
 }
-
-NotNull ErrorNode node ) { } } }
+}
