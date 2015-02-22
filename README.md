@@ -14,6 +14,8 @@ rely on the .NET standard libraries. There will be no Java layer in C#, for exam
     
 Instead, the Java List interface will probably be translated in the .NET IList interface.
 
+Some example code of how to use the framework is included in Example.ps1.
+
 ## Bootstrapping
 
  - The first step in the translation is a Java program that translates Java source code into an XML version of its AST. (done)

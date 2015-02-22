@@ -1,6 +1,6 @@
 /*
  * JavaSharp, a free Java to C# translator based on ANTLRv4
- * Copyright (C) 2014  Philip van Oosten
+ * Copyright (C) 2014-2015  Philip van Oosten
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
