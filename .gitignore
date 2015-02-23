@@ -20,3 +20,6 @@ packages
 bin
 *.sln.ide
 
+# Let's not offend the public with the really dirty stuff...
+Production.ps1
+
